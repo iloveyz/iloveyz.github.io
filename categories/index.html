@@ -143,7 +143,17 @@
 <script>
   (function () {
     var url = 'https://iloveyz.github.io/categories/index.html';
-    $('#article-banner').geopattern(url)
+	var pic = $(".markdown-content img").eq(0).attr('src')
+	if(typeof(pic) != "undefined"){
+		$('#article-banner').css({
+			"background-image":"url("+pic+")",
+			"background-repeat":"no-repeat",
+			"background-position":"center center",
+			"background-size":"cover"
+		})
+	}else{
+		$('#article-banner').geopattern(url);
+	}
     $('.header').removeClass('fixed-header')
 
      // error image
