@@ -10,7 +10,7 @@
   display: none;
 }
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Microsoft jhenghei', 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
@@ -63,18 +63,18 @@ pre {
   font-weight: 600;
 }
 .tag-code {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-family: 'Roboto Mono', 'Microsoft jhenghei', Monaco, courier, monospace;
   font-size: 0.8em;
   display: inline-block;
   background-color: #f8f8f8;
-  color: #e96900;
+  color: #7f8c8d;
   padding: 3px 5px;
   margin: 0 2px 5px 0;
   border-radius: 2px;
   white-space: nowrap;
 }
 .article-card {
-  padding-bottom: 20px;
+  padding: 25px 0;
 }
 .article-card:first-child {
   margin-top: 80px;
@@ -97,11 +97,13 @@ h2.article-head {
 .article-summary {
   margin: 10px 0;
   color: #34495e;
+  line-height: 1.9;
 }
 .more {
   font-weight: 600;
-  display: inline-block;
+  display: block;
   transition: all 0.3s;
+  padding-top: 25px;
 }
 .more:hover {
   transform: translateX(10px);
@@ -518,7 +520,8 @@ h2.article-head {
 }
 .markdown-content p,
 .article-summary p {
-  line-height: 1.6em;
+  line-height: 1.9rem;
+  margin-bottom: 15px;
 }
 .markdown-content p code,
 .article-summary p code {
