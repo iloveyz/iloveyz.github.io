@@ -463,6 +463,11 @@ h2.article-head {
     margin-top: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  #gitalk-comment {
+    margin: 0 20px;
+  }
+}
 .box-item {
   width: 750px;
   padding: 0 20px;
