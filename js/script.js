@@ -10,7 +10,7 @@
   $(document).ready(function () {
     NProgress.start()
     $('#nprogress .bar').css({
-      'background': '#42b983'
+      'background': '#5389e1'
     })
     $('#nprogress .spinner').hide()
 

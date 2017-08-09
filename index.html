@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <!DOCTYPE html>
+<html lang=zh>
+<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
-  <title>
     
-      赤色实验室
+    <title>赤色实验室</title>
+    <meta name="description" content="belong to our world">
+<meta property="og:type" content="website">
+<meta property="og:title" content="赤色实验室">
+<meta property="og:url" content="https://iloveyz.github.io/index.html">
+<meta property="og:site_name" content="赤色实验室">
+<meta property="og:description" content="belong to our world">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="赤色实验室">
+<meta name="twitter:description" content="belong to our world">
     
-  </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
+	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+	<script src="/js/qrious.js"></script>
 <script src="/js/gitment.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
   <div class="header-container">
+	
     <a class="home-link" href="/">
       <span>赤色实验室</span>
     </a>
+	
     <ul class="right-list">
       
         <li class="list-item">
           
             <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/categories" class="item-link">Categories</a>
           
         </li>
       
@@ -60,17 +100,25 @@
         </li>
       
     </ul>
+	
     <div class="menu">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </div>
+	
     <div class="menu-mask">
       <ul class="menu-list">
         
           <li class="menu-item">
             
               <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/categories" class="menu-link">Categories</a>
             
           </li>
         
@@ -101,15 +149,58 @@
       </ul>
     </div>
   </div>
+  <div class="search-btn"></div>
+<div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="index.search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="输入关键字..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '未知',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
 </header>
 
     <main class="app-body">
   
     <article class="article-card">
+		<header class="app-header">
       <h2 class="article-head">
         <a href="/2017/08/08/first-artcile/">赤色实验室开篇第一章</a>
       </h2>
-      <p class="article-date">August 8, 2017</p>
+      <p class="article-date">
+    <span class="article-category">
+        <a class="article-category-link" href="/categories/笔记/">笔记</a>
+    </span>
+<em>/</em>August 8, 2017</p>
       
         
   <a href="/tags#赤色实验室" >
@@ -121,6 +212,7 @@
   </a>
 
       
+	  </header>
       <div class="article-summary">
         
           <p><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"></p>
@@ -132,11 +224,17 @@
     </article>
   
     <article class="article-card">
+		<header class="app-header">
       <h2 class="article-head">
         <a href="/2017/08/07/hello-world/">Hello World</a>
       </h2>
-      <p class="article-date">August 7, 2017</p>
+      <p class="article-date">
+    <span class="article-category">
+        <a class="article-category-link" href="/categories/笔记/">笔记</a>
+    </span>
+<em>/</em>August 7, 2017</p>
       
+	  </header>
       <div class="article-summary">
         
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using He ...
@@ -147,13 +245,35 @@
   
 
   
+  <script type="text/javascript">
+  (function () {
+  	$(".article-summary img").each(function(){
+		$(this).parents('p').addClass('full-pic');
+	});
+  })();
+  </script>
 </main>
 
 
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
-    <footer class="app-footer">
+    
+    <div class="link-wrap link-list">
+        <h3 class="link-title">links</h3>
+        <div class="link">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+<footer class="app-footer">
   <p class="copyright">
     &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>

@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <!DOCTYPE html>
+<html lang=zh>
+<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
-  <title>
     
-      Categories | 赤色实验室
+    <title>Categories | 赤色实验室</title>
+    <meta name="description" content="belong to our world">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="https://iloveyz.github.io/categories/index.html">
+<meta property="og:site_name" content="赤色实验室">
+<meta property="og:description" content="belong to our world">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-08T15:15:39.634Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Categories">
+<meta name="twitter:description" content="belong to our world">
     
-  </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
+	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+	<script src="/js/qrious.js"></script>
 <script src="/js/gitment.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
   <div class="header-container">
+	
     <a class="home-link" href="/">
       <span>赤色实验室</span>
     </a>
+	
     <ul class="right-list">
       
         <li class="list-item">
           
             <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/categories" class="item-link active">Categories</a>
           
         </li>
       
@@ -60,17 +101,25 @@
         </li>
       
     </ul>
+	
     <div class="menu">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </div>
+	
     <div class="menu-mask">
       <ul class="menu-list">
         
           <li class="menu-item">
             
               <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/categories" class="menu-link mobile-active">Categories</a>
             
           </li>
         
@@ -101,130 +150,135 @@
       </ul>
     </div>
   </div>
+  <div class="search-btn"></div>
+<div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="index.search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="输入关键字..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '未知',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
 </header>
 
     <div id="article-banner">
   <h2>Categories</h2>
-  <p class="post-date">2017-08-08</p>
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
+  <p class="post-date">分类目录</p>
 </div>
-<main class="app-body">
-  <article class="post-article">
-    <section class="markdown-content"></section>
-    
-    <div class="money-like">
-      <div class="reward-btn">
-        赏
-        <span class="money-code">
-          <span class="alipay-code">
-            <div class="code-image"></div>
-            <b>使用支付宝打赏</b>
-          </span>
-          <span class="wechat-code">
-            <div class="code-image"></div>
-            <b>使用微信打赏</b>
-          </span>
-        </span>
-      </div>
-      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-    </div>
-    <div class="qrcode">
-      <canvas id="share-qrcode"></canvas>
-      <p class="notice">扫描二维码，分享此文章</p>
-    </div>
-    
-      <div id="comments"></div>
-    
-  </article>
-</main>
+<div class="box-item">
 
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类目录</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+
+    <div class="widget-wrap">
+        <h3 class="widget-title">相关文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/08/08/first-artcile/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg)" alt="赤色实验室开篇第一章" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a></p>
+                            <p class="item-title"><a href="/2017/08/08/first-artcile/" class="title">赤色实验室开篇第一章</a></p>
+                            <p class="item-date"><time datetime="2017-08-08T07:39:42.000Z" itemprop="datePublished">2017-08-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/08/07/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/08/07/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2017-08-07T06:47:11.048Z" itemprop="datePublished">2017-08-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</div>
 <script>
   (function () {
     var url = 'https://iloveyz.github.io/categories/index.html';
-	var pic = $(".markdown-content img").eq(0).attr('src')
-	if(typeof(pic) != "undefined"){
-		$('#article-banner').css({
-			"background-image":"url("+pic+")",
-			"background-repeat":"no-repeat",
-			"background-position":"center center",
-			"background-size":"cover"
-		})
-	}else{
-		$('#article-banner').geopattern(url);
-	}
-    $('.header').removeClass('fixed-header')
-
-     // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      var imageW = $(this).width()
-      var imageH = $(this).height()
-      
-      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-      zoom = zoom < 1 ? 1 : zoom
-      zoom = zoom > 2 ? 2 : zoom
-      var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-      $('.image-view-wrap').addClass('wrap-active')
-      $('.image-view-wrap img').css({
-        'width': `${imageW}`,
-        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-      })
-      $('html').css('overflow', 'hidden')
-
-      $('.image-view-wrap').on('click', function() {
-        $(this).remove()
-        $('html').attr('style', '')
-      })
-    })
-
-    // qrcode
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-
-    // gitment
-    var gitmentConfig = "iloveyz";
-    if (gitmentConfig != "undefined") {
-      var gitment = new Gitment({
-        id: "Categories",
-        owner: "iloveyz",
-        repo: "iloveyz.github.io",
-        oauth: {
-          client_id: "10f1ac4814226967527c",
-          client_secret: "cd02c60db4b464f501fd45603dec3cb5d10da355"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
   })();
 </script>
-
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
-    <footer class="app-footer">
+    
+    <div class="link-wrap link-list">
+        <h3 class="link-title">links</h3>
+        <div class="link">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+<footer class="app-footer">
   <p class="copyright">
     &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
