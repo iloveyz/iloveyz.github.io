@@ -48,11 +48,13 @@
 	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
+<link rel="stylesheet" href="/css/plugins/gitalk.css">
 	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
 <script src="/js/gitment.js"></script>
+<script src="/js/gitalk.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -236,8 +238,8 @@
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
     
-      <div id="comments"></div>
-    
+      <div id="gitalk-comment"></div>
+	
   </article>
 </main>
 
@@ -311,6 +313,18 @@
       })
       gitment.render(document.getElementById('comments'))
     }
+	
+	var gitalk = new Gitalk({
+	  clientID: '68f85c54fe7bab00c69e',
+	  clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	  repo: 'git@github.com:iloveyz/iloveyz.github.io.git',
+	  owner: 'iloveyz',
+	  admin: ['xiaozGerry'],
+
+	})
+
+	gitalk.render('gitalk-comment')
+	
   })();
 </script>
 
