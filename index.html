@@ -42,7 +42,6 @@
     
 
 
-	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
 	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
@@ -53,7 +52,7 @@
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
 <script src="/js/gitment.js"></script>
-<script src="/js/gitalk.js"></script>
+<script src="/js/gitalk.min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -68,12 +67,6 @@
         <li class="list-item">
           
             <a href="/" class="item-link active">Home</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/categories" class="item-link">Categories</a>
           
         </li>
       
@@ -115,12 +108,6 @@
           <li class="menu-item">
             
               <a href="/" class="menu-link mobile-active">Home</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/categories" class="menu-link">Categories</a>
             
           </li>
         
@@ -234,7 +221,9 @@
 <p>不管怎样，大致都添加完，就剩样式了。</ ...
         
       </div>
-      <a class="more" href="/2017/08/08/about-theme-edit/">Read more</a>
+	  <div class="readmore">
+		<a class="more" href="/2017/08/08/about-theme-edit/">Read more</a>
+	  </div>
     </article>
   
     <article class="article-card">
@@ -266,7 +255,9 @@
 <p>我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零 ...
         
       </div>
-      <a class="more" href="/2017/08/08/first-artcile/">Read more</a>
+	  <div class="readmore">
+		<a class="more" href="/2017/08/08/first-artcile/">Read more</a>
+	  </div>
     </article>
   
     <article class="article-card">
@@ -286,7 +277,9 @@
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using He ...
         
       </div>
-      <a class="more" href="/2017/08/07/hello-world/">Read more</a>
+	  <div class="readmore">
+		<a class="more" href="/2017/08/07/hello-world/">Read more</a>
+	  </div>
     </article>
   
 
@@ -304,22 +297,7 @@
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
-    
-    <div class="link-wrap link-list">
-        <h3 class="link-title">links</h3>
-        <div class="link">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-<footer class="app-footer">
+    <footer class="app-footer">
   <p class="copyright">
     &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
