@@ -294,12 +294,16 @@ h2.article-head {
   height: 320px;
   text-align: center;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 @media screen and (max-width: 480px) {
   #article-banner {
     height: 255px;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 #article-banner h2 {
