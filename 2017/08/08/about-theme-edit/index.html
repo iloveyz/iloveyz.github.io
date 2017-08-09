@@ -56,7 +56,6 @@
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
 <script src="/js/gitment.js"></script>
-<script src="/js/gitalk.min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -230,7 +229,7 @@
 
       </div>
     
-    <div class="money-like">
+    <!--<div class="money-like">
       <div class="reward-btn">
         赏
         <span class="money-code">
@@ -245,7 +244,7 @@
         </span>
       </div>
       <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-    </div>
+    </div>-->
     <div class="qrcode">
       <canvas id="share-qrcode"></canvas>
       <p class="notice">扫描二维码，分享此文章</p>
@@ -326,17 +325,6 @@
       })
       gitment.render(document.getElementById('comments'))
     }
-	
-	var gitalk = new Gitalk({
-	  clientID: '68f85c54fe7bab00c69e',
-	  clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
-	  repo: 'https://github.com/iloveyz/iloveyz.github.io',
-	  owner: 'iloveyz',
-	  admin: ['iloveyz'],
-	})
-
-	gitalk.render('gitalk-comment')
-	
   })();
 </script>
 
@@ -388,6 +376,19 @@
 </script>
 <!-- Baidu Tongji -->
 
+<script src="/js/gitalk.min.js"></script>
+<script type="text/javascript">
+var gitalk = new Gitalk({
+  clientID: '10f1ac4814226967527c',
+  clientSecret: 'cd02c60db4b464f501fd45603dec3cb5d10da355',
+  repo: 'https://github.com/iloveyz/iloveyz.github.io',
+  owner: 'iloveyz',
+  admin: ['iloveyz'],
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-comment')
+</script>
 <script src="/js/script.js"></script>
   </body>
 </html>
