@@ -60,6 +60,9 @@ pre {
 .app-header {
   margin-top: 50px;
 }
+.app-header h2 {
+  font-size: 1.6em;
+}
 @media screen and (max-width: 480px) {
   .app-header {
     margin-top: 50px;
@@ -347,6 +350,7 @@ h2.article-head {
 }
 .article-category {
   margin: 10px 0;
+  font-size: 14px;
 }
 .article-date em,
 .post-date em {
@@ -373,6 +377,16 @@ h2.article-head {
   .more {
     padding-top: 0px;
   }
+}
+.article-category a.article-category-link:after {
+  content: "/";
+  margin: 0 5px;
+  color: #ccc;
+}
+.article-category a.article-category-link:last-of-type:after {
+  content: "-";
+  margin: 0 5px;
+  color: #ccc;
 }
 #article-banner {
   width: 100%;

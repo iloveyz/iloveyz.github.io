@@ -52,6 +52,7 @@
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -231,7 +232,7 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a></p>
                             <p class="item-title"><a href="/2017/08/08/first-artcile/" class="title">赤色实验室开篇第一章</a></p>
-                            <p class="item-date"><time datetime="2017-08-08T07:39:42.000Z" itemprop="datePublished">2017-08-08</time></p>
+                            <p class="item-date"><time datetime="2017-08-08T07:39:00.000Z" itemprop="datePublished">2017-08-08</time></p>
                         </div>
                     </li>
                 
@@ -317,12 +318,14 @@
 <script src="/js/gitalk.min.js"></script>
 <script type="text/javascript">
 var gitalk = new Gitalk({
+  id: window.location.pathname,
   clientID: '68f85c54fe7bab00c69e',
   clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
   repo: 'iloveyz.github.io',
   owner: 'iloveyz',
   admin: ['iloveyz'],
-  distractionFreeMode: true
+  distractionFreeMode: true,
+  body: location.href
 })
 
 gitalk.render('gitalk-comment')

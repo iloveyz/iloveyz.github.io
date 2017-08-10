@@ -18,7 +18,7 @@
 <meta property="og:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。 我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零投入用下github">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
-<meta property="og:updated_time" content="2017-08-08T16:56:32.532Z">
+<meta property="og:updated_time" content="2017-08-10T02:48:02.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="赤色实验室开篇第一章">
 <meta name="twitter:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。 我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零投入用下github">
@@ -55,6 +55,7 @@
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -191,7 +192,7 @@
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
-<em>/</em>2017-08-08</p>
+2017-08-08</p>
 </header>
   <article class="post-article">
     <section class="markdown-content"><p><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"></p>
@@ -282,7 +283,32 @@
       value: document.location.href
     });
 
-    
+    // gitment
+    var gitmentConfig = "iloveyz";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "赤色实验室开篇第一章",
+        owner: "iloveyz",
+        repo: "iloveyz.github.io",
+        oauth: {
+          client_id: "10f1ac4814226967527c",
+          client_secret: "cd02c60db4b464f501fd45603dec3cb5d10da355"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
   })();
 </script>
 
@@ -337,12 +363,14 @@
 <script src="/js/gitalk.min.js"></script>
 <script type="text/javascript">
 var gitalk = new Gitalk({
+  id: window.location.pathname,
   clientID: '68f85c54fe7bab00c69e',
   clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
   repo: 'iloveyz.github.io',
   owner: 'iloveyz',
   admin: ['iloveyz'],
-  distractionFreeMode: true
+  distractionFreeMode: true,
+  body: location.href
 })
 
 gitalk.render('gitalk-comment')
