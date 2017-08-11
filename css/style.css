@@ -54,7 +54,6 @@ pre {
   max-width: 750px;
   position: relative;
   opacity: 0;
-  transform: translateY(-20px);
   transition: all 0.4s;
 }
 .app-header h2 {
