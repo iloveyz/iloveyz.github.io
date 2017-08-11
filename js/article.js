@@ -165,4 +165,8 @@
 	}else{
 		$(".video-more").hide();
 	}
-})()
+	$('.v-content').each(function(){
+		$(this).find('br').after("<p></p>").remove();
+		$(this).find('p').eq(0).remove();
+	});
+})();
