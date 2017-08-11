@@ -142,7 +142,6 @@
 			}
 		});
 		if($(".video-playlist p").length>=2){
-			$(".v-light").show();
 			$(".v-select").show();
 		}
 	});

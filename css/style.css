@@ -57,9 +57,6 @@ pre {
   transform: translateY(-20px);
   transition: all 0.4s;
 }
-.app-header {
-  margin-top: 50px;
-}
 .app-header h2 {
   font-size: 1.6em;
   font-weight: normal;
@@ -365,6 +362,12 @@ h2.article-head {
   color: #34495e;
   line-height: 1.9;
 }
+@media screen and (max-width: 480px) {
+  .article-summary h1 {
+    margin: 0 20px 30px 20px;
+    line-height: normal;
+  }
+}
 .more {
   font-weight: 600;
   display: block;
@@ -463,12 +466,14 @@ h2.article-head {
 #article-banner:after {
   content: attr(data-lang);
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.15);
+  height: 50px;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 100;
+  background-image: -webkit-linear-gradient(bottom, #000 0, transparent 100%);
+  background-image: linear-gradient(to bottom, #000 0, transparent 100%);
+  opacity: 0.5;
 }
 .post-article {
   margin-top: 35px;
@@ -957,7 +962,6 @@ h2.archive-title:first-child {
   position: absolute;
   top: 0px;
   right: -65px;
-  display: none;
 }
 .video-box .video-btn .vb-box p.v-comment {
   position: absolute;
@@ -972,7 +976,7 @@ h2.archive-title:first-child {
 }
 .video-box .current-player .cp-box {
   width: 1160px;
-  height: 720px;
+  height: 600px;
   margin: 0 auto;
   background: #d7f0fc url("https://i.loli.net/2017/08/11/598c87b78d385.png") no-repeat center center;
   font-size: 0px;
@@ -1008,7 +1012,7 @@ h2.archive-title:first-child {
 }
 .video-box .video-player embed {
   width: 1160px !important;
-  height: 720px !important;
+  height: 600px !important;
 }
 .video-box .video-player p {
   font-size: 0px;
@@ -1119,6 +1123,19 @@ dfn {
   padding-top: 50px;
   margin: 1rem auto 32px;
 }
+@media screen and (max-width: 480px) {
+  .v-content {
+    padding: 0 20px !important;
+  }
+}
+.app-top {
+  margin-top: 50px;
+}
+@media screen and (max-width: 480px) {
+  .app-top {
+    margin-top: 0px !important;
+  }
+}
 .article-video .tags {
   width: 850px;
   margin: 0 auto;
@@ -1150,6 +1167,36 @@ h2.archive-title {
 .article-video #gitalk-comment {
   width: 850px;
   margin: 0 auto;
+}
+.card-content .video-playlist {
+  display: none;
+}
+.card-content .v-content {
+  width: auto;
+  padding: 0px;
+  margin: 0px;
+  color: #34495e;
+  line-height: 1.9;
+  border: 0px;
+}
+.article-card:after {
+  content: ".....";
+  width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+  display: inline-block;
+  font-size: 50px;
+  color: #ccc;
+}
+@media screen and (max-width: 480px) {
+  .article-card:after {
+    width: 100%;
+    font-size: 35px;
+  }
+}
+.article-card:last-of-type:after {
+  font-size: 0px;
 }
 .video-header h2 {
   font-size: 1.5625rem;
@@ -1381,8 +1428,13 @@ h2.archive-title {
 @media screen and (max-width: 480px) {
   .home-link {
     position: absolute;
-    width: 100%;
+    width: 200px;
+    height: 50px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     left: 0px;
+    margin: auto;
   }
 }
 .right-list {
@@ -1556,7 +1608,7 @@ h2.archive-title {
 .markdown-content p,
 .article-summary p {
   line-height: 1.9rem;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content p,
@@ -1576,10 +1628,23 @@ h2.archive-title {
 .markdown-content h1,
 .article-summary h1 {
   font-size: 1.8em;
+  margin-top: 0px;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content h1,
+  .article-summary h1 {
+    margin: 0 20px 30px 20px !important;
+  }
 }
 .markdown-content h2,
 .article-summary h2 {
   font-size: 1.5em;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content h2,
+  .article-summary h2 {
+    margin: 0 20px 30px 20px !important;
+  }
 }
 .markdown-content h3,
 .article-summary h3 {
@@ -1587,6 +1652,13 @@ h2.archive-title {
   font-size: 1.3em;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #e5e5e5;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content h3,
+  .article-summary h3 {
+    padding-bottom: 30px;
+    margin: 0 20px 30px 20px !important;
+  }
 }
 .markdown-content h4,
 .article-summary h4 {
@@ -1606,6 +1678,22 @@ h2.archive-title {
   font-size: 1em;
   margin: 0.8em 0;
 }
+@media screen and (max-width: 480px) {
+  .markdown-content ul,
+  .article-summary ul {
+    margin: 0 20px 30px !important;
+  }
+}
+.markdown-content table,
+.article-summary table {
+  box-sizing: border-box;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content table,
+  .article-summary table {
+    padding: 0 20px 30px !important;
+  }
+}
 .markdown-content blockquote,
 .article-summary blockquote {
   margin: 1em 0;
@@ -1619,6 +1707,12 @@ h2.archive-title {
   .markdown-content blockquote,
   .article-summary blockquote {
     margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .markdown-content blockquote ul,
+  .article-summary blockquote ul {
+    margin-bottom: 0px !important;
   }
 }
 .markdown-content blockquote p,
@@ -1652,8 +1746,13 @@ h2.archive-title {
 .article-summary img {
   max-width: 100%;
   display: block;
-  margin: 20px auto;
   cursor: zoom-in;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content figure table,
+  .article-summary figure table {
+    padding-bottom: 0px !important;
+  }
 }
 .markdown-content figure,
 .article-summary figure {
