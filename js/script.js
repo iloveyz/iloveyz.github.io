@@ -15,7 +15,6 @@
     $('#nprogress .spinner').hide()
 
     var fade = {
-      transform: 'translateY(0)',
       opacity: 1
     }
     if (banner) {
