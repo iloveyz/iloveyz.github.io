@@ -1366,13 +1366,16 @@ h2.archive-title {
   background: #dd4b39;
   text-shadow: 0 1px #be3221;
 }
-.caption {
+span.caption {
   text-align: center;
   color: #999;
   display: block;
   margin: auto;
 }
-.caption:before {
+.justified-gallery {
+  margin-bottom: 30px;
+}
+span.caption:before {
   content: "";
   width: 25px;
   height: 1px;
