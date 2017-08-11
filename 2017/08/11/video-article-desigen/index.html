@@ -228,6 +228,31 @@
       <canvas id="share-qrcode"></canvas>
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
+	
+		<% if (post.prev || post.next) { %>
+<nav id="article-nav">
+    <% if (post.prev) { %>
+        <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption"><%= __('nav.newer') %></strong>
+            <div class="article-nav-title">
+                <% if (post.prev.title) { %>
+                    <%= post.prev.title %>
+                <% } else { %>
+                    (no title)
+                <% } %>
+            </div>
+        </a>
+    <% } %>
+    <% if (post.next) { %>
+        <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption"><%= __('nav.older') %></strong>
+            <div class="article-nav-title"><%= post.next.title %></div>
+        </a>
+    <% } %>
+</nav>
+<% } %>
+
+	
     
       <div id="gitalk-comment"></div>
 	
@@ -309,5 +334,28 @@ var gitalk = new Gitalk({
 gitalk.render('gitalk-comment')
 </script>
 <script src="/js/script.js"></script>
+	
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
   </body>
 </html>

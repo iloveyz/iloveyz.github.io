@@ -194,7 +194,8 @@
     </span>
 2017-08-08</p>
 </header>
-  <article class="post-article">
+
+  <article class="post-article article-entry">
     <section class="markdown-content"><p>使用了hexo里 <code>yanm1ng</code> 的 <code>vexo</code> 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。<br><a id="more"></a><br>因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。</p>
 <p>不管怎样，大致都添加完，就剩样式了。</p>
 <blockquote>
@@ -228,6 +229,80 @@
 
       </div>
     
+	<div class="article-footer">
+		<div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://iloveyz.github.io/2017/08/08/about-theme-edit/" data-id="cj680fqi10002q4pdgq8m34jv" class="article-share-link"><i class="fa fa-share"></i>article.share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+	</div>
     <!--<div class="money-like">
       <div class="reward-btn">
         赏
@@ -248,6 +323,31 @@
       <canvas id="share-qrcode"></canvas>
       <p class="notice">扫描二维码，分享此文章</p>
     </div>
+	
+		<% if (post.prev || post.next) { %>
+<nav id="article-nav">
+    <% if (post.prev) { %>
+        <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption"><%= __('nav.newer') %></strong>
+            <div class="article-nav-title">
+                <% if (post.prev.title) { %>
+                    <%= post.prev.title %>
+                <% } else { %>
+                    (no title)
+                <% } %>
+            </div>
+        </a>
+    <% } %>
+    <% if (post.next) { %>
+        <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption"><%= __('nav.older') %></strong>
+            <div class="article-nav-title"><%= post.next.title %></div>
+        </a>
+    <% } %>
+</nav>
+<% } %>
+
+	
     
       <div id="gitalk-comment"></div>
 	
@@ -261,36 +361,6 @@
 		$(this).parents('p').addClass('full-pic');
 	});
     $('.header').removeClass('fixed-header')
-
-     // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      var imageW = $(this).width()
-      var imageH = $(this).height()
-      
-      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-      zoom = zoom < 1 ? 1 : zoom
-      zoom = zoom > 2 ? 2 : zoom
-      var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-      $('.image-view-wrap').addClass('wrap-active')
-      $('.image-view-wrap img').css({
-        'width': `${imageW}`,
-        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-      })
-      $('html').css('overflow', 'hidden')
-
-      $('.image-view-wrap').on('click', function() {
-        $(this).remove()
-        $('html').attr('style', '')
-      })
-    })
 
     // qrcode
     var qr = new QRious({
@@ -365,5 +435,28 @@ var gitalk = new Gitalk({
 gitalk.render('gitalk-comment')
 </script>
 <script src="/js/script.js"></script>
+	
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
   </body>
 </html>

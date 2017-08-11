@@ -1200,6 +1200,68 @@ h2.archive-title {
 .article-card:last-of-type:after {
   font-size: 0px;
 }
+#article-nav {
+  padding-bottom: 50px;
+  margin: 50px auto 0;
+  border-bottom: 1px dashed #ebebeb;
+  font-size: 0px;
+  overflow: hidden;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  #article-nav {
+    margin: 50px 20px 0;
+  }
+}
+.article-video #article-nav {
+  width: 850px;
+  margin: 50px auto;
+}
+#article-nav a {
+  font-size: 15px;
+}
+#article-nav a#article-nav-newer,
+#article-nav a#article-nav-older {
+  width: 45%;
+  box-sizing: border-box;
+}
+#article-nav a#article-nav-newer {
+  float: left;
+  position: relative;
+}
+#article-nav a#article-nav-older {
+  float: left;
+  margin-left: 10%;
+}
+#article-nav a#article-nav-newer {
+  text-align: right;
+}
+#article-nav a#article-nav-older {
+  text-align: left;
+}
+.article-nav-caption {
+  padding: 5px 25px;
+  border: 1px solid #666;
+  border-radius: 50px;
+  color: #666;
+  display: inline-block;
+}
+.article-nav-title {
+  margin-top: 15px;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#article-nav a#article-nav-newer:after {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 0px;
+  right: -12%;
+}
 .video-header h2 {
   font-size: 1.5625rem;
   margin-bottom: 10px;
@@ -1213,6 +1275,115 @@ h2.archive-title {
   color: #999;
   display: inline-block;
   font-size: 14px;
+}
+.article-share-box {
+  position: absolute;
+  display: none;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin-left: -145px;
+  overflow: hidden;
+  z-index: 1;
+}
+.article-share-box.on {
+  display: block;
+}
+.article-share-input {
+  width: 100%;
+  background: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  padding: 0 10px;
+  color: #565a5f;
+  outline: none;
+  border: 1px solid #eceff2;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  height: 36px;
+  line-height: 36px;
+}
+.article-share-links {
+  background: #f5f8f9;
+}
+.article-share-links:before,
+.article-share-links:after {
+  content: "";
+  display: table;
+}
+.article-share-links:after {
+  clear: both;
+}
+.article-share-twitter,
+.article-share-facebook,
+.article-share-pinterest,
+.article-share-google {
+  width: 50px;
+  height: 36px;
+  display: block;
+  float: left;
+  position: relative;
+  color: #999;
+  text-shadow: 0 1px #fff;
+}
+.article-share-twitter:before,
+.article-share-facebook:before,
+.article-share-pinterest:before,
+.article-share-google:before {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  text-align: center;
+}
+.article-share-twitter:hover,
+.article-share-facebook:hover,
+.article-share-pinterest:hover,
+.article-share-google:hover {
+  color: #fff;
+}
+.article-share-twitter:hover {
+  background: #00aced;
+  text-shadow: 0 1px #008abe;
+}
+.article-share-facebook:hover {
+  background: #3b5998;
+  text-shadow: 0 1px #2f477a;
+}
+.article-share-pinterest:hover {
+  background: #cb2027;
+  text-shadow: 0 1px #a21a1f;
+}
+.article-share-google:hover {
+  background: #dd4b39;
+  text-shadow: 0 1px #be3221;
+}
+.caption {
+  text-align: center;
+  color: #999;
+  display: block;
+  margin: auto;
+}
+.caption:before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #ebebeb;
+  display: block;
+  margin: 25px auto 15px;
+}
+.article-gallery img {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
@@ -1749,6 +1920,7 @@ h2.archive-title {
   max-width: 100%;
   display: block;
   cursor: zoom-in;
+  margin: auto;
 }
 @media screen and (max-width: 480px) {
   .markdown-content figure table,
