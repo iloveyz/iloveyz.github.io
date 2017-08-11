@@ -1235,7 +1235,7 @@ h2.archive-title {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 200;
+  z-index: 205;
   transition: background 0.5s;
 }
 @media screen and (max-width: 480px) {
