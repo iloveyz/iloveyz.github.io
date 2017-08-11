@@ -1183,7 +1183,7 @@ h2.archive-title {
 }
 .article-card:after {
   content: ".....";
-  width: 850px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   padding-top: 25px;
