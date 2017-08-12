@@ -338,6 +338,11 @@ h2.article-head {
   font-size: 1.6em;
   margin-bottom: 0;
 }
+@media screen and (max-width: 480px) {
+  h2.article-head {
+    margin: 0px;
+  }
+}
 .article-head > a {
   color: #34495e;
 }
@@ -566,22 +571,26 @@ h2.article-head {
 .notice {
   font-size: 12px;
   display: block;
-  margin-top: 10px;
+  margin: 15px 0 !important;
   text-align: center;
   color: #7f8c8d;
   font-style: italic;
+  line-height: normal !important;
 }
 .qrcode {
+  padding-top: 32px;
   margin-top: 32px;
-  padding-bottom: 32px;
   text-align: center;
-  border-bottom: 1px dashed #e5e5e5;
+  border-top: 1px dashed #e5e5e5;
+  font-size: 0px;
 }
 .qrcode canvas {
   width: 8em;
   height: 8em;
   padding: 5px;
   box-shadow: 0 0 1px #e3e3e3;
+  display: inline-block;
+  font-size: 16px;
 }
 .image-view-wrap {
   position: fixed;
@@ -1173,6 +1182,9 @@ h2.archive-title {
 .card-content .video-playlist {
   display: none;
 }
+.card-content img {
+  cursor: auto !important;
+}
 .card-content .v-content {
   width: auto;
   padding: 0px;
@@ -1201,21 +1213,22 @@ h2.archive-title {
   font-size: 0px;
 }
 #article-nav {
-  padding-bottom: 50px;
-  margin: 50px auto 0;
+  padding-bottom: 35px;
+  margin: 35px auto 0;
   border-bottom: 1px dashed #ebebeb;
   font-size: 0px;
   overflow: hidden;
   text-align: center;
+  position: relative;
 }
 @media screen and (max-width: 480px) {
   #article-nav {
-    margin: 50px 20px 0;
+    margin: 35px 20px 0;
   }
 }
 .article-video #article-nav {
   width: 850px;
-  margin: 50px auto;
+  margin: 35px auto;
 }
 #article-nav a {
   font-size: 15px;
@@ -1224,13 +1237,13 @@ h2.archive-title {
 #article-nav a#article-nav-older {
   width: 45%;
   box-sizing: border-box;
+  position: relative;
 }
 #article-nav a#article-nav-newer {
   float: left;
-  position: relative;
 }
 #article-nav a#article-nav-older {
-  float: left;
+  float: right;
   margin-left: 10%;
 }
 #article-nav a#article-nav-newer {
@@ -1253,14 +1266,17 @@ h2.archive-title {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#article-nav a#article-nav-newer:after {
+nav#article-nav:after {
   content: "";
   width: 1px;
   height: 32px;
   background: #f5f5f5;
   position: absolute;
-  top: 0px;
-  right: -12%;
+  top: -35px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
 }
 .video-header h2 {
   font-size: 1.5625rem;
@@ -1386,6 +1402,23 @@ span.caption:before {
 .article-gallery img {
   display: block;
   text-align: center;
+  margin: auto;
+}
+.share-container {
+  margin: auto;
+  text-align: center;
+  font-size: 0px;
+  padding-bottom: 32px;
+  margin: 15px 0 32px;
+  border-bottom: 1px dashed #ebebeb;
+}
+@media screen and (max-width: 480px) {
+  .share-container {
+    margin: 15px 20px 32px;
+  }
+}
+.article-video .article-footer {
+  width: 850px;
   margin: auto;
 }
 @-webkit-keyframes ft_tinyapp_pop {
