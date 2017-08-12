@@ -55,6 +55,7 @@
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
+<script src="/js/gitalk.min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -188,11 +189,15 @@
 <main class="app-body app-top">
 <header class="app-header">
 	<h2>关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...</h2>
-	<p class="post-meta">
+	<div class="post-meta">
+		<p>
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
-2017-08-11</p>
+</p>
+		<p class="meta-date">2017-08-11 15:51:37</p>
+		<p class="view-num"><em>-</em><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></p>
+	</div>
 </header>
 
   <article class="post-article article-entry">
@@ -206,8 +211,8 @@
 </section>
     
       <div class="tags">
-        <span>Tags:</span>
-        
+        <p class="tag-p">
+
   <a href="/tags#hexo" >
     <span class="tag-code">hexo</span>
   </a>
@@ -216,6 +221,7 @@
     <span class="tag-code">无题</span>
   </a>
 
+</p>
       </div>
     
     <!--<div class="money-like">
@@ -285,6 +291,10 @@
 		
 <nav id="article-nav">
     
+        <a href="/2017/08/12/what-the-fuck-bitch/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+        </a>
+    
     
         <a href="/2017/08/11/video-article-desigen/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
@@ -294,26 +304,35 @@
 
 
 	
-    
-		
-	
+	<div id="gitalk-comment"></div>
   </article>
 </main>
 
 <script>
-  (function () {
-    var url = 'https://iloveyz.github.io/2017/08/11/untitled-is-big-boss-yeah-baby/';
+(function () {
+	var url = 'https://iloveyz.github.io/2017/08/11/untitled-is-big-boss-yeah-baby/';
 	$(".markdown-content img").each(function(){
 		$(this).parents('p').addClass('full-pic');
 	});
-    $('.header').removeClass('fixed-header')
+	$('.header').removeClass('fixed-header')
 
-    // qrcode
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-  })();
+	// qrcode
+	var qr = new QRious({
+		element: document.getElementById('share-qrcode'),
+		value: document.location.href
+	});
+})();
+var gitalk = new Gitalk({
+	id: window.location.pathname,
+	clientID: '68f85c54fe7bab00c69e',
+	clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	repo: 'iloveyz.github.io',
+	owner: 'iloveyz',
+	admin: ['iloveyz'],
+	distractionFreeMode: true,
+	body: location.href
+})
+gitalk.render('gitalk-comment')
 </script>
 
 
@@ -365,21 +384,9 @@
 </script>
 <!-- Baidu Tongji -->
 
-<script src="/js/gitalk.min.js"></script>
-<script type="text/javascript">
-var gitalk = new Gitalk({
-  id: window.location.pathname,
-  clientID: '68f85c54fe7bab00c69e',
-  clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
-  repo: 'iloveyz.github.io',
-  owner: 'iloveyz',
-  admin: ['iloveyz'],
-  distractionFreeMode: true,
-  body: location.href
-})
-gitalk.render('gitalk-comment')
-</script>
 <script src="/js/script.js"></script>
+<script src="/js/jquery.liveTimeAgo.js"></script>
+<script src="/js/iloveyz.js"></script>
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>

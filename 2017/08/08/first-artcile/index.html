@@ -18,7 +18,7 @@
 <meta property="og:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
-<meta property="og:updated_time" content="2017-08-11T14:58:54.256Z">
+<meta property="og:updated_time" content="2017-08-12T12:43:56.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="赤色实验室开篇第一章">
 <meta name="twitter:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
@@ -55,6 +55,7 @@
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
+<script src="/js/gitalk.min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -188,21 +189,25 @@
 <main class="app-body app-top">
 <header class="app-header">
 	<h2>赤色实验室开篇第一章</h2>
-	<p class="post-meta">
+	<div class="post-meta">
+		<p>
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
-2017-08-08</p>
+</p>
+		<p class="meta-date">2017-08-08 15:39:00</p>
+		<p class="view-num"><em>-</em><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></p>
+	</div>
 </header>
 
   <article class="post-article article-entry">
-    <section class="markdown-content"><p><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"></p>
+    <section class="markdown-content"><p><img src="https://i.loli.net/2017/08/12/598ec5028598d.jpg" alt="赤色实验室"></p>
 <p>初次使用<strong>git</strong>在<strong>github</strong>上搭建<strong>hexo</strong>，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。<br><a id="more"></a><br>我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零投入用下<strong>github</strong></p>
 <div class="justified-gallery"><br><img src="https://www.hdwallpapers.net/previews/lake-prags-italy-1053.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/macos-sierra-1021.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/california-road-1016.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/water-plant-close-up-979.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/starry-night-over-corsica-986.jpg" alt="赤色实验室"><br><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"><br></div></section>
     
       <div class="tags">
-        <span>Tags:</span>
-        
+        <p class="tag-p">
+
   <a href="/tags#赤色实验室" >
     <span class="tag-code">赤色实验室</span>
   </a>
@@ -211,6 +216,7 @@
     <span class="tag-code">博客</span>
   </a>
 
+</p>
       </div>
     
     <!--<div class="money-like">
@@ -293,26 +299,35 @@
 
 
 	
-    
-		
-	
+	<div id="gitalk-comment"></div>
   </article>
 </main>
 
 <script>
-  (function () {
-    var url = 'https://iloveyz.github.io/2017/08/08/first-artcile/';
+(function () {
+	var url = 'https://iloveyz.github.io/2017/08/08/first-artcile/';
 	$(".markdown-content img").each(function(){
 		$(this).parents('p').addClass('full-pic');
 	});
-    $('.header').removeClass('fixed-header')
+	$('.header').removeClass('fixed-header')
 
-    // qrcode
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-  })();
+	// qrcode
+	var qr = new QRious({
+		element: document.getElementById('share-qrcode'),
+		value: document.location.href
+	});
+})();
+var gitalk = new Gitalk({
+	id: window.location.pathname,
+	clientID: '68f85c54fe7bab00c69e',
+	clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	repo: 'iloveyz.github.io',
+	owner: 'iloveyz',
+	admin: ['iloveyz'],
+	distractionFreeMode: true,
+	body: location.href
+})
+gitalk.render('gitalk-comment')
 </script>
 
 
@@ -364,21 +379,9 @@
 </script>
 <!-- Baidu Tongji -->
 
-<script src="/js/gitalk.min.js"></script>
-<script type="text/javascript">
-var gitalk = new Gitalk({
-  id: window.location.pathname,
-  clientID: '68f85c54fe7bab00c69e',
-  clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
-  repo: 'iloveyz.github.io',
-  owner: 'iloveyz',
-  admin: ['iloveyz'],
-  distractionFreeMode: true,
-  body: location.href
-})
-gitalk.render('gitalk-comment')
-</script>
 <script src="/js/script.js"></script>
+<script src="/js/jquery.liveTimeAgo.js"></script>
+<script src="/js/iloveyz.js"></script>
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>

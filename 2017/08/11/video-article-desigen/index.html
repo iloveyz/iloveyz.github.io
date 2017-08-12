@@ -55,6 +55,7 @@
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/qrious.js"></script>
+<script src="/js/gitalk.min.js"></script>
 </head>
   <body>
     <header class="header fixed-header">
@@ -189,7 +190,7 @@
         <a class="article-category-link" href="/categories/视频/">视频</a>
     </span>
 </p>
-			<p>2017-08-11</p>
+			<p><i class="meta-date">2017-08-11 08:54:48</i></p>
 		</div>
 	</div>
 </header>
@@ -212,8 +213,8 @@
     </div>
 	
       <div class="tags">
-        <span>Tags:</span>
-        
+        <p class="tag-p">
+
   <a href="/tags#视频" >
     <span class="tag-code">视频</span>
   </a>
@@ -222,6 +223,7 @@
     <span class="tag-code">设计</span>
   </a>
 
+</p>
       </div>
     
 	<div class="qrcode">
@@ -303,6 +305,17 @@
 		value: document.location.href
 	});
 })();
+var gitalk = new Gitalk({
+	id: window.location.pathname,
+	clientID: '68f85c54fe7bab00c69e',
+	clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	repo: 'iloveyz.github.io',
+	owner: 'iloveyz',
+	admin: ['iloveyz'],
+	distractionFreeMode: true,
+	body: location.href
+})
+gitalk.render('gitalk-comment')
 </script>
 
     <div class="scroll-top">
@@ -353,21 +366,9 @@
 </script>
 <!-- Baidu Tongji -->
 
-<script src="/js/gitalk.min.js"></script>
-<script type="text/javascript">
-var gitalk = new Gitalk({
-  id: window.location.pathname,
-  clientID: '68f85c54fe7bab00c69e',
-  clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
-  repo: 'iloveyz.github.io',
-  owner: 'iloveyz',
-  admin: ['iloveyz'],
-  distractionFreeMode: true,
-  body: location.href
-})
-gitalk.render('gitalk-comment')
-</script>
 <script src="/js/script.js"></script>
+<script src="/js/jquery.liveTimeAgo.js"></script>
+<script src="/js/iloveyz.js"></script>
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>

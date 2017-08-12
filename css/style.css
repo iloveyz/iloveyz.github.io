@@ -60,6 +60,7 @@ pre {
 .app-header h2 {
   font-size: 1.6em;
   font-weight: normal;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 480px) {
   .app-header {
@@ -79,8 +80,8 @@ pre {
 }
 @media screen and (max-width: 480px) {
   .app-header h2,
-  .app-header .post-date,
-  .app-header .article-date,
+  .app-header .post-meta,
+  .app-header .article-meta,
   .app-header a {
     text-align: left;
   }
@@ -90,7 +91,7 @@ pre {
 }
 @media screen and (max-width: 480px) {
   .app-header {
-    margin: 50px 20px 20px;
+    margin: 50px 20px 25px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -177,7 +178,7 @@ pre {
   margin-top: 35px;
 }
 p {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 img {
   max-width: 100%;
@@ -351,24 +352,28 @@ h2.article-head {
 .article-head > a {
   color: #34495e;
 }
-.article-date {
+.article-meta {
   color: #7f8c8d;
   margin: 15px 0;
-  font-size: 0.9em;
+  font-size: 0px;
+}
+.article-meta p {
+  display: inline-block;
+  font-size: 14px;
 }
 .article-category {
   margin: 10px 0;
   font-size: 14px;
 }
-.article-date em,
-.post-date em {
-  color: #ebebeb;
+.article-meta em,
+.post-meta em {
+  color: #ccc;
   padding: 0px;
-  margin: 0 9px 0 5px;
+  margin: 0 10px;
   font-style: normal;
 }
 .article-summary {
-  margin: 25px 0 0;
+  margin: 35px 0 0;
   color: #34495e;
   line-height: 1.9;
 }
@@ -398,7 +403,7 @@ h2.article-head {
 }
 .article-category a.article-category-link:last-of-type:after {
   content: "-";
-  margin: 0 5px;
+  margin: 0 10px;
   color: #ccc;
 }
 #article-banner {
@@ -438,7 +443,7 @@ h2.article-head {
     font-size: 2em;
   }
 }
-#article-banner .post-date {
+#article-banner .post-meta {
   margin: 10px 0 20px 0;
   color: #fff;
   opacity: 0;
@@ -492,13 +497,24 @@ h2.article-head {
     margin-top: 35px;
   }
 }
+.post-meta {
+  font-size: 0px;
+  color: #7f8c8d;
+}
+.post-meta p {
+  display: inline-block;
+  font-size: 14px;
+}
 #gitalk-comment {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 480px) {
   #gitalk-comment {
-    margin: 0 20px 35px;
+    margin: 0 20px 50px;
   }
+}
+#gitalk-comment p {
+  margin-bottom: 15px;
 }
 .box-item {
   width: 750px;
@@ -1218,8 +1234,11 @@ h2.archive-title {
     font-size: 35px;
   }
 }
+.article-card:last-of-type {
+  margin-bottom: 50px;
+}
 .article-card:last-of-type:after {
-  font-size: 0px;
+  display: none;
 }
 #article-nav {
   padding-bottom: 35px;
@@ -1429,6 +1448,9 @@ span.caption:before {
 .article-video .article-footer {
   width: 850px;
   margin: auto;
+}
+.view-num i {
+  margin-right: 7.5px;
 }
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
@@ -1773,13 +1795,16 @@ span.caption:before {
   color: #5389e1;
 }
 .app-footer {
-  padding: 1em 0;
+  padding: 25px 0;
   margin: 0px auto;
   max-width: 850px;
   border-top: 1px solid #e5e5e5;
   background-color: #fff;
   text-align: center;
   font-size: 0.9em;
+}
+.app-footer p {
+  margin: 0px;
 }
 .copyright {
   color: #7f8c8d;
