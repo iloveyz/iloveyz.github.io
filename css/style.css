@@ -1176,6 +1176,9 @@ dfn {
   width: 850px;
   margin: 0 auto;
 }
+.article-video.article-summary {
+  line-height: normal !important;
+}
 h2.archive-title {
   border-top: 1px solid #ebebeb;
   padding-top: 35px;
