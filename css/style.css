@@ -1320,6 +1320,10 @@ nav#article-nav:after {
   display: inline-block;
   font-size: 14px;
 }
+.entry-meta p em {
+  margin: 0 10px;
+  color: #ccc;
+}
 .article-share-box {
   position: absolute;
   display: none;
