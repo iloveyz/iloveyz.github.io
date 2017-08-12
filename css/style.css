@@ -497,7 +497,7 @@ h2.article-head {
 }
 @media screen and (max-width: 480px) {
   #gitalk-comment {
-    margin: 0 20px;
+    margin: 0 20px 35px;
   }
 }
 .box-item {
