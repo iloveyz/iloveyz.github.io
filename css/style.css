@@ -317,7 +317,7 @@ h3.link-title {
 }
 @media screen and (max-width: 480px) {
   .article-card {
-    padding-top: 25px;
+    padding-top: 29px;
   }
 }
 .article-card:first-child {
@@ -368,7 +368,7 @@ h2.article-head {
   font-style: normal;
 }
 .article-summary {
-  margin: 35px 0 0;
+  margin: 25px 0 0;
   color: #34495e;
   line-height: 1.9;
 }
@@ -1771,7 +1771,7 @@ span.caption:before {
 }
 .app-footer {
   padding: 1em 0;
-  margin: 50px auto 0;
+  margin: 0px auto;
   max-width: 850px;
   border-top: 1px solid #e5e5e5;
   background-color: #fff;
