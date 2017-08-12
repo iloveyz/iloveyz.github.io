@@ -492,6 +492,9 @@ h2.article-head {
     margin-top: 35px;
   }
 }
+#gitalk-comment {
+  margin-bottom: 35px;
+}
 @media screen and (max-width: 480px) {
   #gitalk-comment {
     margin: 0 20px;
