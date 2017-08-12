@@ -1914,7 +1914,7 @@ span.caption:before {
 }
 .markdown-content blockquote,
 .article-summary blockquote {
-  margin: 1em 0;
+  margin: 0 0 30px;
   padding: 15px 20px;
   border-left: 4px solid #5389e1;
   background: #f8f8f8;
