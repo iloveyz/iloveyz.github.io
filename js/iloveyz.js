@@ -16,4 +16,9 @@ var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a|
 			'error': '未知的时间',
 		}
 	});
+	$('.article-card').find('.leancloud-visitors-count').each(function(){
+		if($(this).text() == ''){
+			$(this).text(0);
+		}
+	})
 })();
