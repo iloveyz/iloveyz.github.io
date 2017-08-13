@@ -3,9 +3,11 @@
 	$(".video-playlist p").each(function(i) {
 		if($(this).find("embed").length>=1){
 			var sum = $(this).index()+1;
-			$(this).append("<span>第"+sum+"集</span>");
+			$(this).append("<span><em>第"+sum+"集</em></span>");
 			if($(this).html().indexOf("$")>-1){
-				$(this).prepend("<cite>"+sum+"、</cite>")
+				var vnc = $(this).find('i').html();
+				$(this).find('i').remove();
+				$(this).prepend("<cite><em>"+sum+"、"+vnc+"</em></cite>");
 				$(this).find("span").remove();
 			}
 		}
@@ -83,7 +85,10 @@
 			gt.hide();
 		}
 		if(list>=5){
-			$(".video-playlist").after("<div class='video-more'><div class='more-box'>展开查看更多</div></div>");
+			$(".video-playlist").after("<div class='video-more'><div class='more-box'>展开查看更多</div><div class='video-js'><span>"+list+"</span>P</div></div>");
+		}
+		if(list<2){
+			$('.video-more .video-js').remove();
 		}
 		$(".video-playlist p").eq(0).addClass("cur cl");
 		$(".video-playlist p").each(function(){
@@ -127,7 +132,7 @@
 			});
 		});
 		$(".video-more").click(function(){
-			if($(".video-playlist p").is(":hidden")){
+			if($(".video-playlist p").is(":hidden") || $('.video-playlist.show').length == 1){
 				gt.show();
 				$(".video-more .more-box").html("收起");
 				$(".video-playlist p").show();
