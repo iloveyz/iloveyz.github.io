@@ -16,12 +16,13 @@ var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a|
 			'error': '未知的时间',
 		}
 	});
-	$('.article-card').find('.leancloud-visitors-count').each(function(){
+	$('.mobile--view-p').find('.leancloud-visitors-count').each(function(){
 		if($(this).text() == ''){
 			$(this).text(0);
 		}
 	});
 	if($('.header-top').is(':hidden')){
+		$('.header-top').remove();
 		$('.mobile--video-box .more-box').click(function(){
 			if(!$('.mobile--video-box.video-playlist').attr('style')){
 				$('.mobile--video-box .video-playlist').css({
@@ -35,13 +36,14 @@ var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a|
 				$('.mobile--video-box .video-playlist').removeClass('show');
 			}
 		});
+		$('.mobile--video-box .video-playlist p').click(function(){
+			$('.mobile--video-box .video-box .current-player .cp-box').addClass('cur--click');
+			setTimeout(function(){$('.mobile--video-box .video-box .current-player .cp-box').removeClass('cur--click');},3000);
+			$('.current-player .cp-box p').html('正在为您播放，请稍候...');
+		});
 	}else{
 		$('.mobile--video-box .video-js').remove();
 	}
-	$('.mobile--video-box .video-playlist p').click(function(){
-		$('.mobile--video-box .video-box .current-player .cp-box').addClass('cur--click');
-		setTimeout(function(){$('.mobile--video-box .video-box .current-player .cp-box').removeClass('cur--click');},3000);
-	});
 	var vpContent = $('.mobile--video-box .entry-description p').height();
 	$('.mobile--video-box .entry-description i').click(function(){
 		if(!$('.mobile--video-box .entry-description .d-content').attr('style')){
