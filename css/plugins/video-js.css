@@ -1321,8 +1321,12 @@ video::-webkit-media-text-track-display {
     background-color: #73859f;
     background-color: rgba(115,133,159,.5);
     border-width: 0.15em;
-    margin-top: -1.25em;
-    margin-left: -1.75em;
+    position: absolute;
+    top: -1.5rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
 }
 /* 中间的播放箭头 */
 .vjs-big-play-button .vjs-icon-placeholder {
