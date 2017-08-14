@@ -1,21 +1,16 @@
 (function () {
 	$('.video-playlist br').remove();
 	$(".video-playlist p").each(function(i) {
-		if($(this).find("embed").length>=1){
+		if($(this).find("embed").length>=1 || $(this).find("video").length>=1){
 			var sum = $(this).index()+1;
 			$(this).append("<span><em>第"+sum+"集</em></span>");
 			if($(this).html().indexOf("$")>-1){
 				var vnc = $(this).find('i').html();
 				$(this).find('i').remove();
-				$(this).prepend("<cite><em>"+sum+"、"+vnc+"</em></cite>");
+				$(this).prepend("<cite><i>"+sum+"、"+vnc+"</i></cite>");
 				$(this).find("span").remove();
 			}
 		}
-		$(this).click(function(){
-			var href = $(this).html();
-			$(".video-player").html("<p>"+href+"</p>");
-			$(this).addClass("cur").siblings().removeClass("cur");
-		});
 		
 		$(this).click(function(){
 			var scroll_offset = $(".video-box").offset();
@@ -77,7 +72,11 @@
 	}
 	var vd = $(".video-playlist p").eq(0).html();
 	$(".video-playlist p").eq(0).addClass("cur");
-	$(".video-player").append("<p>"+vd+"</p>");
+	if($('.header-top').is(':hidden')){
+		$(".video-player").append("<video id='my-video' class='video-js' controls preload='auto' data-setup='{}'>"+vd+"</video>");
+	}else{
+		$(".video-player").append("<p>"+vd+"</p>");
+	}
 	$(".video-playlist").each(function(){
 		var list = $(".video-playlist p").length;
 		if(list>=3){
@@ -85,10 +84,10 @@
 			gt.hide();
 		}
 		if(list>=5){
-			$(".video-playlist").after("<div class='video-more'><div class='more-box'>展开查看更多</div><div class='video-js'><span>"+list+"</span>P</div></div>");
+			$(".video-playlist").after("<div class='video-more'><div class='more-box'>展开查看更多</div><div class='video-player-num'><span>"+list+"</span>P</div></div>");
 		}
 		if(list<2){
-			$('.video-more .video-js').remove();
+			$('.mobile--video-box .video-more .video-js').remove();
 		}
 		$(".video-playlist p").eq(0).addClass("cur cl");
 		$(".video-playlist p").each(function(){
@@ -173,5 +172,44 @@
 	$('.v-content').each(function(){
 		$(this).find('br').after("<p></p>").remove();
 		$(this).find('p').eq(0).remove();
+	});
+	if($('.header-top').is(':hidden')){
+		$('.header-top').remove();
+	}
+	if($('.header-top').length < 1){
+		$('.mobile--video-box .more-box').click(function(){
+			$('.mobile--video-box .video-playlist').toggleClass('show');
+			if($('.mobile--video-box .video-playlist').hasClass('show')){
+				$('.mobile--video-box .video-playlist').css({
+					'overflow-x': 'hidden',
+					'white-space': 'normal',
+					'height': 'auto'
+				});
+				$(".video-more .more-box").html("展开查看更多");
+			}else{
+				$('.mobile--video-box .video-playlist').removeAttr('style');
+				$('.mobile--video-box .video-playlist').removeClass('show');
+			}
+		});
+		$('.mobile--video-box .video-playlist p').click(function(){
+			$('.mobile--video-box .video-box .current-player .cp-box').addClass('cur--click');
+			setTimeout(function(){$('.mobile--video-box .video-box .current-player .cp-box').removeClass('cur--click');},3000);
+			$('.current-player .cp-box p').html('正在为您播放，请稍候...');
+		});
+	}else{
+		$('.mobile--video-box .video-player-num').remove();
+		$('.mobile--header-top').remove();
+	}
+	var vpContent = $('.mobile--video-box .entry-description p').height();
+	$('.mobile--video-box .entry-description i').click(function(){
+		if(!$('.mobile--video-box .entry-description .d-content').attr('style')){
+			$('.mobile--video-box .entry-description .d-content').css('height',vpContent);
+			$('.mobile--video-box .entry-description i').removeClass('fa-angle-up');
+			$('.mobile--video-box .entry-description i').addClass('fa-angle-down');
+		}else{
+			$('.mobile--video-box .entry-description .d-content').removeAttr('style');
+			$('.mobile--video-box .entry-description i').removeClass('fa-angle-down');
+			$('.mobile--video-box .entry-description i').addClass('fa-angle-up');
+		}
 	});
 })();

@@ -18,7 +18,7 @@
 <meta property="og:description" content="因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2017/08/11/598cfc331cefb.gif">
-<meta property="og:updated_time" content="2017-08-13T13:39:37.614Z">
+<meta property="og:updated_time" content="2017-08-14T08:43:13.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
 <meta name="twitter:description" content="因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。">
@@ -51,6 +51,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
 <link rel="stylesheet" href="/css/plugins/gitalk.css">
+<link rel="stylesheet" href="/css/plugins/video-js.css">
 	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
@@ -237,18 +238,18 @@
 </header>
 <div class="clear"></div>
     <div class="entry-content video-content">
-        <div class="video-playlist"><p><br><i>【熟肉】蜡笔小新原声版【日语】</i><em>$</em><br><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=2" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=3" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=4" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><i>蜡笔小新 - 营养干餐</i><em>$</em><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=5" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><br><i>【熟肉】蜡笔小新原声版【日语】</i><em>$</em><br><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=2" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=3" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=4" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br><p><i>蜡笔小新 - 营养干餐</i><em>$</em><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13144357&page=5" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></p><br></div><div class="v-content"><br>这篇主要是用来提供观赏使用，视频页…还有一重要的事情<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(当前使用浏览方式 == <span class="string">'手持智能板砖'</span>)&#123;</div><div class="line">	alert(<span class="string">'居然使用手机访问，奉劝您赶紧扔掉，免得伤着你'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>对了，如果是从别的文章，比如来自<a href="https://iloveyz.github.io/2017/08/11/untitled-is-big-boss-yeah-baby/">#无题，但标题又很长</a>&lt;–这是返回的传送门，不用谢。<br></div>
+        <div class="video-playlist"><br><p><br><i>【取经计划·原创】新·九九八十一【泠鸢】</i><em>$</em><br><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13203642&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br><source class="video-source" src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"><br></p><br><p><br><i>想要兄弟哦</i><em>$</em><br><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=4108635&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br><source class="video-source" src="http://cn-jszj-dx-v-02.acgvideo.com/vg3/5/9a/18631699-1-hd.mp4?expires=1502706300&platform=mobile&ssig=itJZ1Kt7Mvb_qUs4cTGinQ&oi=3059008382&nfa=iCnd1wqqoAsXLyv+e2tfVA==&dynamic=1&hfa=2074231348&hfb=Yjk5ZmZjM2M1YzY4ZjAwYTMzMTIzYmIyNWY4ODJkNWI=" type="video/mp4"><br></p><br></div><div class="v-content"><br>这篇主要是用来提供观赏使用，视频页…还有一重要的事情<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(当前使用浏览方式 == <span class="string">'手持智能板砖'</span>)&#123;</div><div class="line">	alert(<span class="string">'居然使用手机访问，奉劝您赶紧扔掉，免得伤着你'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>对了，如果是从别的文章，比如来自<a href="https://iloveyz.github.io/2017/08/11/untitled-is-big-boss-yeah-baby/">#无题，但标题又很长</a>&lt;–这是返回的传送门，不用谢。<br></div>
     </div>
 	
       <div class="tags">
         <p class="tag-p">
 
   <a href="/tags#视频" >
-    <span class="tag-code">视频</span>
+    <span class="tag-code">#视频</span>
   </a>
 
   <a href="/tags#设计" >
-    <span class="tag-code">设计</span>
+    <span class="tag-code">#设计</span>
   </a>
 
 </p>
@@ -322,10 +323,37 @@
 </article>
 
 <div class="lightoff"></div>
+<script src="/js/video.min.js"></script>
 <script src="/js/article.js"></script>
 <script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
+$('.video-playlist p').each(function(){
+	if($('.header-top').length < 1){
+		var myPlayer = videojs('my-video');
+		videojs("my-video").ready(function(){
+			var myPlayer = this;
+			myPlayer.play();
+			$('.video-playlist p').each(function(){
+				$(this).click(function(){
+					var source = $(this).find('source').attr('src');
+					myPlayer.pause()
+					$('.video-player video').attr('src',source);
+					$('.video-player video source').attr('src',source);
+					myPlayer.setAttribute('src', source);
+					myPlayer.load();
+					myPlayer.play();
+				});
+			});
+		});
+	}else{
+		$(this).click(function(){
+			var href = $(this).html();
+			$(".video-player").html("<p>"+href+"</p>");
+			$(this).addClass("cur").siblings().removeClass("cur");
+		});
+	}
+});
 	// qrcode
 	var qr = new QRious({
 		element: document.getElementById('share-qrcode'),
