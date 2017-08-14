@@ -21,7 +21,7 @@
                 'hours': '% hours ago',
                 'minute': '% minute ago',
                 'minutes': '% minutes ago',
-                'seconds': 'few seconds ago',
+                'seconds': '% seconds ago',
                 'error': 'unknow time',
             }
         };

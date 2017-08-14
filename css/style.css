@@ -2,6 +2,9 @@
   font-family: 'Source Sans Pro';
   src: url("../fonts/SourceSansPro.ttf");
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 ::selection {
   background: #5389e1;
   color: #fff;
@@ -835,6 +838,9 @@ h2.archive-title:first-child {
   background: #f9f9f9;
   padding: 100px 0 65px;
 }
+#footnotes {
+  margin: 0 20px;
+}
 .video-box {
   width: 100%;
   padding: 50px 0;
@@ -1578,6 +1584,27 @@ span.caption:before {
     position: relative;
     transition: inherit;
   }
+  .video-playlist p:hover {
+    width: 47.8%;
+    height: 50px;
+    margin: 0px !important;
+    font-size: 12px;
+    display: inline-block;
+    float: none;
+    margin-right: 3.2% !important;
+    white-space: normal;
+    font-size: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    transition: inherit;
+    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+  }
+  .video-playlist p.cur:hover {
+    background: #ff5539;
+  }
   .video-playlist p cite i {
     font-size: 12px;
     overflow: hidden;
@@ -1675,7 +1702,7 @@ span.caption:before {
     margin: 0 -20px !important;
   }
   .mobile--video-box.article-summary table {
-    padding: 0px !important;
+    padding: 0px 10px !important;
   }
   .mobile--video-box.article-summary .tags p {
     line-height: normal;
@@ -1793,6 +1820,9 @@ span.caption:before {
   .video-js {
     width: 100% !important;
     height: 175px !important;
+  }
+  .card-content .article-summary figure {
+    margin: 0 -20px !important;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {
@@ -2277,7 +2307,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content table,
   .article-summary table {
-    padding: 0 20px 30px !important;
+    padding: 0 10px 30px !important;
   }
 }
 .markdown-content blockquote,
