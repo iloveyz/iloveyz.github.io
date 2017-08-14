@@ -1061,7 +1061,7 @@ h2.archive-title:first-child {
 }
 .video-playlist {
   width: 1160px;
-  margin: 2.5rem auto 25px;
+  margin: 50px auto 50px;
   overflow: hidden;
   padding-left: 15px;
   padding-bottom: 2.5rem;
@@ -1124,10 +1124,11 @@ h2.archive-title:first-child {
   margin-right: 0px !important;
 }
 .video-more {
-  width: 207px;
-  margin: 2.5rem auto 1.5rem;
-  padding-bottom: 1.5rem;
+  width: 850px;
+  margin: 50px auto 50px;
+  padding-bottom: 50px;
   text-align: center;
+  border-bottom: 1px solid #f5f5f5;
 }
 .video-more .more-box {
   width: 175px;
@@ -1143,7 +1144,7 @@ h2.archive-title:first-child {
   box-shadow: 0 3px 2px 1px rgba(0,0,0,0.05);
 }
 .video-content {
-  margin-top: 33px;
+  margin-top: 50px;
 }
 .video-content embed {
   display: none;
@@ -1167,9 +1168,7 @@ dfn {
 }
 .v-content {
   width: 850px;
-  border-top: 1px solid #f5f5f5;
-  padding-top: 50px;
-  margin: 1rem auto 32px;
+  margin: 50px auto 32px;
 }
 @media screen and (max-width: 480px) {
   .v-content {
@@ -1525,7 +1524,7 @@ span.caption:before {
     padding-bottom: 25px;
     margin: 15px 20px 25px;
     position: relative;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #f5f5f5;
     display: block;
   }
   .entry-description .d-content {
