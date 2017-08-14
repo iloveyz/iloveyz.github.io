@@ -1342,5 +1342,5 @@ video::-webkit-media-text-track-display {
     margin-left: -1.5em;
 }
 .video-js.vjs-playing .vjs-tech {
-    pointer-events: auto;
+    pointer-events: auto !important;
 }

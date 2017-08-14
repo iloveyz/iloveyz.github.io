@@ -1785,7 +1785,7 @@ span.caption:before {
   .mobile--video-box .video,
   .my-video-dimensions {
     width: 100% !important;
-    height: 175px !important;
+    height: auto !important;
     position: absolute;
     top: 0px;
     left: 0px;
