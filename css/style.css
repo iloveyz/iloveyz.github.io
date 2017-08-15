@@ -13,7 +13,7 @@
   display: none;
 }
 body {
-  font-family: 'Source Sans Pro', 'Microsoft jhenghei', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Microsoft jhenghei', 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
@@ -114,10 +114,6 @@ pre {
 .tags {
   margin: 15px 0;
 }
-.tags span:first-child {
-  margin-right: 10px;
-  font-weight: 600;
-}
 @media screen and (max-width: 480px) {
   .tags {
     margin: 15px 20px;
@@ -125,12 +121,12 @@ pre {
 }
 .tag-code {
   font-family: 'Roboto Mono', 'Microsoft jhenghei', Monaco, courier, monospace;
-  font-size: 0.8em;
+  font-size: 12px;
   display: inline-block;
   background-color: #f8f8f8;
   color: #7f8c8d;
   padding: 3px 5px;
-  margin: 0 2px 5px 0;
+  margin: 0 5px 5px 0;
   border-radius: 2px;
   white-space: nowrap;
 }
@@ -1824,6 +1820,12 @@ span.caption:before {
     margin: 0 -20px !important;
   }
 }
+.tags p.tag-p {
+  font-size: 0px;
+}
+.tags p.tag-p a {
+  display: inline-block;
+}
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
     opacity: 0.5;
@@ -2077,7 +2079,7 @@ span.caption:before {
   height: 1px;
   background: #5389e1;
   position: absolute;
-  bottom: -13px;
+  bottom: -15px;
   left: 0px;
 }
 .active {
@@ -2090,7 +2092,7 @@ span.caption:before {
   height: 1px;
   background: #5389e1;
   position: absolute;
-  bottom: -13px;
+  bottom: -15px;
   left: 0px;
 }
 .menu {
