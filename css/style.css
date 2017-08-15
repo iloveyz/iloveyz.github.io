@@ -299,6 +299,7 @@ h3.link-title {
   text-align: left;
   font-size: 1em;
   color: #fff;
+  cursor: pointer;
 }
 .search-btn:after {
   content: '\f002';
