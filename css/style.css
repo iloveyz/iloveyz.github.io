@@ -227,7 +227,7 @@ h3.link-title {
   text-align: center;
   width: 100px;
   height: 35px;
-  line-height: 35px;
+  line-height: 35px !important;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 50px;
@@ -237,7 +237,7 @@ h3.link-title {
   font-weight: bold !important;
 }
 .about-body {
-  max-width: 850px;
+  max-width: 750px;
 }
 .about-body .markdown-content {
   border-bottom: 1px solid #f5f5f5;
