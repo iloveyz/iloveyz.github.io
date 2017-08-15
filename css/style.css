@@ -64,6 +64,7 @@ pre {
   font-size: 1.6em;
   font-weight: normal;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
 @media screen and (max-width: 480px) {
   .app-header {
@@ -243,11 +244,37 @@ h3.link-title {
   padding-bottom: 25px;
   margin-bottom: 50px;
 }
+.app-top-block .app-header {
+  margin-top: 80px !important;
+  padding-top: 15px;
+}
 @media screen and (max-width: 480px) {
   .about-body .markdown-content {
     margin: 35px 20px 50px;
     padding-bottom: 25px;
   }
+  .app-top-block .app-header {
+    margin-top: 79px !important;
+  }
+  .app-top-block .app-header {
+    margin: 0px 20px 25px;
+    padding: 0px;
+  }
+}
+#header-block {
+  position: fixed !important;
+  color: #000;
+  background-color: rgba(255,255,255,0.98);
+  box-shadow: 0 0 3px rgba(14,14,14,0.26);
+}
+#header-block .menu .icon-bar {
+  background: #7f8c8d;
+}
+#header-block .search-btn {
+  color: #7f8c8d;
+}
+#header-block a {
+  color: #000;
 }
 .about-header:after {
   content: "";
@@ -356,7 +383,7 @@ h3.link-title {
   margin: 0;
 }
 .article-card {
-  padding: 15px 0;
+  padding: 15px 0 19px;
 }
 @media screen and (max-width: 480px) {
   .article-card {
@@ -1281,21 +1308,22 @@ h2.archive-title {
   line-height: 1.9;
   border: 0px;
 }
+@media screen and (max-width: 480px) {
+  .article-card:after {
+    width: 100%;
+    font-size: 35px;
+    padding-top: 27px;
+  }
+}
 .article-card:after {
   content: ".....";
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 23px;
   display: inline-block;
   font-size: 50px;
   color: #ccc;
-}
-@media screen and (max-width: 480px) {
-  .article-card:after {
-    width: 100%;
-    font-size: 35px;
-  }
 }
 .article-card:last-of-type {
   margin-bottom: 50px;
@@ -1939,7 +1967,7 @@ span.caption:before {
   background-size: 25px 25px;
 }
 .fixed-header .search-btn {
-  color: #000;
+  color: #7f8c8d;
 }
 .backto {
   width: 50px;
