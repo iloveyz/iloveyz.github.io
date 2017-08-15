@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="赤色实验室">
 <meta property="og:description" content="belong to our world">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-08T06:27:04.933Z">
+<meta property="og:updated_time" content="2017-08-15T09:57:46.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About">
 <meta name="twitter:description" content="belong to our world">
@@ -194,6 +194,7 @@
     
   </section>
 </div>
+<div id="gitalk-comment"></div>
 <div class="ft-link">
 
     <div class="link-wrap link-list">
@@ -210,7 +211,7 @@
 	</div>
 
 </div>
-
+<script src="/js/gitalk.min.js"></script>
 <script>
   (function () {
     $('.header').removeClass('fixed-header')
@@ -223,6 +224,17 @@
       })
     }
   })();
+var gitalk = new Gitalk({
+	id: window.location.pathname,
+	clientID: '68f85c54fe7bab00c69e',
+	clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	repo: 'iloveyz.github.io',
+	owner: 'iloveyz',
+	admin: ['iloveyz'],
+	distractionFreeMode: true,
+	body: location.href
+})
+gitalk.render('gitalk-comment')
 </script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
