@@ -342,6 +342,7 @@ h3.link-title {
 h2.article-head {
   font-size: 1.6em;
   margin-bottom: 0;
+  line-height: 1.5;
 }
 @media screen and (max-width: 480px) {
   h2.article-head {
