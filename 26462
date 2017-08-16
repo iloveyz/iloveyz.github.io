@@ -8,21 +8,21 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>赤色实验室主题简单修改 | 赤色实验室</title>
-    <meta name="description" content="使用了hexo里 yanm1ng 的 vexo 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。">
-<meta name="keywords" content="赤色实验室,博客,主题,折腾,笔记">
+    <title>赤色实验室开篇第一章 | 赤色实验室</title>
+    <meta name="description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
+<meta name="keywords" content="赤色实验室,博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="赤色实验室主题简单修改">
-<meta property="og:url" content="https://iloveyz.github.io/24735/index.html">
+<meta property="og:title" content="赤色实验室开篇第一章">
+<meta property="og:url" content="https://iloveyz.github.io/26462">
 <meta property="og:site_name" content="赤色实验室">
-<meta property="og:description" content="使用了hexo里 yanm1ng 的 vexo 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。">
+<meta property="og:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2017/08/09/598a76a2a8bee.jpg">
-<meta property="og:updated_time" content="2017-08-14T15:53:12.244Z">
+<meta property="og:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
+<meta property="og:updated_time" content="2017-08-16T14:47:40.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="赤色实验室主题简单修改">
-<meta name="twitter:description" content="使用了hexo里 yanm1ng 的 vexo 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。">
-<meta name="twitter:image" content="https://i.loli.net/2017/08/09/598a76a2a8bee.jpg">
+<meta name="twitter:title" content="赤色实验室开篇第一章">
+<meta name="twitter:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
+<meta name="twitter:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
     
 
     
@@ -186,7 +186,7 @@
 
     
 
-<div id="article-banner" style="background-image: url(https://i.loli.net/2017/08/09/598a76a2a8bee.jpg)">
+<div id="article-banner" style="background-image: url(http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg)">
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -194,17 +194,17 @@
 <main class="app-body app-top">
 
 <header class="app-header">
-	<h2>赤色实验室主题简单修改</h2>
+	<h2>赤色实验室开篇第一章</h2>
 	<div class="post-meta">
 		<p>
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
 </p>
-		<p class="meta-date">2017-08-08 15:39:42</p>
+		<p class="meta-date">2017-08-08 15:39:00</p>
 		<p class="view-p">
 	<em>-</em>
-   <span id="/24735/" class="leancloud_visitors" data-flag-title="赤色实验室主题简单修改">
+   <span id="/26462" class="leancloud_visitors" data-flag-title="赤色实验室开篇第一章">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
@@ -212,14 +212,11 @@
 	</div>
 </header>
 
+
   <article class="post-article article-entry">
-    <section class="markdown-content"><p>使用了hexo里 <code>yanm1ng</code> 的 <code>vexo</code> 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。<br><a id="more"></a><br>因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。</p>
-<p>不管怎样，大致都添加完，就剩样式了。</p>
-<blockquote>
-<p>有一点不爽的是只能在电脑端更新文章，手机端好像没有这个功能？</p>
-</blockquote>
-<p>不过倒不是特别影响，嘿嘿。</p>
-</section>
+    <section class="markdown-content"><p><img src="https://i.loli.net/2017/08/12/598ec5028598d.jpg" alt="赤色实验室"></p>
+<p>初次使用<strong>git</strong>在<strong>github</strong>上搭建<strong>hexo</strong>，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。<br><a id="more"></a><br>我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零投入用下<strong>github</strong></p>
+<div class="justified-gallery"><br><img src="https://www.hdwallpapers.net/previews/lake-prags-italy-1053.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/macos-sierra-1021.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/california-road-1016.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/water-plant-close-up-979.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/starry-night-over-corsica-986.jpg" alt="赤色实验室"><br><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"><br></div></section>
     
       <div class="tags">
         <p class="tag-p">
@@ -230,18 +227,6 @@
 
   <a href="/tags#博客" >
     <span class="tag-code">博客</span>
-  </a>
-
-  <a href="/tags#主题" >
-    <span class="tag-code">主题</span>
-  </a>
-
-  <a href="/tags#折腾" >
-    <span class="tag-code">折腾</span>
-  </a>
-
-  <a href="/tags#笔记" >
-    <span class="tag-code">笔记</span>
   </a>
 
 </p>
@@ -314,12 +299,12 @@
 		
 <nav id="article-nav">
     
-        <a href="/61722/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/24735" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
         </a>
     
     
-        <a href="/26462/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/16107" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
         </a>
     
@@ -334,7 +319,7 @@
 <script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
-	var url = 'https://iloveyz.github.io/24735/';
+	var url = 'https://iloveyz.github.io/26462';
 	$(".markdown-content img").each(function(){
 		$(this).parents('p').addClass('full-pic');
 	});

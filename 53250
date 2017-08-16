@@ -8,21 +8,21 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>赤色实验室开篇第一章 | 赤色实验室</title>
-    <meta name="description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
-<meta name="keywords" content="赤色实验室,博客">
+    <title>关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错... | 赤色实验室</title>
+    <meta name="description" content="好像开通hexo到现在还没正儿八经的写过啥，其实不是文笔不行，而是真的不行，码字容易记流水帐。小学作文就没入过老师法眼，更别提初中高中大学了，那简直是人见人流泪，不是感动的，而是辣眼睛。嘿嘿！~">
+<meta name="keywords" content="hexo,无题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="赤色实验室开篇第一章">
-<meta property="og:url" content="https://iloveyz.github.io/26462/index.html">
+<meta property="og:title" content="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
+<meta property="og:url" content="https://iloveyz.github.io/53250">
 <meta property="og:site_name" content="赤色实验室">
-<meta property="og:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
+<meta property="og:description" content="好像开通hexo到现在还没正儿八经的写过啥，其实不是文笔不行，而是真的不行，码字容易记流水帐。小学作文就没入过老师法眼，更别提初中高中大学了，那简直是人见人流泪，不是感动的，而是辣眼睛。嘿嘿！~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
-<meta property="og:updated_time" content="2017-08-15T15:04:22.112Z">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/08/11/598d65f090a8c.jpg">
+<meta property="og:updated_time" content="2017-08-14T15:53:12.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="赤色实验室开篇第一章">
-<meta name="twitter:description" content="初次使用git在github上搭建hexo，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。">
-<meta name="twitter:image" content="http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg">
+<meta name="twitter:title" content="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
+<meta name="twitter:description" content="好像开通hexo到现在还没正儿八经的写过啥，其实不是文笔不行，而是真的不行，码字容易记流水帐。小学作文就没入过老师法眼，更别提初中高中大学了，那简直是人见人流泪，不是感动的，而是辣眼睛。嘿嘿！~">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/08/11/598d65f090a8c.jpg">
     
 
     
@@ -186,7 +186,7 @@
 
     
 
-<div id="article-banner" style="background-image: url(http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/assets/hero_image.jpg)">
+<div id="article-banner" style="background-image: url(https://ooo.0o0.ooo/2017/08/11/598d65f090a8c.jpg)">
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -194,17 +194,17 @@
 <main class="app-body app-top">
 
 <header class="app-header">
-	<h2>赤色实验室开篇第一章</h2>
+	<h2>关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...</h2>
 	<div class="post-meta">
 		<p>
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
 </p>
-		<p class="meta-date">2017-08-08 15:39:00</p>
+		<p class="meta-date">2017-08-11 15:51:37</p>
 		<p class="view-p">
 	<em>-</em>
-   <span id="/26462/" class="leancloud_visitors" data-flag-title="赤色实验室开篇第一章">
+   <span id="/53250" class="leancloud_visitors" data-flag-title="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
@@ -212,20 +212,26 @@
 	</div>
 </header>
 
+
   <article class="post-article article-entry">
-    <section class="markdown-content"><p><img src="https://i.loli.net/2017/08/12/598ec5028598d.jpg" alt="赤色实验室"></p>
-<p>初次使用<strong>git</strong>在<strong>github</strong>上搭建<strong>hexo</strong>，感觉还是蛮不错的，在编辑器里写文章还是头一次。不得不说新鲜+成就感油然而生，虽然搭建没有什么难度。<br><a id="more"></a><br>我还是比较喜欢折腾的，以前使用wordpress做过几个站，感觉很有意思，这次零投入用下<strong>github</strong></p>
-<div class="justified-gallery"><br><img src="https://www.hdwallpapers.net/previews/lake-prags-italy-1053.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/macos-sierra-1021.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/california-road-1016.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/water-plant-close-up-979.jpg" alt="赤色实验室"><br><img src="https://www.hdwallpapers.net/previews/starry-night-over-corsica-986.jpg" alt="赤色实验室"><br><img src="http://ouccunuwl.bkt.clouddn.com/pic-first.jpg" alt="赤色实验室"><br></div></section>
+    <section class="markdown-content"><p><img src="https://ooo.0o0.ooo/2017/08/11/598d5b9c83a1e.jpg" alt="无题"></p>
+<p>好像开通hexo到现在还没正儿八经的写过啥，其实不是文笔不行，而是真的不行，码字容易记流水帐。小学作文就没入过老师法眼，更别提初中高中大学了，那简直是人见人流泪，不是感动的，而是辣眼睛。嘿嘿！~<br><a id="more"></a></p>
+<h2 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h2><p>这两天研究主题的修改以及添加个视频页，<a href="https://iloveyz.github.io/2017/08/11/video-article-desigen/">#朕的视频页</a>&lt;–既然这么闲，那就跑去瞅瞅吧。</p>
+<p>还有就是主题的简单修改，之前也写过，是啊，也是闲瑕之余，反正有空就再说一次。</p>
+<h2 id="关于视频页"><a href="#关于视频页" class="headerlink" title="关于视频页"></a>关于视频页</h2><p>视频页有个样儿了至少，可以分出个普通青年，2B青年，喔不，普通页面和视频页面，但首页没辙只能和普通文章一样，没区分。还在想呢，暂时就这样吧！</p>
+<h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>本站主要以娱乐记录为主，虽然这么说，但依着hexo更新这么费劲，估计年更。玩儿呢，抽空更新吧。因为赤色实验室是在并非正式站使用，如果是正式会叫赤色娱乐，所以没必要日…更，别找了暂时没更这个人。。。</p>
+<p>好，差不多叨叨完了，暂时不知道该说啥了，我还是个害羞的boy…</p>
+</section>
     
       <div class="tags">
         <p class="tag-p">
 
-  <a href="/tags#赤色实验室" >
-    <span class="tag-code">赤色实验室</span>
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
   </a>
 
-  <a href="/tags#博客" >
-    <span class="tag-code">博客</span>
+  <a href="/tags#无题" >
+    <span class="tag-code">无题</span>
   </a>
 
 </p>
@@ -298,12 +304,12 @@
 		
 <nav id="article-nav">
     
-        <a href="/24735/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/29240" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
         </a>
     
     
-        <a href="/16107/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/61722" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
         </a>
     
@@ -318,7 +324,7 @@
 <script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
-	var url = 'https://iloveyz.github.io/26462/';
+	var url = 'https://iloveyz.github.io/53250';
 	$(".markdown-content img").each(function(){
 		$(this).parents('p').addClass('full-pic');
 	});

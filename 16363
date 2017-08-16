@@ -8,21 +8,21 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~ | 赤色实验室</title>
-    <meta name="description" content="因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。">
-<meta name="keywords" content="视频,设计">
+    <title>无题之作二篇章... | 赤色实验室</title>
+    <meta name="description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
+<meta name="keywords" content="博客,杂谈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
-<meta property="og:url" content="https://iloveyz.github.io/61722/index.html">
+<meta property="og:title" content="无题之作二篇章...">
+<meta property="og:url" content="https://iloveyz.github.io/16363">
 <meta property="og:site_name" content="赤色实验室">
-<meta property="og:description" content="因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。">
+<meta property="og:description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2017/08/11/598cfc331cefb.gif">
-<meta property="og:updated_time" content="2017-08-15T01:31:59.715Z">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg">
+<meta property="og:updated_time" content="2017-08-15T15:53:14.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
-<meta name="twitter:description" content="因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。">
-<meta name="twitter:image" content="https://i.loli.net/2017/08/11/598cfc331cefb.gif">
+<meta name="twitter:title" content="无题之作二篇章...">
+<meta name="twitter:description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg">
     
 
     
@@ -61,7 +61,7 @@
 </head>
   <body>
     
-<header class="header fixed-header">
+<header id="header-block" class="header fixed-header">
 
   <div class="header-container">
 	
@@ -185,81 +185,72 @@
 </header>
 
     
-<header class="header-top">
-	<div class="video-header">
-		<h2>视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</h2>
-		<div class="entry-meta">
-			<p>
+
+<main class="app-body app-top app-top-block">
+
+<header class="app-header">
+	<h2>无题之作二篇章...</h2>
+	<div class="post-meta">
+		<p>
     <span class="article-category">
-        <a class="article-category-link" href="/categories/视频/">视频</a>
+        <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
 </p>
-			<p><i class="meta-date">2017-08-11 08:54:48</i></p>
-			<p class="view-p">
+		<p class="meta-date">2017-08-15 23:53:12</p>
+		<p class="view-p">
 	<em>-</em>
-   <span id="/61722/" class="leancloud_visitors" data-flag-title="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
+   <span id="/16363" class="leancloud_visitors" data-flag-title="无题之作二篇章...">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
 </p>
-		</div>
 	</div>
 </header>
-<article class="article-video article-summary mobile--video-box">
-	<div class="video-box">
-		<div class="video-player">
-		</div>
-		<div class="video-btn">
-			<div class="vb-box">
-				<p class="v-light" title="关灯"><i class="fa fa-moon-o"></i></p>
-				<p class="v-comment" title="评论"><i class="fa fa-commenting-o"></i></p>
-				<p class="v-select" title="选集"><i class="fa fa-tv"></i></p>
-			</div>
-		</div>
-		<div class="current-player"><div class="cp-box"></div></div>
-	</div>
-	<div class="clear"></div>
-	<header class="mobile--header-top">
-	<div class="video-header">
-		<h2>视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</h2>
-		<div class="entry-meta">
-			<p>
-    <span class="article-category">
-        <a class="article-category-link" href="/categories/视频/">视频</a>
-    </span>
-</p>
-			<p><i class="meta-date">2017-08-11 08:54:48</i></p>
-			<p class="mobile--view-p">
-	<em>-</em>
-   <span id="/61722/" class="leancloud_visitors" data-flag-title="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
-       <i class="fa fa-eye"></i>
-     <span class="leancloud-visitors-count"></span>
-    </span>
-</p>
-		</div>
-		<div class="entry-description"><div class="d-content"><p>因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。</p></div><i class="fa fa-angle-down"></i></div>
-	</div>
-</header>
-<div class="clear"></div>
-    <div class="entry-content video-content">
-        <div class="video-playlist"><br><p><br><i>示例视频展示</i><em>$</em><br><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=13203642&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br><source class="video-source" src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"><br></p><br></div><div class="v-content"><br>这篇主要是用来提供观赏使用，视频页…还有一重要的事情<br></div>
-    </div>
-	
+
+
+  <article class="post-article article-entry">
+    <section class="markdown-content"><p><img src="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg" alt=""></p>
+<p>说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。<br><a id="more"></a></p>
+<p>网站还没想好以什么为主题，是娱乐，还是日常，完全没有头绪，就像码代码一样，键盘敲的夸啦夸啦（相声词），结果到最后又没啥头绪。谜…</p>
+<p>-</p>
+<p>今天准备给小站关联个微博号，结果结满蜘蛛网的微博上不知道为何多了N多我不曾发过的东西。结果一顿删，把我弹琴且娇嫩的手都累酸了，罢。</p>
+<p>看到许久前建站时去友站评论时留下的身影，看着评论一条条，感慨，试着打开链接，多数是打不开了，少数还可以看到仍在坚持。满满的都是回忆啊。</p>
+<p>很少这么娇情。今天娇性大发，没忍住，不管啦，这篇流水文就得这么写。</p>
+<p>-</p>
+<p>今天搞工作忙活一天，算是把最棘手的问题解决了，定位-距离-附近，目前已经把前两个搞定了。剩下的就是附近这一功能。不得不吐槽百度的定位，不仅误差很大，而且不同浏览器误差也存在，还得写兼容，头都大了。得亏还有两把刷子，透露一下，其实主要是长相威摄住了全场（笑）。</p>
+</section>
+    
       <div class="tags">
         <p class="tag-p">
 
-  <a href="/tags#视频" >
-    <span class="tag-code">视频</span>
+  <a href="/tags#博客" >
+    <span class="tag-code">博客</span>
   </a>
 
-  <a href="/tags#设计" >
-    <span class="tag-code">设计</span>
+  <a href="/tags#杂谈" >
+    <span class="tag-code">杂谈</span>
   </a>
 
 </p>
       </div>
     
-	<div class="qrcode">
+    <!--<div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>-->
+    <div class="qrcode">
 		<div class="qr-box">
 			<canvas id="share-qrcode"></canvas>
 			<p class="notice">扫描二维码或点下方按钮，分享此文章</p>
@@ -310,12 +301,8 @@
 		
 <nav id="article-nav">
     
-        <a href="/53250/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-        </a>
     
-    
-        <a href="/24735/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/29240" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
         </a>
     
@@ -324,40 +311,18 @@
 
 	
 	<div id="gitalk-comment"></div>
-</article>
+  </article>
+</main>
 
-<div class="lightoff"></div>
-<script src="/js/video.min.js"></script>
-<script src="/js/article.js"></script>
 <script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
-$('.video-playlist p').each(function(){
-	if($('.header-top').length < 1){
-		var myPlayer = videojs('my-video');
-		videojs("my-video").ready(function(){
-			var myPlayer = this;
-			myPlayer.play();
-			$('.video-playlist p').each(function(){
-				$(this).click(function(){
-					var source = $(this).find('source').attr('src');
-					myPlayer.pause()
-					$('.video-player video').attr('src',source);
-					$('.video-player video source').attr('src',source);
-					myPlayer.setAttribute('src', source);
-					myPlayer.load();
-					myPlayer.play();
-				});
-			});
-		});
-	}else{
-		$(this).click(function(){
-			var href = $(this).html();
-			$(".video-player").html("<p>"+href+"</p>");
-			$(this).addClass("cur").siblings().removeClass("cur");
-		});
-	}
-});
+	var url = 'https://iloveyz.github.io/16363';
+	$(".markdown-content img").each(function(){
+		$(this).parents('p').addClass('full-pic');
+	});
+	$('.header').removeClass('fixed-header')
+
 	// qrcode
 	var qr = new QRious({
 		element: document.getElementById('share-qrcode'),
@@ -376,6 +341,7 @@ var gitalk = new Gitalk({
 })
 gitalk.render('gitalk-comment')
 </script>
+
 
     <div class="scroll-top">
   <span class="arrow-icon"></span>

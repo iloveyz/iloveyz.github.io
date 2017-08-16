@@ -8,21 +8,21 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>无题之作二篇章... | 赤色实验室</title>
-    <meta name="description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
-<meta name="keywords" content="博客,杂谈">
+    <title>hexo部分暂时折腾结束，回归工作... | 赤色实验室</title>
+    <meta name="description" content="折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。 再次吐槽，hexo不能手机随时随地更新略不爽。 最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。">
+<meta name="keywords" content="博客,hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题之作二篇章...">
-<meta property="og:url" content="https://iloveyz.github.io/16363/index.html">
+<meta property="og:title" content="hexo部分暂时折腾结束，回归工作...">
+<meta property="og:url" content="https://iloveyz.github.io/29240">
 <meta property="og:site_name" content="赤色实验室">
-<meta property="og:description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
+<meta property="og:description" content="折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。 再次吐槽，hexo不能手机随时随地更新略不爽。 最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg">
-<meta property="og:updated_time" content="2017-08-15T15:53:14.791Z">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/08/15/5992418e8d2f6.jpg">
+<meta property="og:updated_time" content="2017-08-15T00:52:48.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题之作二篇章...">
-<meta name="twitter:description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
-<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg">
+<meta name="twitter:title" content="hexo部分暂时折腾结束，回归工作...">
+<meta name="twitter:description" content="折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。 再次吐槽，hexo不能手机随时随地更新略不爽。 最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/08/15/5992418e8d2f6.jpg">
     
 
     
@@ -61,7 +61,7 @@
 </head>
   <body>
     
-<header id="header-block" class="header fixed-header">
+<header class="header fixed-header">
 
   <div class="header-container">
 	
@@ -186,20 +186,25 @@
 
     
 
-<main class="app-body app-top app-top-block">
+<div id="article-banner" style="background-image: url(https://ooo.0o0.ooo/2017/08/15/5992418e8d2f6.jpg)">
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body app-top">
 
 <header class="app-header">
-	<h2>无题之作二篇章...</h2>
+	<h2>hexo部分暂时折腾结束，回归工作...</h2>
 	<div class="post-meta">
 		<p>
     <span class="article-category">
         <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
 </p>
-		<p class="meta-date">2017-08-15 23:53:12</p>
+		<p class="meta-date">2017-08-15 08:52:48</p>
 		<p class="view-p">
 	<em>-</em>
-   <span id="/16363/" class="leancloud_visitors" data-flag-title="无题之作二篇章...">
+   <span id="/29240" class="leancloud_visitors" data-flag-title="hexo部分暂时折腾结束，回归工作...">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
@@ -207,16 +212,11 @@
 	</div>
 </header>
 
+
   <article class="post-article article-entry">
-    <section class="markdown-content"><p><img src="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg" alt=""></p>
-<p>说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。<br><a id="more"></a></p>
-<p>网站还没想好以什么为主题，是娱乐，还是日常，完全没有头绪，就像码代码一样，键盘敲的夸啦夸啦（相声词），结果到最后又没啥头绪。谜…</p>
-<p>-</p>
-<p>今天准备给小站关联个微博号，结果结满蜘蛛网的微博上不知道为何多了N多我不曾发过的东西。结果一顿删，把我弹琴且娇嫩的手都累酸了，罢。</p>
-<p>看到许久前建站时去友站评论时留下的身影，看着评论一条条，感慨，试着打开链接，多数是打不开了，少数还可以看到仍在坚持。满满的都是回忆啊。</p>
-<p>很少这么娇情。今天娇性大发，没忍住，不管啦，这篇流水文就得这么写。</p>
-<p>-</p>
-<p>今天搞工作忙活一天，算是把最棘手的问题解决了，定位-距离-附近，目前已经把前两个搞定了。剩下的就是附近这一功能。不得不吐槽百度的定位，不仅误差很大，而且不同浏览器误差也存在，还得写兼容，头都大了。得亏还有两把刷子，透露一下，其实主要是长相威摄住了全场（笑）。</p>
+    <section class="markdown-content"><p>折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。</p>
+<p>再次吐槽，hexo不能手机随时随地更新略不爽。</p>
+<p>最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。</p>
 </section>
     
       <div class="tags">
@@ -226,8 +226,8 @@
     <span class="tag-code">博客</span>
   </a>
 
-  <a href="/tags#杂谈" >
-    <span class="tag-code">杂谈</span>
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
   </a>
 
 </p>
@@ -300,8 +300,12 @@
 		
 <nav id="article-nav">
     
+        <a href="/16363" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+        </a>
     
-        <a href="/29240/" id="article-nav-older" class="article-nav-link-wrap">
+    
+        <a href="/53250" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
         </a>
     
@@ -316,7 +320,7 @@
 <script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
-	var url = 'https://iloveyz.github.io/16363/';
+	var url = 'https://iloveyz.github.io/29240';
 	$(".markdown-content img").each(function(){
 		$(this).parents('p').addClass('full-pic');
 	});
