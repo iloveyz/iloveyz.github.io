@@ -404,7 +404,8 @@ h3.link-title {
 }
 @media screen and (max-width: 480px) {
   .article-card:first-child {
-    margin-top: 50px !important;
+    padding: 0 0 29px;
+    margin-top: 79px !important;
   }
 }
 .ar-container {
