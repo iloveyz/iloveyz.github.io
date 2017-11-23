@@ -53,6 +53,7 @@
 	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+	<script src="/js/cookie.js"></script>
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
@@ -417,102 +418,113 @@
 
 	
 		
+
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("Ar3kPAXMBGr8NVcMJbv3bDIq-gzGzoHsz", "2fRmD25rHRRDjElN6CTeMzUf");</script>
+  <script>AV.initialize("GM9SIwrOcd1dWuY21JsjQQsj-gzGzoHsz", "xqyvopE9x4lEQCqaSvz0SWze");</script>
   <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
+	function showTime(Counter) {
+			var query = new AV.Query(Counter);
+			var entries = [];
+			var $visitors = $(".like-content");
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
+			$visitors.each(function () {
+				entries.push( $(this).attr("id").trim() );
+			});
 
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+			query.containedIn('url', entries);
+			query.find()
+			.done(function (results) {
+				var COUNT_CONTAINER_REF = '.count';
 
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
+				if (results.length === 0) {
+					$visitors.find(COUNT_CONTAINER_REF).text(0);
+					return;
+				}
 
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
+				for (var i = 0; i < results.length; i++) {
+					var item = results[i];
+					var url = item.get('url');
+					var time = item.get('time');
+					var element = document.getElementById(url);
 
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
+					$(element).find(COUNT_CONTAINER_REF).text(time);
+				}
+			})
+			.fail(function (object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			});
+		}
 
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
+		function addCount(Counter) {
+			var $visitors = $(".like-content");
+			var url = $visitors.attr('id').trim();
+			var title = $visitors.attr('data-flag-title').trim();
+			var query = new AV.Query(Counter);
 
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
+			query.equalTo("url", url);
+			query.find({
+				success: function(results) {
+					if (results.length > 0) {
+						var counter = results[0];
+						counter.fetchWhenSave(true);
+						counter.increment("time");
+						counter.save(null, {
+							success: function(counter) {
+								var $element = $(document.getElementById(url));
+								$element.find('.count').text(counter.get('time'));
+							},
+							error: function(counter, error) {
+								console.log('Failed to save Visitor num, with error message: ' + error.message);
+							}
+						});
+					} else {
+						var newcounter = new Counter();
+						/* Set ACL */
+						var acl = new AV.ACL();
+						acl.setPublicReadAccess(true);
+						acl.setPublicWriteAccess(true);
+						newcounter.setACL(acl);
+						/* End Set ACL */
+						newcounter.set("title", title);
+						newcounter.set("url", url);
+						newcounter.set("time", 1);
+						newcounter.save(null, {
+							success: function(newcounter) {
+								var $element = $(document.getElementById(url));
+								$element.find('.count').text(newcounter.get('time'));
+							},
+							error: function(newcounter, error) {
+								console.log('Failed to create');
+							}
+						});
+					}
+				},
+				error: function(error) {
+					console.log('Error:' + error.code + " " + error.message);
+				}
+			});
+		}
+		$(function() {
+			var Counter = AV.Object.extend("Counter");
+			var cookieClass = $.cookie('class');
+			$('.post-like').attr('class',cookieClass);	
+			$('.post-like').on('click', function(){
+				if($(this).hasClass('is-active')){
+					$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
+					setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+				}else{
+					$(this).addClass('is-active');
+					var className=$(this).attr("class");
+					var cur_url = $(this).find('.like-content').attr('id');
+					$.cookie('class', className, { expires: 999999, path: cur_url });
+					addCount(Counter);
+				  	$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");
+					setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+				}
+			});
+			showTime(Counter);
+		});
   </script>
-
 
 	
   </body>
