@@ -1,20 +1,4 @@
 (function(){
-	$('.meta-date').liveTimeAgo({
-		translate: {
-			'year': '% 年前',
-			'years': '% 年前',
-			'month':'% 个月前',
-			'months':'% 个月前',
-			'day': '% 天前',
-			'days': '% 天前',
-			'hour': '% 小时前',
-			'hours': '% 小时前',
-			'minute': '% 分钟前',
-			'minutes': '% 分钟前',
-			'seconds': '% 秒钟前',
-			'error': '未知的时间',
-		}
-	});
 	$('.mobile--view-p, .view-p').find('.leancloud-visitors-count').each(function(){
 		if($(this).text() == ''){
 			$(this).text(0);
@@ -64,10 +48,12 @@
 		'{:高兴:}':'<img src="https://ooo.0o0.ooo/2017/09/21/59c385feed722.gif" class="smile" />',
 		'{:可爱:}':'<img src="https://i.loli.net/2017/09/08/59b2a8679a928.gif" class="smile" />'
 	};
-	var reg = /\{:.+?\:}/g;
-	var str = $('.markdown-content').html();
-	str = str.replace(reg,function(a,b){ 
-		return face[a];
-	});
-  	$('.markdown-content').html(str);
+	if($('.markdown-content').length >= 1){
+		var reg = /\{:.+?\:}/g;
+		var str = $('.markdown-content').html();
+		str = str.replace(reg,function(a,b){ 
+			return face[a];
+		});
+		$('.markdown-content').html(str);
+	}
 })();

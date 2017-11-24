@@ -87,6 +87,9 @@ pre {
   margin-left: 50% !important;
   max-width: inherit;
 }
+.markdown-content img {
+  cursor: pointer !important;
+}
 .markdown-content img.smile {
   max-width: 100%;
   display: inline-block;
@@ -124,7 +127,7 @@ pre {
   }
 }
 .full-pic {
-  margin: 0 0 30px 0 !important;
+  margin: 0 0 32px 0 !important;
 }
 @media screen and (max-width: 480px) {
   .app-header {
@@ -152,6 +155,75 @@ pre {
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 50px;
   margin: 20px 0 32px;
+  cursor: pointer;
+}
+.like-active {
+  width: 100%;
+  height: 35px;
+  position: fixed;
+  bottom: 150px;
+  left: 0px;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  -webkit-transition: visibility 0s linear 0.7s, opacity 0.7s ease 0s, -webkit-transform 0.7s ease 0s;
+  transition: visibility 0s linear 0.7s, opacity 0.7s ease 0s, -webkit-transform 0.7s ease 0s;
+  transition: transform 0.7s ease 0s, visibility 0s linear 0.7s, opacity 0.7s ease 0s;
+  transition: transform 0.7s ease 0s, visibility 0s linear 0.7s, opacity 0.7s ease 0s, -webkit-transform 0.7s ease 0s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 200;
+  cursor: default;
+}
+.like-active.cur--click {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  visibility: visible;
+}
+.like-active em {
+  padding: 10px 30px;
+  color: #fff;
+  background: gradient(linear, 0 50%, 100% 50%, from(#fab37d), to(#fa9a7d));
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#fab37d), to(#fa9a7d));
+  background: -moz-gradient(linear, 0 50%, 100% 50%, from(#fab37d), to(#fa9a7d));
+  background: -ms-gradient(linear, 0 50%, 100% 50%, from(#fab37d), to(#fa9a7d));
+  background: -o-gradient(linear, 0 50%, 100% 50%, from(#fab37d), to(#fa9a7d));
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px 5px rgba(250,138,125,0.25);
+  font-style: normal;
+  font-size: 16px;
+}
+.like-active span {
+  padding: 10px 30px;
+  color: #fff;
+  background: gradient(linear, 0 50%, 100% 50%, from(#a67dfa), to(#7d7dfa));
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#a67dfa), to(#7d7dfa));
+  background: -moz-gradient(linear, 0 50%, 100% 50%, from(#a67dfa), to(#7d7dfa));
+  background: -ms-gradient(linear, 0 50%, 100% 50%, from(#a67dfa), to(#7d7dfa));
+  background: -o-gradient(linear, 0 50%, 100% 50%, from(#a67dfa), to(#7d7dfa));
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 5px 15px 5px rgba(125,125,250,0.25);
+}
+.like-active em,
+.like-active span {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .post-like.is-active span.like-content {
   background: #5389e1;
@@ -2372,13 +2444,14 @@ span.caption:before {
 }
 .markdown-content p,
 .article-summary p {
-  line-height: 1.9rem;
-  margin-bottom: 30px;
+  line-height: 39px;
+  margin-bottom: 32px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content p,
   .article-summary p {
-    margin: 0 20px 30px 20px;
+    margin: 0 20px 32px 20px;
+    line-height: 32px;
   }
 }
 .markdown-content p code,
@@ -2398,7 +2471,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content h1,
   .article-summary h1 {
-    margin: 0 20px 30px 20px !important;
+    margin: 0 20px 32px 20px !important;
   }
 }
 .markdown-content h2,
@@ -2408,7 +2481,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content h2,
   .article-summary h2 {
-    margin: 0 20px 30px 20px !important;
+    margin: 0 20px 32px 20px !important;
   }
 }
 .markdown-content h3,
@@ -2422,7 +2495,7 @@ span.caption:before {
   .markdown-content h3,
   .article-summary h3 {
     padding-bottom: 30px;
-    margin: 0 20px 30px 20px !important;
+    margin: 0 20px 32px 20px !important;
   }
 }
 .markdown-content h4,
@@ -2446,7 +2519,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content ul,
   .article-summary ul {
-    margin: 0 20px 30px !important;
+    margin: 0 20px 32px !important;
   }
 }
 .markdown-content table,
@@ -2456,12 +2529,12 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content table,
   .article-summary table {
-    padding: 0 10px 30px !important;
+    padding: 0 10px 32px !important;
   }
 }
 .markdown-content blockquote,
 .article-summary blockquote {
-  margin: 0 0 30px;
+  margin: 0 0 32px;
   padding: 15px 20px;
   border-left: 4px solid #5389e1;
   background: #f8f8f8;
@@ -2471,7 +2544,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content blockquote,
   .article-summary blockquote {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2487,7 +2560,7 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .markdown-content blockquote p,
   .article-summary blockquote p {
-    margin: 30px 0 0 0 !important;
+    margin: 32px 0 0 0 !important;
   }
 }
 .markdown-content blockquote p:first-child,
