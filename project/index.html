@@ -8,12 +8,12 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>Project | 赤色实验室</title>
+    <title>Project | 赤色娱乐</title>
     <meta name="description" content="belong to our world">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Project">
 <meta property="og:url" content="https://iloveyz.github.io/project/index.html">
-<meta property="og:site_name" content="赤色实验室">
+<meta property="og:site_name" content="赤色娱乐">
 <meta property="og:description" content="belong to our world">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-08T06:27:04.936Z">
@@ -59,13 +59,14 @@
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
+	
     
 <header id="header-block" class="header fixed-header">
 
   <div class="header-container">
 	
     <a class="home-link" href="/">
-      <span>赤色实验室</span>
+      <span>赤色娱乐</span>
     </a>
 	
     <ul class="right-list">
@@ -97,6 +98,12 @@
         <li class="list-item">
           
             <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
           
         </li>
       
@@ -138,6 +145,12 @@
           <li class="menu-item">
             
               <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
             
           </li>
         
@@ -184,6 +197,7 @@
 </div>
 </header>
 
+	
     <div id="article-banner" class="ab-top">
   <h2>Projects</h2>
   <p class="post-date">开源项目</p>
@@ -342,7 +356,7 @@
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(like);
-            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })

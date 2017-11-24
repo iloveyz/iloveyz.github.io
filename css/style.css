@@ -1402,6 +1402,7 @@ dfn {
 }
 .article-video {
   margin-top: 0px !important;
+  overflow-x: hidden;
 }
 .article-video .tags {
   width: 850px;
@@ -1688,6 +1689,7 @@ span.caption:before {
   width: 850px;
   margin: auto;
 }
+.like-p i,
 .view-p i,
 .mobile--view-p i {
   margin-right: 7.5px;

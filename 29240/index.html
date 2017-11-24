@@ -8,13 +8,13 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>hexo部分暂时折腾结束，回归工作... | 赤色实验室</title>
+    <title>hexo部分暂时折腾结束，回归工作... | 赤色娱乐</title>
     <meta name="description" content="折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。 再次吐槽，hexo不能手机随时随地更新略不爽。 最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。">
 <meta name="keywords" content="博客,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo部分暂时折腾结束，回归工作...">
 <meta property="og:url" content="https://iloveyz.github.io/29240/index.html">
-<meta property="og:site_name" content="赤色实验室">
+<meta property="og:site_name" content="赤色娱乐">
 <meta property="og:description" content="折腾结束喽，该收拾收拾把工作解决解决了，回头会记录一下，嘿嘿。折腾的还不错，虽然没有实现啥特别的功能，但也还算满意，所以就暂且这样吧。反正以后想起来还会继续折腾些适用于我的小东西。这样也算在网络上有个地方。 再次吐槽，hexo不能手机随时随地更新略不爽。 最近把视频页响应式完成了，又用了大多时间把手机上播放视频的功能整理了下，算是大功告成了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/08/15/5992418e8d2f6.jpg">
@@ -62,13 +62,14 @@
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
+	
     
 <header class="header fixed-header">
 
   <div class="header-container">
 	
 	<a class="home-link" href="/">
-      <span>赤色实验室</span>
+      <span>赤色娱乐</span>
     </a>
 	<div class="menu left">
       <span class="icon-bar"></span>
@@ -108,6 +109,12 @@
           
         </li>
       
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
+          
+        </li>
+      
     </ul>
 	
     <div class="menu-mask">
@@ -140,6 +147,12 @@
           <li class="menu-item">
             
               <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
             
           </li>
         
@@ -186,6 +199,7 @@
 </div>
 </header>
 
+	
     
 
 <div id="article-banner" style="background-image: url(https://ooo.0o0.ooo/2017/08/15/5992418e8d2f6.jpg)">
@@ -463,7 +477,7 @@ gitalk.render('gitalk-comment')
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(like);
-            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })

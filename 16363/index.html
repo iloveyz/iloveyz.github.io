@@ -8,13 +8,13 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>无题之作二篇章... | 赤色实验室</title>
+    <title>无题之作二篇章... | 赤色娱乐</title>
     <meta name="description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
 <meta name="keywords" content="博客,杂谈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="无题之作二篇章...">
 <meta property="og:url" content="https://iloveyz.github.io/16363/index.html">
-<meta property="og:site_name" content="赤色实验室">
+<meta property="og:site_name" content="赤色娱乐">
 <meta property="og:description" content="说好不折腾的，结果还是没控制住，简单弄了下关于页，其实也算不上折腾。嘿嘿，以后就慢慢更新文章，把小站充实起来先。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/08/15/599310fcdf36a.jpg">
@@ -62,13 +62,14 @@
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
+	
     
 <header id="header-block" class="header fixed-header">
 
   <div class="header-container">
 	
 	<a class="home-link" href="/">
-      <span>赤色实验室</span>
+      <span>赤色娱乐</span>
     </a>
 	<div class="menu left">
       <span class="icon-bar"></span>
@@ -108,6 +109,12 @@
           
         </li>
       
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
+          
+        </li>
+      
     </ul>
 	
     <div class="menu-mask">
@@ -140,6 +147,12 @@
           <li class="menu-item">
             
               <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
             
           </li>
         
@@ -186,6 +199,7 @@
 </div>
 </header>
 
+	
     
 
 <main class="app-body app-top app-top-block">
@@ -464,7 +478,7 @@ gitalk.render('gitalk-comment')
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(like);
-            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })

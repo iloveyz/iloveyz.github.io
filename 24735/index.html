@@ -8,13 +8,13 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>赤色实验室主题简单修改 | 赤色实验室</title>
+    <title>赤色实验室主题简单修改 | 赤色娱乐</title>
     <meta name="description" content="使用了hexo里 yanm1ng 的 vexo 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。">
 <meta name="keywords" content="赤色实验室,博客,主题,折腾,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="赤色实验室主题简单修改">
 <meta property="og:url" content="https://iloveyz.github.io/24735/index.html">
-<meta property="og:site_name" content="赤色实验室">
+<meta property="og:site_name" content="赤色娱乐">
 <meta property="og:description" content="使用了hexo里 yanm1ng 的 vexo 对主题进行了稍微修改，还未完善，主要还是添加（扒）了一些功能在这个主题里，不管如何还是挺满意的，有了自己想要的功能和样式。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2017/08/09/598a76a2a8bee.jpg">
@@ -62,13 +62,14 @@
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
+	
     
 <header class="header fixed-header">
 
   <div class="header-container">
 	
 	<a class="home-link" href="/">
-      <span>赤色实验室</span>
+      <span>赤色娱乐</span>
     </a>
 	<div class="menu left">
       <span class="icon-bar"></span>
@@ -108,6 +109,12 @@
           
         </li>
       
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
+          
+        </li>
+      
     </ul>
 	
     <div class="menu-mask">
@@ -140,6 +147,12 @@
           <li class="menu-item">
             
               <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
             
           </li>
         
@@ -186,6 +199,7 @@
 </div>
 </header>
 
+	
     
 
 <div id="article-banner" style="background-image: url(https://i.loli.net/2017/08/09/598a76a2a8bee.jpg)">
@@ -478,7 +492,7 @@ gitalk.render('gitalk-comment')
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(like);
-            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })

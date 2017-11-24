@@ -8,12 +8,12 @@
   <meta name="description" content="belong to our world">
   <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
     
-    <title>Categories | 赤色实验室</title>
+    <title>Categories | 赤色娱乐</title>
     <meta name="description" content="belong to our world">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Categories">
 <meta property="og:url" content="https://iloveyz.github.io/categories/index.html">
-<meta property="og:site_name" content="赤色实验室">
+<meta property="og:site_name" content="赤色娱乐">
 <meta property="og:description" content="belong to our world">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-08T15:15:39.634Z">
@@ -59,13 +59,14 @@
 	<script src="/js/qrious.js"></script>
 </head>
   <body>
+	
     
 <header id="header-block" class="header fixed-header">
 
   <div class="header-container">
 	
     <a class="home-link" href="/">
-      <span>赤色实验室</span>
+      <span>赤色娱乐</span>
     </a>
 	
     <ul class="right-list">
@@ -97,6 +98,12 @@
         <li class="list-item">
           
             <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
           
         </li>
       
@@ -138,6 +145,12 @@
           <li class="menu-item">
             
               <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
             
           </li>
         
@@ -184,6 +197,7 @@
 </div>
 </header>
 
+	
     <div id="article-banner">
   <h2>Categories</h2>
   <p class="post-date">分类目录</p>
@@ -193,7 +207,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类目录</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/视频/">视频</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/作品/">作品</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/视频/">视频</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -203,6 +217,25 @@
         <h3 class="widget-title">相关文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/35325/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/作品/">作品</a></p>
+                            <p class="item-title"><a href="/35325/" class="title">like页面设计</a></p>
+                            <p class="item-date"><time datetime="2017-11-25T14:36:25.000Z" itemprop="datePublished">2017-11-25</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -277,25 +310,6 @@
                             <p class="item-category"><a class="article-category-link" href="/categories/笔记/">笔记</a></p>
                             <p class="item-title"><a href="/53250/" class="title">关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...</a></p>
                             <p class="item-date"><time datetime="2017-08-11T07:51:37.015Z" itemprop="datePublished">2017-08-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/61722/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://i.loli.net/2017/08/11/598cfc331cefb.gif)" alt="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/视频/">视频</a></p>
-                            <p class="item-title"><a href="/61722/" class="title">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a></p>
-                            <p class="item-date"><time datetime="2017-08-11T00:54:48.734Z" itemprop="datePublished">2017-08-11</time></p>
                         </div>
                     </li>
                 
@@ -419,7 +433,7 @@
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(like);
-            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })
