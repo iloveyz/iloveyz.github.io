@@ -109,6 +109,12 @@ pre {
 .justified-gallery a {
   border: 0px !important;
 }
+.lg-outer #lg-share,
+.lg-outer #lg-download,
+.lg-outer .lg-autoplay-button,
+.lg-outer .lg-fullscreen {
+  display: none;
+}
 @media screen and (max-width: 480px) {
   .app-header h2,
   .app-header .post-meta,
@@ -2505,7 +2511,7 @@ span.caption:before {
 .article-summary img {
   max-width: 100%;
   display: block;
-  cursor: zoom-in;
+  cursor: default;
   margin: auto;
 }
 @media screen and (max-width: 480px) {
