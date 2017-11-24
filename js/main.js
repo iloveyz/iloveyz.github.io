@@ -10,6 +10,9 @@
             if ($(this).parent().prop("tagName") !== 'A') {
                 $(this).wrap('<a href="' + ($(this).attr("data-imgbig") ? $(this).attr("data-imgbig") : this.src) + '" title="' + this.alt + '" class="gallery-item"></a>');
             }
+			if($(this).hasClass('smile')){
+				 $(this).unwrap('<a href="' + ($(this).attr("data-imgbig") ? $(this).attr("data-imgbig") : this.src) + '" title="' + this.alt + '" class="gallery-item"></a>');
+			}
         });
     });
     if (typeof lightGallery != 'undefined') {

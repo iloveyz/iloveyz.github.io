@@ -82,6 +82,33 @@ pre {
     margin: 0 20px;
   }
 }
+.markdown-content img.hd {
+  transform: translateX(-50%) !important;
+  margin-left: 50% !important;
+  max-width: inherit;
+}
+.markdown-content img.smile {
+  max-width: 100%;
+  display: inline-block;
+  cursor: default;
+  margin: auto;
+  vertical-align: middle;
+  position: relative;
+  top: -2.5px;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content img.hd {
+    max-width: 100%;
+  }
+}
+.justified-gallery.hd {
+  width: 1250px !important;
+  transform: translateX(-50%);
+  margin: 32px 0 32px 50% !important;
+}
+.justified-gallery a {
+  border: 0px !important;
+}
 @media screen and (max-width: 480px) {
   .app-header h2,
   .app-header .post-meta,
@@ -108,6 +135,35 @@ pre {
   .article-card .app-header {
     margin-top: 0px;
   }
+}
+.post-like {
+  text-align: center;
+}
+.post-like span.like-content {
+  padding: 10px 20px;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 50px;
+  margin: 20px 0 32px;
+}
+.post-like.is-active span.like-content {
+  background: #5389e1;
+  color: #fff;
+  border: 1px solid #5389e1;
+}
+.post-like.is-active span.like-content i {
+  color: #fff;
+}
+.post-like.is-active span.like-content i:before {
+  content: "\f004";
+}
+.post-like span.like-count {
+  color: #666;
+  margin-left: 0px;
+}
+.post-like.is-active span.like-count {
+  color: #fff;
 }
 .hljs {
   background: none !important;
@@ -2286,11 +2342,6 @@ span.caption:before {
 }
 .unvisible {
   visibility: hidden;
-}
-.markdown-content,
-.article-summary {
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 .markdown-content pre,
 .article-summary pre,

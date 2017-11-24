@@ -54,7 +54,8 @@
 <link rel="stylesheet" href="/css/plugins/gitment.css">
 <link rel="stylesheet" href="/css/plugins/gitalk.css">
 <link rel="stylesheet" href="/css/plugins/video-js.css">
-	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="/js/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
 	<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 	<script src="/js/cookie.js"></script>
@@ -205,7 +206,7 @@
 		<p class="meta-date">2017-08-11 15:51:37</p>
 		<p class="view-p">
 	<em>-</em>
-   <span id="/53250/" class="leancloud_visitors" data-flag-title="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
+   <span url="/53250/" url="/53250/" class="leancloud_visitors" data-flag-name="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
@@ -223,15 +224,12 @@
 <h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>本站主要以娱乐记录为主，虽然这么说，但依着hexo更新这么费劲，估计年更。玩儿呢，抽空更新吧。因为赤色实验室是在并非正式站使用，如果是正式会叫赤色娱乐，所以没必要日…更，别找了暂时没更这个人。。。</p>
 <p>好，差不多叨叨完了，暂时不知道该说啥了，我还是个害羞的boy…</p>
 </section>
-	
-		<div class="post-like">
-			<span class="like-content" id="/53250/" data-flag-title="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
-				<i class="fa fa-heart-o">
-					<span class="count">0</span>
-				</i>
-			</span>
-		</div>
-	
+	<div class="post-like">
+		<span id="/53250/" class="like-content" data-flag-title="关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...">
+			<i class="fa fa-heart-o"></i>
+			<span class="like-count">0</span>
+		</span>
+	</div>
     
       <div class="tags">
         <p class="tag-p">
@@ -439,108 +437,175 @@ gitalk.render('gitalk-comment')
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("GM9SIwrOcd1dWuY21JsjQQsj-gzGzoHsz", "xqyvopE9x4lEQCqaSvz0SWze");</script>
   <script>
-	function showTime(Counter) {
-			var query = new AV.Query(Counter);
-			var entries = [];
-			var $visitors = $(".like-content");
+	function showLike(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $like = $(".like-content");
+      var $visitors = $(".leancloud_visitors");
 
-			$visitors.each(function () {
-				entries.push( $(this).attr("id").trim() );
-			});
+      $like.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
 
-			query.containedIn('url', entries);
-			query.find()
-			.done(function (results) {
-				var COUNT_CONTAINER_REF = '.count';
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.like-count';
+          var VIEW_CONTAINER_COUNT = '.leancloud-visitors-count';
+          if (results.length === 0) {
+            $like.find(COUNT_CONTAINER_REF).text(0);
+            $visitors.find(VIEW_CONTAINER_COUNT).text(0);
+            return;
+          }
 
-				if (results.length === 0) {
-					$visitors.find(COUNT_CONTAINER_REF).text(0);
-					return;
-				}
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var like = item.get('like');
+            var time = item.get('time');
+            var element = document.getElementById(url);
 
-				for (var i = 0; i < results.length; i++) {
-					var item = results[i];
-					var url = item.get('url');
-					var time = item.get('time');
-					var element = document.getElementById(url);
+            $(element).find(COUNT_CONTAINER_REF).text(like);
+            $(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
 
-					$(element).find(COUNT_CONTAINER_REF).text(time);
-				}
-			})
-			.fail(function (object, error) {
-				console.log("Error: " + error.code + " " + error.message);
-			});
-		}
+    function addLike(Counter) {
+      var $like = $(".like-content");
+      var url = $like.attr('id').trim();
+      var title = $like.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("like");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.like-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("like", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.like-count').text(newcounter.get('like'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+	
+	function addCount(Counter) {
+      var $like = $(".like-content");
+      var url = $like.attr('id').trim();
+      var title = $like.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.parents('.like-p').prev('.view-p').find('.leancloud-visitors-count').text(counter.get('time'));
+                $element.parents('.post-like').parents('.article-entry').prev('.app-header').find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.parents('.like-p').prev('.view-p').find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $element.parents('.post-like').parents('.article-entry').prev('.app-header').find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
 
-		function addCount(Counter) {
-			var $visitors = $(".like-content");
-			var url = $visitors.attr('id').trim();
-			var title = $visitors.attr('data-flag-title').trim();
-			var query = new AV.Query(Counter);
-
-			query.equalTo("url", url);
-			query.find({
-				success: function(results) {
-					if (results.length > 0) {
-						var counter = results[0];
-						counter.fetchWhenSave(true);
-						counter.increment("time");
-						counter.save(null, {
-							success: function(counter) {
-								var $element = $(document.getElementById(url));
-								$element.find('.count').text(counter.get('time'));
-							},
-							error: function(counter, error) {
-								console.log('Failed to save Visitor num, with error message: ' + error.message);
-							}
-						});
-					} else {
-						var newcounter = new Counter();
-						/* Set ACL */
-						var acl = new AV.ACL();
-						acl.setPublicReadAccess(true);
-						acl.setPublicWriteAccess(true);
-						newcounter.setACL(acl);
-						/* End Set ACL */
-						newcounter.set("title", title);
-						newcounter.set("url", url);
-						newcounter.set("time", 1);
-						newcounter.save(null, {
-							success: function(newcounter) {
-								var $element = $(document.getElementById(url));
-								$element.find('.count').text(newcounter.get('time'));
-							},
-							error: function(newcounter, error) {
-								console.log('Failed to create');
-							}
-						});
-					}
-				},
-				error: function(error) {
-					console.log('Error:' + error.code + " " + error.message);
-				}
-			});
-		}
-		$(function() {
-			var Counter = AV.Object.extend("Counter");
-			var cookieClass = $.cookie('class');
-			$('.post-like').attr('class',cookieClass);	
-			$('.post-like').on('click', function(){
-				if($(this).hasClass('is-active')){
-					$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
-					setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
-				}else{
-					$(this).addClass('is-active');
-					var className=$(this).attr("class");
-					var cur_url = $(this).find('.like-content').attr('id');
-					$.cookie('class', className, { expires: 999999, path: cur_url });
-					addCount(Counter);
-				  	$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");
-					setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
-				}
-			});
-			showTime(Counter);
+    $(function() {
+		/*var viewCounter = AV.Object.extend("Counter");
+		if ($('.leancloud_visitors').length == 1) {
+			addLike(postLike);
+		} else if ($('.post-title-link').length > 1) {
+			showLike(postLike);
+		}*/
+		var postLike = AV.Object.extend("Counter");
+		var cookieClass = $.cookie('class');
+		$('.post-like').attr('class',cookieClass);
+		$('.post-like').on('click', function(){
+			if($(this).hasClass('is-active')){
+				$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
+				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+			}else{
+				$(this).addClass('is-active');
+				var className=$(this).attr("class");
+				var cur_url = $(this).find('.like-content').attr('id');
+				$.cookie('class', className, { expires: 999999, path: cur_url });
+				addLike(postLike);
+				$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");
+				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+			}
 		});
+		showLike(postLike);
+		if ($('.leancloud_visitors').length == 1) {
+			addCount(postLike);
+		} else if ($('.post-title-link').length > 1) {
+			showLike(postLike);
+		}
+    });
   </script>
 
 	
