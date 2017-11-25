@@ -16,6 +16,11 @@ header.top-header {
     display: inline-block;
     margin-bottom: 50px;
 }
+.like-logo a {
+    width: 125px;
+    height: 39px;
+    display: inline-block;
+}
 .top-header nav {
     font-size: 0px;
 }
