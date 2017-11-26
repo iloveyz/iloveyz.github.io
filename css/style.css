@@ -408,7 +408,6 @@ h3.link-title {
   position: fixed !important;
   color: #000;
   background-color: rgba(255,255,255,0.98);
-  box-shadow: 0 0 3px rgba(14,14,14,0.26);
 }
 #header-block .menu .icon-bar {
   background: #7f8c8d;
@@ -2085,7 +2084,6 @@ span.caption:before {
 .fixed-header {
   position: fixed;
   background-color: rgba(255,255,255,0.98);
-  box-shadow: 0 0 3px rgba(14,14,14,0.26);
 }
 .fixed-header .home-link {
   color: #000;
@@ -2600,7 +2598,7 @@ span.caption:before {
   background: #f8f8f8;
   padding: 0 10px;
   border-radius: 2px;
-  margin: 20px 0;
+  margin: 32px 0;
   overflow: auto;
   position: relative;
 }
