@@ -552,14 +552,14 @@
 		var postLike = AV.Object.extend("Counter");
 		var cookieClass = $.cookie('class');
 		$('.post-like').attr('class',cookieClass);
-		$('.post-like').on('click', function(){
-			if($(this).hasClass('is-active')){
+		$('.like-content').on('click', function(){
+			if($(this).parents('.post-like').hasClass('is-active')){
 				$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
 				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
 			}else{
-				$(this).addClass('is-active');
-				var className=$(this).attr("class");
-				var cur_url = $(this).find('.like-content').attr('id');
+				$(this).parents('.post-like').addClass('is-active');
+				var className=$(this).parents('.post-like').attr("class");
+				var cur_url = $(this).attr('id');
 				$.cookie('class', className, { expires: 999999, path: cur_url });
 				addLike(postLike);
 				$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");

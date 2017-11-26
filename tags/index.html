@@ -206,33 +206,33 @@
 <div class="tag-content-box">
   <div id="tag-cloud">
     
-      <a class="tag2" data-name="tag-博客">博客</a>
+      <a class="tag0" data-name="tag-博客">博客</a>
     
-      <a class="tag0" data-name="tag-日常">日常</a>
+      <a class="tag2" data-name="tag-日常">日常</a>
     
-      <a class="tag2" data-name="tag-like页面">like页面</a>
+      <a class="tag1" data-name="tag-like页面">like页面</a>
     
       <a class="tag3" data-name="tag-研究">研究</a>
     
-      <a class="tag3" data-name="tag-工作">工作</a>
+      <a class="tag2" data-name="tag-工作">工作</a>
     
-      <a class="tag1" data-name="tag-hexo">hexo</a>
+      <a class="tag3" data-name="tag-hexo">hexo</a>
     
-      <a class="tag2" data-name="tag-赤色实验室">赤色实验室</a>
+      <a class="tag1" data-name="tag-赤色实验室">赤色实验室</a>
     
-      <a class="tag1" data-name="tag-主题">主题</a>
+      <a class="tag2" data-name="tag-主题">主题</a>
     
-      <a class="tag0" data-name="tag-折腾">折腾</a>
+      <a class="tag2" data-name="tag-折腾">折腾</a>
     
-      <a class="tag2" data-name="tag-笔记">笔记</a>
-    
-      <a class="tag1" data-name="tag-视频">视频</a>
-    
-      <a class="tag0" data-name="tag-设计">设计</a>
+      <a class="tag1" data-name="tag-笔记">笔记</a>
     
       <a class="tag1" data-name="tag-无题">无题</a>
     
       <a class="tag3" data-name="tag-杂谈">杂谈</a>
+    
+      <a class="tag1" data-name="tag-视频">视频</a>
+    
+      <a class="tag2" data-name="tag-设计">设计</a>
     
   </div>
   
@@ -247,7 +247,7 @@
         
         <ul class="tag-preview">
           <li>
-            <a href="/6997/">准备换个博客环境，和老弟一起记录日常...</a>
+            <a href="/24735/">赤色实验室主题简单修改</a>
           </li>
         </ul>
         
@@ -259,19 +259,19 @@
         
         <ul class="tag-preview">
           <li>
-            <a href="/24735/">赤色实验室主题简单修改</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/35325/">like页面设计</a>
+            <a href="/6997/">准备换个博客环境，和老弟一起记录日常...</a>
           </li>
         </ul>
         
         <ul class="tag-preview">
           <li>
             <a href="/29240/">hexo部分暂时折腾结束，回归工作...</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/35325/">like页面设计</a>
           </li>
         </ul>
         
@@ -355,13 +355,13 @@
       
         <ul class="tag-preview">
           <li>
-            <a href="/26462/">赤色实验室开篇第一章</a>
+            <a href="/24735/">赤色实验室主题简单修改</a>
           </li>
         </ul>
         
         <ul class="tag-preview">
           <li>
-            <a href="/24735/">赤色实验室主题简单修改</a>
+            <a href="/26462/">赤色实验室开篇第一章</a>
           </li>
         </ul>
         
@@ -401,28 +401,6 @@
     </div>
     
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-视频">视频</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/61722/">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-设计">设计</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/61722/">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
       <h3 class="tag-name" id="tag-无题">无题</h3>
       
         <ul class="tag-preview">
@@ -439,6 +417,28 @@
         <ul class="tag-preview">
           <li>
             <a href="/16363/">无题之作二篇章...</a>
+          </li>
+        </ul>
+        
+    </div>
+    
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-视频">视频</h3>
+      
+        <ul class="tag-preview">
+          <li>
+            <a href="/61722/">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a>
+          </li>
+        </ul>
+        
+    </div>
+    
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-设计">设计</h3>
+      
+        <ul class="tag-preview">
+          <li>
+            <a href="/61722/">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a>
           </li>
         </ul>
         
@@ -689,14 +689,14 @@
 		var postLike = AV.Object.extend("Counter");
 		var cookieClass = $.cookie('class');
 		$('.post-like').attr('class',cookieClass);
-		$('.post-like').on('click', function(){
-			if($(this).hasClass('is-active')){
+		$('.like-content').on('click', function(){
+			if($(this).parents('.post-like').hasClass('is-active')){
 				$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
 				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
 			}else{
-				$(this).addClass('is-active');
-				var className=$(this).attr("class");
-				var cur_url = $(this).find('.like-content').attr('id');
+				$(this).parents('.post-like').addClass('is-active');
+				var className=$(this).parents('.post-like').attr("class");
+				var cur_url = $(this).attr('id');
 				$.cookie('class', className, { expires: 999999, path: cur_url });
 				addLike(postLike);
 				$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");

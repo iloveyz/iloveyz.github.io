@@ -19,7 +19,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2017/11/26/5a1ad6b398ae9.jpg">
 <meta property="og:image" content="https://i.loli.net/2017/11/26/5a1acf812321b.jpg">
-<meta property="og:updated_time" content="2017-11-26T14:59:30.974Z">
+<meta property="og:image" content="https://i.loli.net/2017/11/26/5a1adb5a2fc0f.jpg">
+<meta property="og:updated_time" content="2017-11-26T15:23:02.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常研究和like页面以及关于博客">
 <meta name="twitter:description" content="bitcron试用到期了，暂时没打算续费，但以后估计还会用，主要还是没啥时间和太懒更新，先闲置着吧。现在把hexo拾掇拾掇继续用起来，嘿嘿。以前弄了半天不知道hexo语法，而hexo官方似乎介绍并没有多详细，可能还是自己的水平有限，一直不知道如何自定义…">
@@ -261,13 +262,17 @@
 <p>的确是可行的，并且使用<code>cate.name</code>进行判断，如果等于这个分类就开始显示对应的模板文件。这个问题解决了，我也成功的制作了<a href="/like/">like页面</a>，还是有点意思的。</p>
 <p>既然可以以这种形式判断，那接下来我就要研究一下，bitcron的一个文章内链的功能。</p>
 <p><img src="https://i.loli.net/2017/11/26/5a1acf812321b.jpg" alt="图片来自bitcron" class="hd"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>bitcron根据站内文章并以超链接的形式放入文中，如<code>[](文章固定链接)</code>然后对文章内链接进行遍历，如果找到条件成立的就以上图显示方式显示。（这里按插个链接用于测试）<a href="/6997/"></a></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>bitcron根据站内文章并以超链接的形式放入文中，如<code>[](文章固定链接)</code>然后对文章内链接进行遍历，如果找到条件成立的就以上图显示方式显示。</p>
 <p>我觉得首先得在文章页把所有文章的链接循环出来，然后进行匹配。我也只是简单的这样琢磨了一下。hexo的文章页应该就是按这个思路进行的。</p>
 <hr>
 <p>从bitcron转回hexo，也把点赞给弄回来了。与浏览量一样，通过<code>leancloud</code>进行存储来实现的点赞功能。倒没什么不妥的地方。因为不需要登陆，所以以cookie方式存储，倒也无所谓。</p>
 <p>接下来只要把站内链接给搞定，就不折腾啦。嘿嘿。</p>
 <hr>
 <p>最近工作需要突击一个项目，我的休息日也泡汤了。最烦加班，心里很不爽。但也很无奈，加就加吧，权当是学习了。{:挖鼻:}</p>
+<hr>
+<p><img src="https://i.loli.net/2017/11/26/5a1adb5a2fc0f.jpg" alt="赤色娱乐LOGO" class="hd"></p>
+<p>闲着无聊，把LOGO改了下，虽然没多大需求，但闲着就得折腾一下，感觉可以凑合用，从方形变成圆形，从字体到自己制作，基本没有啥好讲的，毕竟懒，毕竟文笔不行。</p>
+<p>其实若是按照网上那一套来个草稿图什么的装下X，感觉似乎的确能提升点儿逼格。嘿嘿{:扶眼镜:}</p>
 </section>
 	<div class="post-like">
 		<span id="/58255/" class="like-content" data-flag-title="日常研究和like页面以及关于博客">
@@ -647,14 +652,14 @@ gitalk.render('gitalk-comment')
 		var postLike = AV.Object.extend("Counter");
 		var cookieClass = $.cookie('class');
 		$('.post-like').attr('class',cookieClass);
-		$('.post-like').on('click', function(){
-			if($(this).hasClass('is-active')){
+		$('.like-content').on('click', function(){
+			if($(this).parents('.post-like').hasClass('is-active')){
 				$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
 				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
 			}else{
-				$(this).addClass('is-active');
-				var className=$(this).attr("class");
-				var cur_url = $(this).find('.like-content').attr('id');
+				$(this).parents('.post-like').addClass('is-active');
+				var className=$(this).parents('.post-like').attr("class");
+				var cur_url = $(this).attr('id');
 				$.cookie('class', className, { expires: 999999, path: cur_url });
 				addLike(postLike);
 				$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");
