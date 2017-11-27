@@ -2409,17 +2409,62 @@ span.caption:before {
   color: #7f8c8d;
 }
 .guide-pager {
-  margin: 1em 3em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 15px;
   font-weight: 600;
+  position: relative;
+  width: 200px;
+  margin: 12px auto 72px;
+}
+.guide-pager:before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #bbb;
+  position: absolute;
+  top: 20.5px;
+  left: -100px;
+}
+.guide-pager:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #bbb;
+  position: absolute;
+  top: 20.5px;
+  right: -100px;
+}
+.guide-pager a {
+  padding: 10px 32px;
+  border: 1px solid #bbb;
+  border-radius: 50px;
+  color: #666;
 }
 .page-arrow {
-  color: #34495e;
+  color: #363636;
+  display: none;
 }
-.unvisible {
-  visibility: hidden;
+.guide-pager a.nextpage.unvisible {
+  border-radius: 0 50px 50px 0;
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+  border-left: 0px;
+  cursor: not-allowed;
+}
+.guide-pager a.nextpage {
+  border-radius: 0 50px 50px 0;
+  border-left: 0px;
+}
+.guide-pager a.prevpage.unvisible {
+  border-radius: 50px 0 0 50px;
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+  border-right: 1px solid #bbb;
+  cursor: not-allowed;
+}
+.guide-pager a.prevpage {
+  border-radius: 50px 0 0 50px;
 }
 .markdown-content pre,
 .article-summary pre,
