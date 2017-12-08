@@ -2195,6 +2195,13 @@ span.caption:before {
   font-size: 14px;
   color: #5389e1;
 }
+.ins-section-container section:nth-child(3),
+.ins-section-container section:nth-child(4),
+.ins-section-container .ins-section:nth-child(2) .ins-selectable:nth-child(2),
+.ins-section-container .ins-section:nth-child(2) .ins-selectable:nth-child(4),
+.ins-section-container .ins-section:nth-child(2) .ins-selectable:nth-child(6) {
+  display: none;
+}
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
     opacity: 0.5;
