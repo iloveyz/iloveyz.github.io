@@ -2062,8 +2062,6 @@ span.caption:before {
 .preview-post--image {
   width: 29%;
   height: 100%;
-  min-height: 182px;
-  max-height: 212px;
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -2103,7 +2101,8 @@ span.caption:before {
 @media screen and (max-width: 480px) {
   .preview-post--link {
     padding: 36px 20px 29px;
-    height: 126px;
+    max-height: 126px;
+    min-height: 98px;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
     border: 0px;
     position: relative;
@@ -2144,7 +2143,7 @@ span.caption:before {
     color: rgba(255,255,255,0.75);
     width: 100%;
     max-height: 60px;
-    min-height: 60px;
+    min-height: 32px;
     overflow: hidden;
     margin-top: 9px;
   }
@@ -2626,7 +2625,7 @@ span.caption:before {
 .markdown-content code,
 .article-summary code {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  font-size: 15px;
+  font-size: 13px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content pre,
