@@ -2200,6 +2200,30 @@ span.caption:before {
 .ins-section-container .ins-section:nth-child(2) .ins-selectable:nth-child(6) {
   display: none;
 }
+.markdown-content ul {
+  margin: 32px 0 !important;
+}
+.markdown-content ul li {
+  margin-left: 30px;
+  margin-bottom: 12px;
+  padding-top: 2px;
+}
+.markdown-content ul li:before {
+  content: "•";
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-left: -58px;
+  padding-right: 15px;
+  display: inline-block;
+  text-align: right;
+  width: 58px;
+}
+.markdown-content ul ul li:last-of-type {
+  margin-bottom: 0px;
+}
+.markdown-content ul ul {
+  margin: 15px 0 0 !important;
+}
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
     opacity: 0.5;
