@@ -2224,6 +2224,25 @@ span.caption:before {
 .markdown-content ul ul {
   margin: 15px 0 0 !important;
 }
+.markdown-content a[title=note] {
+  border: 1px solid #5389e1;
+  font-size: 12px;
+  padding: 2.5px 10px;
+  border-radius: 50px;
+  color: #5389e1;
+  background: #fff;
+  display: inline-block;
+  line-height: normal;
+  vertical-align: top;
+  position: relative;
+  top: 8.5px;
+  margin-right: 15px;
+}
+@media screen and (max-width: 480px) {
+  .markdown-content a[title=note] {
+    top: 3.6px;
+  }
+}
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
     opacity: 0.5;
