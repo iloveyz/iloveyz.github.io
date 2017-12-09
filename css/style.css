@@ -2232,7 +2232,7 @@ span.caption:before {
   color: #5389e1;
   background: #fff;
   display: inline-block;
-  line-height: normal;
+  line-height: 20px;
   vertical-align: top;
   position: relative;
   top: 8.5px;
