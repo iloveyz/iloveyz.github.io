@@ -2227,12 +2227,12 @@ span.caption:before {
 .markdown-content a[title=note] {
   border: 1px solid #5389e1;
   font-size: 12px;
-  padding: 2.5px 10px;
+  padding: 3.2px 10px 2.5px;
   border-radius: 50px;
   color: #5389e1;
   background: #fff;
   display: inline-block;
-  line-height: 15px;
+  line-height: normal;
   vertical-align: top;
   position: relative;
   top: 8.5px;
