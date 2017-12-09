@@ -2136,7 +2136,7 @@ span.caption:before {
   .preview-post--time {
     font-size: 14px;
     color: rgba(255,255,255,0.5);
-    margin-top: 10px;
+    margin-top: 12px;
   }
   .preview-post--content {
     line-height: 1.9rem;
@@ -2146,7 +2146,7 @@ span.caption:before {
     max-height: 60px;
     min-height: 60px;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 9px;
   }
   .preview-post--link a {
     width: 100%;
