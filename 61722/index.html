@@ -175,17 +175,27 @@
 
 	
     
-<header class="header-top">
+<header class="header-top app-header">
 	<div class="video-header">
-		<h2><%- page.title %></h2>
+		<h2>视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</h2>
 		<div class="entry-meta">
-			<p><%- partial('post/category') %></p>
-			<p><i class="meta-date"><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></i></p>
-			<p class="view-p"><%- partial('post-article') %></p>
+			<p>
+    <span class="article-category">
+        视频
+    </span>
+</p>
+			<p class="meta-date" data-timeago="2017-08-11 08:54:48">2017-08-11 08:54:48</p>
+			<p class="view-p">
+	<em>-</em>
+   <span url="/61722/" url="/61722/" class="leancloud_visitors" data-flag-name="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
+       <i class="fa fa-eye"></i>
+     <span class="leancloud-visitors-count"></span>
+    </span>
+</p>
 		</div>
 	</div>
 </header>
-<article class="article-video article-summary mobile--video-box">
+<article class="article-video article-summary mobile--video-box article-entry">
 	<div class="video-box">
 		<div class="video-player">
 		</div>
@@ -201,24 +211,50 @@
 	<div class="clear"></div>
 	<header class="mobile--header-top">
 	<div class="video-header">
-		<h2><%- page.title %></h2>
+		<h2>视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</h2>
 		<div class="entry-meta">
-			<p><%- partial('post/category') %></p>
-			<p><i class="meta-date"><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></i></p>
-			<p class="mobile--view-p"><%- partial('post-article') %></p>
+			<p>
+    <span class="article-category">
+        视频
+    </span>
+</p>
+			<p class="meta-date" data-timeago="2017-08-11 08:54:48">17-08-11</p>
+			<p class="mobile--view-p">
+	<em>-</em>
+   <span url="/61722/" url="/61722/" class="leancloud_visitors" data-flag-name="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
+       <i class="fa fa-eye"></i>
+     <span class="leancloud-visitors-count"></span>
+    </span>
+</p>
 		</div>
-		<div class="entry-description"><div class="d-content"><p><%- page.description %></p></div><i class="fa fa-angle-down"></i></div>
+		<div class="entry-description"><div class="d-content"><p>因为对hexo很陌生，有些地方着实让我挺烦恼的。样式就很难写啊，不知道是不是编辑器的问题，有时候如果不按规定tab或空格就会使样式显示不出来，甚至还会把原先的样式给取消掉。不过现在倒是弄明白怎么回事了。</p></div><i class="fa fa-angle-down"></i></div>
 	</div>
 </header>
 <div class="clear"></div>
     <div class="entry-content video-content">
-        <%- page.content %>
+        <div class="v-content"><br>这篇主要是用来提供观赏使用，视频页…还有一重要的事情<br></div>
     </div>
-	<% if (page.tags && page.tags.length) { %>
+	<div class="post-like">
+		<span id="/61722/" class="like-content" data-flag-title="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~">
+			<i class="fa fa-heart-o"></i>
+			<span class="like-count">0</span>
+		</span>
+	</div>
+	
       <div class="tags">
-        <%- partial('post/tag', { tags: page.tags }) %>
+        <p class="tag-p">
+
+  <a href="/tags#设计" >
+    <span class="tag-code">设计</span>
+  </a>
+
+  <a href="/tags#视频" >
+    <span class="tag-code">视频</span>
+  </a>
+
+</p>
       </div>
-    <% } %>
+    
 	<div class="qrcode">
 		<div class="qr-box">
 			<canvas id="share-qrcode"></canvas>
@@ -226,18 +262,70 @@
 		</div>
     </div>
 	<div class="article-footer">
-		<%- partial('share/index', { post: post }) %>
+		<div class="share-container">
+
+
+    <div class="bdsharebuttonbox">
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+		float: none;
+		display: inline-block;
+        margin: 0px 6px;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft jhenghei','Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
 	</div>
-	<% if (!index) { %>
-		<%- partial('post/nav') %>
-	<% } %>
+	
+		
+<nav id="article-nav">
+    
+        <a href="/53250/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+        </a>
+    
+    
+        <a href="/24735/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+        </a>
+    
+</nav>
+
+
+	
 	<div id="gitalk-comment"></div>
 </article>
 
 <div class="lightoff"></div>
-<%- js('js/video.min') %>
-<%- js('js/article') %>
-<%- js('js/gitalk.min') %>
+<script src="/js/video.min.js"></script>
+<script src="/js/article.js"></script>
+<script src="/js/gitalk.min.js"></script>
 <script>
 (function () {
 $('.video-playlist p').each(function(){
@@ -274,11 +362,11 @@ $('.video-playlist p').each(function(){
 })();
 var gitalk = new Gitalk({
 	id: window.location.pathname,
-	clientID: '<%= theme['gitalk_clientID'] %>',
-	clientSecret: '<%= theme['gitalk_clientSecret'] %>',
-	repo: '<%= theme['gitalk_repo'] %>',
-	owner: '<%= theme['gitalk_owner'] %>',
-	admin: ['<%= theme['gitalk_admin'] %>'],
+	clientID: '68f85c54fe7bab00c69e',
+	clientSecret: '45babb7dd380e07cb68e5daf40b1a230f0f3391d',
+	repo: 'iloveyz.github.io',
+	owner: 'iloveyz',
+	admin: ['iloveyz'],
 	distractionFreeMode: true,
 	body: location.href
 })

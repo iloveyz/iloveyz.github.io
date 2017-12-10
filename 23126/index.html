@@ -319,39 +319,15 @@
 </main>
 <div class="like-active"><span><em></em></span></div>
 
-<form class="js-form form" method="post" action="https://api.staticman.net/v2/entry/iloveyz/iloveyz.github.io/master/comment">
-  <input type="hidden" name="options[slug]" value="/23126/">
-  <input type="hidden" name="options[parent]" value="">
+<form method="POST" action="https://api.staticman.net/v2/entry/iloveyz/iloveyz.github.io/comment">
+  <input name="/23126/" type="hidden" value="https://iloveyz.github.io">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input name="options[slug]" type="hidden" value="/23126/">
+  <label><input name="fields[name]" type="text">Name</label>
+  <label><input name="fields[email]" type="email">E-mail</label>
+  <label><textarea name="fields[message]"></textarea>Message</label>
   
-  <fieldset>
-  <div class="textfield">
-    <textarea name="fields[comment]" type="text" placeholder="Vous pouvez utiliser la syntaxe Markdown"></textarea>
-  </div>
-  </fieldset>
-
-  <fieldset>
-    <div class="textfield">
-      <input name="fields[name]" type="text" placeholder="Votre nom">
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <div class="textfield">
-      <input type="email" name="fields[email]" placeholder="Votre addresse mail">
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <div class="textfield">
-      <input type="text" name="fields[website]" placeholder="Votre site web">
-    </div>
-  </fieldset>
-  
-  <fieldset>
-    <button class="button">
-      Submit
-    </button>
-  </fieldset>
+  <button type="submit">Go!</button>
 </form>
 
 <script src="/js/gitalk.min.js"></script>
