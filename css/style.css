@@ -2155,6 +2155,9 @@ span.caption:before {
     left: 0px;
     display: block;
   }
+  .justified-gallery.hd {
+    width: 100% !important;
+  }
 }
 .highlight .hljs {
   color: #999 !important;
@@ -2228,7 +2231,8 @@ span.caption:before {
 .markdown-content a[title=note],
 .markdown-content a[title=solve],
 .markdown-content a[title=error],
-.markdown-content a[title=text] {
+.markdown-content a[title=text],
+.markdown-content a[title=normal] {
   font-size: 12px;
   padding: 3.2px 10px 2.5px;
   border-radius: 50px;
@@ -2269,11 +2273,17 @@ span.caption:before {
   color: #fff;
   background: #5389e1;
 }
+.markdown-content a[title=normal] {
+  border: 1px solid #bbb;
+  color: #666;
+  background: #fff;
+}
 @media screen and (max-width: 480px) {
   .markdown-content a[title=other],
   .markdown-content a[title=note],
   .markdown-content a[title=error],
-  .markdown-content a[title=text] {
+  .markdown-content a[title=text],
+  .markdown-content a[title=normal] {
     top: 5px;
   }
 }
