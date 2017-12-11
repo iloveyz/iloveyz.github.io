@@ -2234,7 +2234,7 @@ span.caption:before {
 .markdown-content a[title=text],
 .markdown-content a[title=normal] {
   font-size: 12px;
-  padding: 3.2px 10px 2.5px;
+  padding: 3.2px 10px 3.2px;
   border-radius: 50px;
   display: inline-block;
   line-height: normal;
@@ -2268,14 +2268,14 @@ span.caption:before {
   top: -7.5px;
   border: 2px solid #fff;
 }
-.markdown-content a[title=text] {
+.markdown-content a[title=normal] {
   border: 1px solid #5389e1;
   color: #fff;
   background: #5389e1;
 }
-.markdown-content a[title=normal] {
+.markdown-content a[title=text] {
   border: 1px solid #bbb;
-  color: #666;
+  color: #999;
   background: #fff;
 }
 @media screen and (max-width: 480px) {
@@ -2285,6 +2285,7 @@ span.caption:before {
   .markdown-content a[title=text],
   .markdown-content a[title=normal] {
     top: 5px;
+    padding: 3.2px 10px 2.5px;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {
