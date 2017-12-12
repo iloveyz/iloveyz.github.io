@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <!DOCTYPE html>
-<html lang=zh>
+<html lang=zh class="">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -47,6 +47,7 @@
 	<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
 	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/swiper.min.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
 <link rel="stylesheet" href="/css/plugins/gitalk.css">
 <link rel="stylesheet" href="/css/plugins/video-js.css">
@@ -60,7 +61,7 @@
   <body>
 	
     
-<header id="header-block" class="header fixed-header">
+<header id="header-block" class="header fixed-header is-display">
 
   <div class="header-container">
 	
@@ -181,6 +182,52 @@
 <div class="timeline timeline-wrap">
     <div class="timeline-row timeline-row-major">
     </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                
+    
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/53250/">关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/53250/">
+            <time datetime="2017-08-11T07:51:37.015Z" itemprop="datePublished">2017-08-11</time>
+        </a>
+    </div>
+
+
+                    
+    <span class="article-category">
+        笔记
+    </span>
+
+                    <p class="tag-p">
+
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
+  </a>
+
+  <a href="/tags#无题" >
+    <span class="tag-code">无题</span>
+  </a>
+
+</p>
+                </div>
+				<div class="article-content">
+					
+					<div class="post-content"><p><img src="https://ooo.0o0.ooo/2017/08/11/598d5b9c83a1e.jpg" alt="无题"></p>
+<p>好像开通hexo到现在还没正儿八经的写过啥，其实不是文笔不行，而是真的不行，码字容易记流水帐。小学作文就没入过老师法眼，更别提初中高中大学了，那简直是人见人流泪，不是感动的，而是辣眼睛。嘿嘿！~<br><a id="more"></a></p>
+<h2 id="关于hexo"><a href="#关于hexo" class="headerl ...</div>
+				</div>
+            </div>
+        </div>
     
         <div class="timeline-row">
             <span class="node"></span>
@@ -349,6 +396,22 @@
 <script src="/js/script.js"></script>
 <script src="/js/jquery.liveTimeAgo.js"></script>
 <script src="/js/iloveyz.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script>
+var swiper1 = new Swiper('.swiper1', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true
+});
+var swiper2 = new Swiper('.swiper2', {
+	pagination: '.swiper-pagination2',
+	slidesPerView: 'auto',
+	paginationClickable: true,
+	spaceBetween: 20,
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
+});
+</script>
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>

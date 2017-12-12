@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <!DOCTYPE html>
-<html lang=zh>
+<html lang=zh class="">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -47,6 +47,7 @@
 	<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
 	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/swiper.min.css">
 <link rel="stylesheet" href="/css/plugins/gitment.css">
 <link rel="stylesheet" href="/css/plugins/gitalk.css">
 <link rel="stylesheet" href="/css/plugins/video-js.css">
@@ -60,7 +61,7 @@
   <body>
 	
     
-<header id="header-block" class="header fixed-header">
+<header id="header-block" class="header fixed-header is-display">
 
   <div class="header-container">
 	
@@ -207,9 +208,24 @@
 				
 				<div class="one-tag-list">
                 <div class="post-preview">
-                    <a href="/8109/">
+                    <a href="/25955/">
                         <p class="post-title">
-                            一不注意，差点又折腾起来了
+                            我要做个长文章页面...再一次折腾...
+                        </p>
+                        
+                    </a>
+				</div>
+				</div>
+            
+				
+				
+				
+				
+				<div class="one-tag-list">
+                <div class="post-preview">
+                    <a href="/10571/">
+                        <p class="post-title">
+                            一不注意，差点又折腾了...
                         </p>
                         
                     </a>
@@ -540,6 +556,22 @@
 <script src="/js/script.js"></script>
 <script src="/js/jquery.liveTimeAgo.js"></script>
 <script src="/js/iloveyz.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script>
+var swiper1 = new Swiper('.swiper1', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true
+});
+var swiper2 = new Swiper('.swiper2', {
+	pagination: '.swiper-pagination2',
+	slidesPerView: 'auto',
+	paginationClickable: true,
+	spaceBetween: 20,
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
+});
+</script>
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
