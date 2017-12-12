@@ -2521,6 +2521,15 @@ main.la-wrapper.la-banner {
   .la-content {
     position: relative;
     z-index: 99;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .la-content.is-mobile-hide {
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: -99999;
+    transition: transform 0.5s ease, opacity 0.5s ease;
   }
   .la-content,
   .la-content .post-article,
@@ -2636,8 +2645,7 @@ main.la-wrapper.la-banner {
   .la-title,
   .tags,
   .la-footer,
-  .app-footer,
-  .is-mobile-hide {
+  .app-footer {
     display: none;
   }
   .app-long--article .la-content .close {
