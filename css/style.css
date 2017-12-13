@@ -2692,6 +2692,11 @@ main.la-wrapper.la-banner {
     font-size: 16px;
     line-height: 25px;
   }
+  .app-long--article .la-mobile-content h6 {
+    margin: 10px 0px 20px;
+    font-size: 16px;
+    line-height: 25px;
+  }
   .app-long--article .la-mobile-content .swiper-container {
     overflow: unset;
   }
