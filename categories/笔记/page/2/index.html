@@ -58,10 +58,10 @@
 	<script src="/js/cookie.js"></script>
 	<script src="/js/qrious.js"></script>
 </head>
-  <body>
+  <body class= ''>
 	
     
-<header id="header-block" class="header fixed-header is-display">
+<header id="header-block" class="header fixed-header ">
 
   <div class="header-container">
 	
@@ -256,6 +256,10 @@
 
                     <p class="tag-p">
 
+  <a href="/tags#折腾" >
+    <span class="tag-code">折腾</span>
+  </a>
+
   <a href="/tags#赤色实验室" >
     <span class="tag-code">赤色实验室</span>
   </a>
@@ -266,10 +270,6 @@
 
   <a href="/tags#主题" >
     <span class="tag-code">主题</span>
-  </a>
-
-  <a href="/tags#折腾" >
-    <span class="tag-code">折腾</span>
   </a>
 
   <a href="/tags#笔记" >
@@ -400,7 +400,10 @@
 <script>
 var swiper1 = new Swiper('.swiper1', {
 	pagination: '.swiper-pagination',
-	paginationClickable: true
+	paginationClickable: true,
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
 });
 var swiper2 = new Swiper('.swiper2', {
 	pagination: '.swiper-pagination',
@@ -411,6 +414,8 @@ var swiper2 = new Swiper('.swiper2', {
 		return '<span class="' + className + '">' + (index + 1) + '</span>';
 	}
 });
+swiper1.params.control = swiper2;
+swiper2.params.control = swiper1;
 </script>
 	
     

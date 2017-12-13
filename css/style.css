@@ -2643,9 +2643,9 @@ main.la-wrapper.la-banner {
   .app-long--article #article-banner,
   .is-display,
   .la-title,
-  .tags,
+  .app-long--article .tags,
   .la-footer,
-  .app-footer {
+  .app-long--article .app-footer {
     display: none;
   }
   .app-long--article .la-content .close {

@@ -59,10 +59,10 @@
 	<script src="/js/cookie.js"></script>
 	<script src="/js/qrious.js"></script>
 </head>
-  <body>
+  <body class= ''>
 	
     
-<header id="header-block" class="header fixed-header is-display">
+<header id="header-block" class="header fixed-header ">
 
   <div class="header-container">
 	
@@ -377,7 +377,10 @@ gitalk.render('gitalk-comment')
 <script>
 var swiper1 = new Swiper('.swiper1', {
 	pagination: '.swiper-pagination',
-	paginationClickable: true
+	paginationClickable: true,
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
 });
 var swiper2 = new Swiper('.swiper2', {
 	pagination: '.swiper-pagination',
@@ -388,6 +391,8 @@ var swiper2 = new Swiper('.swiper2', {
 		return '<span class="' + className + '">' + (index + 1) + '</span>';
 	}
 });
+swiper1.params.control = swiper2;
+swiper2.params.control = swiper1;
 </script>
 	
     
