@@ -2323,7 +2323,7 @@ main.la-wrapper.la-banner {
 }
 .la-content h6 {
   font-size: 1.6em;
-  margin: 15px auto 35px;
+  margin: 15px auto 50px;
   text-align: -webkit-center;
   font-weight: normal;
 }
@@ -2344,7 +2344,7 @@ main.la-wrapper.la-banner {
 }
 .la-content h6 {
   font-size: 1.6em;
-  margin: 0 auto 35px;
+  margin: 0 auto 50px;
   text-align: -webkit-center;
   font-weight: normal;
   padding: 0 50px 0;
@@ -2369,11 +2369,12 @@ main.la-wrapper.la-banner {
   border-top: 0px;
 }
 .la-title ol li a {
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 0 32px;
   border-top: 1px solid #f5f5f5;
   display: block;
   color: #999;
+  line-height: 25px;
 }
 .la-title ol {
   padding: 0px;
@@ -2430,7 +2431,7 @@ main.la-wrapper.la-banner {
   position: absolute;
   background: #5389e1;
   padding: 10px 0;
-  top: 22px;
+  top: 19px;
 }
 .la-title ol li.toc-item.toc-level-6.cur a {
   color: #5389e1;
@@ -2688,17 +2689,21 @@ main.la-wrapper.la-banner {
   }
   .app-long--article .la-mobile-content p {
     margin: 0px;
-    line-height: 25px;
+    line-height: 26px;
   }
   .app-long--article .la-mobile-content h6 {
     margin: 10px 0px 20px;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 26px;
   }
   .app-long--article .la-mobile-content h6 {
     margin: 10px 0px 20px;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 26px;
+  }
+  .la-content h6 {
+    padding: 0 32px;
+    margin: 0 auto 32px;
   }
   .app-long--article .la-mobile-content h6:after {
     content: "";
@@ -2706,7 +2711,7 @@ main.la-wrapper.la-banner {
     height: 1px;
     background: #bbb;
     display: block;
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .app-long--article .la-mobile-content .swiper-container {
     overflow: unset;
