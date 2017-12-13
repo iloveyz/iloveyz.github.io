@@ -2455,6 +2455,7 @@ main.la-wrapper.la-banner {
     margin: 20px 20px 0;
     color: #fff;
     font-size: 22px;
+    text-shadow: 0 0px 5px rgba(0,0,0,0.5);
   }
   .app-long--article .app-header h2:before {
     content: "";
