@@ -57,17 +57,19 @@
 		$('.markdown-content').html(str);
 	}
 	$('.la-title ol li  a[href*=#]').click(function() {
+		//$(this).parents('li').addClass('cur').siblings().removeClass('cur');
 	  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
 		var $target = $(this.hash);  
 		$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');  
 		if ($target.length) {  
-		  var targetOffset = $target.offset().top;  
+		  var targetOffset = $target.offset().top;
+		  var curposition = parseInt(targetOffset - 171);
 		  $('html,body').animate({  
-			scrollTop: targetOffset - 171
+			scrollTop: targetOffset - 145
 		  },1000);  
 		  return false;  
 		}  
-	  }  
+	  }
 	});
 	if($('.app-long--article').length == 1){
 		document.addEventListener('scroll', function () {
@@ -86,6 +88,7 @@
 			  $('.la-sidebar').removeClass('fixed');
 			  $('.la-sidebar').addClass('is-stop-top');
 		  }
+		  
 		  if(bannerlength == 1){
 			  var mainheight = parseInt(laheight - sidebarheight) - 75;
 		  }
@@ -93,11 +96,19 @@
 			  $('.la-sidebar').removeClass('fixed');
 			  $('.la-sidebar').addClass('is-stop-bottom');
 		  }
+		  $('.la-content .la-item--content').each(function(){
+			  var topindex = $(this).index();
+			  var topset = $(this).offset().top - 145;
+			  if(scrollTop >= topset){
+				$('.la-title ol li').eq(topindex).addClass('cur').siblings().removeClass('cur');
+			  }
+		  });
 		});
 	}
 	$('.la-mobile-content .la-item--content').click(function(){
 		var itemIndex = $(this).index();
 		$('.la-content').removeClass('is-mobile-hide');
+		$('header').hide();
 		$('.la-content .la-item--content').eq(itemIndex).addClass('swiper-slide-active').siblings().removeClass('swiper-slide-active');
 		if(itemIndex == 0){
 			var curwidth = parseInt($(window).width() - $(window).width());
@@ -110,13 +121,12 @@
 	});
 	$('.la-content .close').click(function(){
 		$('.la-content').addClass('is-mobile-hide');
+		$('header').show();
 		$('.la-content .la-item--content').removeClass('is-show');
 		$('.la-mobile-content .la-item--content').each(function(){
 			var moveIndex = $(this).index()+1;
 			var itemWidth = $('.la-mobile-content .la-item--content');
 			var itemNum = parseInt($('.la-content .swiper-pagination-bullet-active').text());
-			//if(moveIndex+1 == itemNum){
-			
 		});
 	});
 })();

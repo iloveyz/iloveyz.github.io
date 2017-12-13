@@ -178,7 +178,10 @@
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content la-article-card">
+	<div class="la-article-pic" style="background-image: url('https://i.loli.net/2017/12/11/5a2ea337581a5.jpg')"></div>
+	<div class="la-wrapper--box">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/25955/" class="post-title-link">我要做个长文章页面...再一次折腾...</a>
@@ -206,22 +209,16 @@
 </p>
 	</div>
   </header>
-  <div class="article-summary">
-	
-	  <div class="la-item--content swiper-slide longarticle"><div class="la-item--box"><h6 id="如果这篇就是长文章，那这里就是标题"><a href="#如果这篇就是长文章，那这里就是标题" class="headerlink" title="如果这篇就是长文章，那这里就是标题"></a>如果这篇就是长文章，那这里就是标题</h6><p>所以这篇长文章的构造就此形成。现在主要思考，该如何把文章和标题关联起来。这次要尽量少使用js，准备大量运用hexo语法来实现长文章的展示。其实长文章一直是我想弄的东西，比如，就是我之前说的小说，或是长篇大论都有用到的时候，所以考虑再三，最后还是再折腾一次好了。</p>
-	
-  </div>
-  <div class="readmore">
-	<a class="more" href="/25955/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/10571/" class="post-title-link">一不注意，差点又折腾了...</a>
@@ -258,13 +255,14 @@
 	<a class="more" href="/10571/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/6286/" class="post-title-link">卡通爱好者，整理相册发现一些以前制作的卡通人物</a>
@@ -302,13 +300,14 @@
 	<a class="more" href="/6286/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/51677/" class="post-title-link">无题也是种很好的标题...</a>
@@ -345,13 +344,14 @@
 	<a class="more" href="/51677/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/50931/" class="post-title-link">文章内链的研究...</a>
@@ -389,13 +389,14 @@
 	<a class="more" href="/50931/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/23126/" class="post-title-link">又一周</a>
@@ -433,13 +434,14 @@
 	<a class="more" href="/23126/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/10376/" class="post-title-link">无趣，无题，心情文，嘿嘿...</a>
@@ -477,13 +479,14 @@
 	<a class="more" href="/10376/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/11044/" class="post-title-link">没事看看电视剧也挺不错...</a>
@@ -521,19 +524,19 @@
 	<a class="more" href="/11044/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
 		
 	
-	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/58255/" class="post-title-link">日常研究和like页面以及关于博客</a>
@@ -571,8 +574,8 @@
 	<a class="more" href="/58255/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 
@@ -733,7 +736,9 @@ swiper2.params.control = swiper1;
 			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			
 			if($('.app-long--article').length == 1){
+				$(element).parents('.app-long--article').next('.la-footer').find(COUNT_CONTAINER_REF).text(like);
 				$(element).parents('.post-like').parents('.la-footer').prev('.app-long--article').find(VIEW_CONTAINER_COUNT).text(time);
+				$(element).parents('.post-like').parents('.la-content').prev('.la-sidebar').find(VIEW_CONTAINER_COUNT).text(time);
 			}else{
 				$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
 			}

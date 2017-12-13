@@ -178,7 +178,8 @@
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/6997/" class="post-title-link">准备换个博客环境，和老弟一起记录日常...</a>
@@ -216,13 +217,14 @@
 	<a class="more" href="/6997/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/16363/" class="post-title-link">无题之作二篇章...</a>
@@ -260,13 +262,14 @@
 	<a class="more" href="/16363/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/29240/" class="post-title-link">hexo部分暂时折腾结束，回归工作...</a>
@@ -306,13 +309,14 @@
 	<a class="more" href="/29240/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/53250/" class="post-title-link">关于hexo，顺便感慨一下，基本标题要长一点好像才比较不错...</a>
@@ -350,13 +354,14 @@
 	<a class="more" href="/53250/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/61722/" class="post-title-link">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</a>
@@ -393,13 +398,14 @@
 	<a class="more" href="/61722/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/24735/" class="post-title-link">赤色实验室主题简单修改</a>
@@ -436,13 +442,14 @@
 	<a class="more" href="/24735/">Read more</a>
   </div>
 </article>
+			
 		
-	
 	
 
 	
 		
-			<article class="article-card card-content">
+			
+				<article class="article-card card-content">
 	<header class="app-header">
   <h2 class="article-head">
 	<a href="/26462/" class="post-title-link">赤色实验室开篇第一章</a>
@@ -480,11 +487,10 @@
 	<a class="more" href="/26462/">Read more</a>
   </div>
 </article>
+			
 		
 	
-	
 
-	
 	
 
 
@@ -645,7 +651,9 @@ swiper2.params.control = swiper1;
 			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			
 			if($('.app-long--article').length == 1){
+				$(element).parents('.app-long--article').next('.la-footer').find(COUNT_CONTAINER_REF).text(like);
 				$(element).parents('.post-like').parents('.la-footer').prev('.app-long--article').find(VIEW_CONTAINER_COUNT).text(time);
+				$(element).parents('.post-like').parents('.la-content').prev('.la-sidebar').find(VIEW_CONTAINER_COUNT).text(time);
 			}else{
 				$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
 			}
