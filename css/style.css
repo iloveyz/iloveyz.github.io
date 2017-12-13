@@ -2660,6 +2660,9 @@ main.la-wrapper.la-banner {
     background: #000;
     z-index: 9;
   }
+  .is-overflow .ins-search.show {
+    height: 100%;
+  }
 }
 @-webkit-keyframes ft_tinyapp_pop {
   0% {
