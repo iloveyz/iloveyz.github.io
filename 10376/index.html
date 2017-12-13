@@ -475,6 +475,7 @@ swiper2.params.control = swiper1;
             $(element).find(COUNT_CONTAINER_REF).text(like);
 			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.post-like').parents('.la-footer').prev('.app-long--article').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })
         .fail(function (object, error) {

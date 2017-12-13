@@ -256,6 +256,10 @@
 
                     <p class="tag-p">
 
+  <a href="/tags#折腾" >
+    <span class="tag-code">折腾</span>
+  </a>
+
   <a href="/tags#赤色实验室" >
     <span class="tag-code">赤色实验室</span>
   </a>
@@ -266,10 +270,6 @@
 
   <a href="/tags#主题" >
     <span class="tag-code">主题</span>
-  </a>
-
-  <a href="/tags#折腾" >
-    <span class="tag-code">折腾</span>
   </a>
 
   <a href="/tags#笔记" >
@@ -476,6 +476,7 @@ swiper2.params.control = swiper1;
             $(element).find(COUNT_CONTAINER_REF).text(like);
 			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
 			$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
+			$(element).parents('.post-like').parents('.la-footer').prev('.app-long--article').find(VIEW_CONTAINER_COUNT).text(time);
           }
         })
         .fail(function (object, error) {
