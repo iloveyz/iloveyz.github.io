@@ -104,6 +104,8 @@
 			  }
 		  });
 		});
+		var wrapperheight = $('.app-long--article').height();
+		$('.app-long--article').css({'height': wrapperheight+'px'});
 	}
 	$('.la-mobile-content .la-item--content').click(function(){
 		var itemIndex = $(this).index();
