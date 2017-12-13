@@ -2491,6 +2491,9 @@ main.la-wrapper.la-banner {
     position: relative;
     z-index: 5;
   }
+  .la-article-card .la-wrapper--box h2 {
+    font-size: 20px;
+  }
   .la-article-card header {
     position: static;
     padding: 15px 20px;
@@ -2696,6 +2699,14 @@ main.la-wrapper.la-banner {
     margin: 10px 0px 20px;
     font-size: 16px;
     line-height: 25px;
+  }
+  .app-long--article .la-mobile-content h6:after {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: #bbb;
+    display: block;
+    margin-top: 25px;
   }
   .app-long--article .la-mobile-content .swiper-container {
     overflow: unset;
