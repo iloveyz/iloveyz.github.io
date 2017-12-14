@@ -112,6 +112,15 @@
 			  $('.la-sidebar').addClass('is-stop-bottom');
 		  }
 		});
+		var wrapperheight = $('.app-long--article').height();
+		$(window).resize(function() {
+			if($(window).height()<wrapperheight){
+				$('.app-long--article').hide();
+			}
+			if($(window).height()>=wrapperheight){
+				$('.app-long--article').show();
+			}
+		});
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if(scrollTop >= 425){
 			$('.la-sidebar').removeClass('is-stop-top');
@@ -127,15 +136,6 @@
 			$('.la-sidebar').removeClass('fixed');
 			$('.la-sidebar').addClass('is-stop-top');  
 		}
-		var wrapperheight = $('.app-long--article').height();
-		$(window).resize(function() {
-			if($(window).height()<wrapperheight){
-				$('.app-long--article').hide();
-			}
-			if($(window).height()>=wrapperheight){
-				$('.app-long--article').show();
-			}
-		});
 		/* var currentOffset = $('.toc-item').offset().top +$('.toc-article').outerHeight(false);
 		var nextBottom = $(div内的对应链接).offset().top + $(div内的对应链接).outerHeight(false);
 		var nextOffset = $(div).scrollTop() + nextBottom - currentOffset;

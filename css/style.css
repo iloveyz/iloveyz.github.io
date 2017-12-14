@@ -2524,6 +2524,14 @@ main.la-wrapper.la-banner {
     margin: 0px;
   }
 }
+.la-wrapper--box a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+}
 @media screen and (max-width: 480px) {
   .is-overflow {
     overflow: hidden;
@@ -2697,7 +2705,8 @@ main.la-wrapper.la-banner {
   }
   .app-long--article .la-mobile-content .swiper-wrapper .swiper-slide:last-of-type {
     margin-right: 20px;
-    margin-left: 25px;
+    margin-left: 5px;
+    transform: scale(1.05, 1.05);
   }
   .la-mobile-content .la-item--content {
     padding: 20px;
@@ -2867,12 +2876,6 @@ main.la-wrapper.la-banner {
     position: relative;
     z-index: 16;
     opacity: 1;
-  }
-  .la-content .markdown-content pre,
-  .la-content .article-summary pre,
-  .la-content .markdown-content code,
-  .la-content .article-summary code {
-    white-space: pre-wrap;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {

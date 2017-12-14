@@ -77,5 +77,14 @@
     } else {
       top.removeClass('opacity')
     }
-  })
+  });
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	var headerH = header.height();
+	if (banner) {
+		if (scrollTop >= headerH) {
+			header.addClass('fixed-header')
+		} else if (scrollTop === 0) {
+			header.removeClass('fixed-header')
+		}
+	}
 })(jQuery)
