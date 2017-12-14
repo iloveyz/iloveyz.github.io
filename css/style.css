@@ -2687,6 +2687,9 @@ main.la-wrapper.la-banner {
 		height: 275px;*/
     background: #fff;
     box-shadow: 0 0 32px 0px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    opacity: 0.75;
   }
   .app-long--article .la-mobile-content .swiper-wrapper .swiper-slide:first-child {
     margin-left: 20px;
@@ -2810,12 +2813,16 @@ main.la-wrapper.la-banner {
   .la-comment {
     text-align: center;
     position: relative;
+    opacity: 1 !important;
+    background: #5389e1 !important;
+    color: #fff;
   }
   .la-comment em {
     width: 150px;
     height: 150px;
     display: inline-block;
     font-size: 25px;
+    color: #fff;
     text-align: center;
     position: absolute;
     top: 0px;
@@ -2828,7 +2835,7 @@ main.la-wrapper.la-banner {
     content: "";
     width: 25px;
     height: 1px;
-    background: #bbb;
+    background: rgba(255,255,255,0.5);
     display: block;
     margin: 50px auto 0;
   }
@@ -2836,19 +2843,28 @@ main.la-wrapper.la-banner {
     content: "";
     width: 25px;
     height: 1px;
-    background: #bbb;
+    background: rgba(255,255,255,0.5);
     display: block;
     margin: 0 auto 50px;
   }
   .la-comment em i {
-    color: #999;
+    color: rgba(255,255,255,0.75);
     font-size: 12px;
     letter-spacing: 1em;
     display: block;
     margin-top: 5px;
   }
+  .la-mobile-content .la-comment.la-item--content:after {
+    background: #5389e1 !important;
+  }
   .is-overflow .ins-search {
     height: 100%;
+  }
+  .app-long--article .la-mobile-content .la-item--content.swiper-slide.longarticle.swiper-slide-active {
+    transform: scale(1.05, 1.05);
+    position: relative;
+    z-index: 16;
+    opacity: 1;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {
