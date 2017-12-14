@@ -2090,6 +2090,26 @@ span.caption:before {
   overflow: hidden;
   margin-top: 20px;
 }
+.preview-post--content br {
+  display: none;
+}
+.app-long--article .preview-post--link {
+  margin: 32px 50px;
+}
+.app-long--article .preview-post--image {
+  z-index: 1;
+}
+.app-long--article .preview-post--link .preview-post--title,
+.app-long--article .preview-post--time,
+.app-long--article .preview-post--content {
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 480px) {
+  .app-long--article .preview-post--link {
+    margin: 32px 0;
+  }
+}
 .preview-post--link a {
   width: 100%;
   height: 100%;
@@ -2387,7 +2407,7 @@ main.la-wrapper.la-banner {
   background: #f9f9f9;
 }
 #toc {
-  height: 255px;
+  height: 265px;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -2535,6 +2555,7 @@ main.la-wrapper.la-banner {
     top: unset !important;
     bottom: 325px;
     left: 0px;
+/*bottom: 325px;*/
   }
   .app-long--article .app-header {
     margin: 0px;
@@ -2660,8 +2681,10 @@ main.la-wrapper.la-banner {
     z-index: 15;
   }
   .app-long--article .la-mobile-content .swiper-wrapper .swiper-slide {
-    width: 220px;
+    width: 195px;
     height: 275px;
+/*width: 220px;
+		height: 275px;*/
     background: #fff;
     box-shadow: 0 0 32px 0px rgba(0,0,0,0.5);
   }
@@ -2688,7 +2711,7 @@ main.la-wrapper.la-banner {
     left: 0px;
   }
   .app-long--article .la-mobile-content p {
-    margin: 0px;
+    margin: 0 0 15px;
     line-height: 26px;
   }
   .app-long--article .la-mobile-content h6 {
@@ -2758,8 +2781,8 @@ main.la-wrapper.la-banner {
     height: 100%;
     overflow-y: auto;
   }
-  .is-overflow header {
-    background: transparent !important;
+  .is-overflow header.header {
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.5)) !important;
   }
   .is-overflow header a,
   .is-overflow header.header .search-btn {
@@ -3431,7 +3454,8 @@ main.la-wrapper.la-banner {
   background: #f9f9f9;
   padding: 0;
   margin: 32px 0;
-  overflow: auto;
+  overflow: hidden;
+  overflow-x: auto;
   position: relative;
 }
 .markdown-content figure:after,
