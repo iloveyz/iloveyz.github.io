@@ -2690,12 +2690,14 @@ main.la-wrapper.la-banner {
     transition: all 0.2s ease;
     box-sizing: border-box;
     opacity: 0.75;
+    margin-left: 20px;
   }
   .app-long--article .la-mobile-content .swiper-wrapper .swiper-slide:first-child {
     margin-left: 20px;
   }
   .app-long--article .la-mobile-content .swiper-wrapper .swiper-slide:last-of-type {
     margin-right: 20px;
+    margin-left: 25px;
   }
   .la-mobile-content .la-item--content {
     padding: 20px;
@@ -2865,6 +2867,12 @@ main.la-wrapper.la-banner {
     position: relative;
     z-index: 16;
     opacity: 1;
+  }
+  .la-content .markdown-content pre,
+  .la-content .article-summary pre,
+  .la-content .markdown-content code,
+  .la-content .article-summary code {
+    white-space: pre-wrap;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {

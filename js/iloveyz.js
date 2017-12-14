@@ -111,14 +111,6 @@
 			  $('.la-sidebar').removeClass('fixed');
 			  $('.la-sidebar').addClass('is-stop-bottom');
 		  }
-		  var currentOffset = $('.toc-item').offset().top +$('.toc-article').outerHeight(false);
-			var nextBottom = $(div内的对应链接).offset().top + $(div内的对应链接).outerHeight(false);
-			var nextOffset = $(div).scrollTop() + nextBottom - currentOffset;
-			if (nextBottom>currentOffset) {
-				$(div).scrollTop(nextOffset);
-			}else {
-				$(div).scrollTop(0);
-			}
 		});
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if(scrollTop >= 425){
@@ -144,7 +136,16 @@
 				$('.app-long--article').show();
 			}
 		});
+		/* var currentOffset = $('.toc-item').offset().top +$('.toc-article').outerHeight(false);
+		var nextBottom = $(div内的对应链接).offset().top + $(div内的对应链接).outerHeight(false);
+		var nextOffset = $(div).scrollTop() + nextBottom - currentOffset;
+		if (nextBottom>currentOffset) {
+			$(div).scrollTop(nextOffset);
+		}else {
+			$(div).scrollTop(0);
+		} */
 	}
+	
 	$('.la-mobile-content .la-item--content').click(function(){
 		var itemIndex = $(this).index();
 		$('.la-content').removeClass('is-mobile-hide');
