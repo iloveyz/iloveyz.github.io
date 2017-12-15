@@ -529,7 +529,8 @@ h3.link-title {
 }
 @media screen and (max-width: 480px) {
   .article-card {
-    padding: 15px 0 29px;
+    padding: 15px 0 21px;
+    margin-top: 8px !important;
   }
 }
 .article-card:first-child {
@@ -2311,11 +2312,12 @@ span.caption:before {
 }
 .app-long--article {
   background: #f6f6f6;
+  position: relative;
+  padding-bottom: 50px;
 }
 main.la-wrapper.la-banner {
   width: 1170px;
-  margin: 50px auto;
-  padding-bottom: 50px;
+  margin: 50px auto 0;
   font-size: 0px;
   position: relative;
 }
@@ -2341,6 +2343,9 @@ main.la-wrapper.la-banner {
   display: inline-block;
   vertical-align: top;
   margin-left: 360px;
+}
+.no-banner .la-content {
+  margin-top: 95px;
 }
 .la-content h6 {
   font-size: 1.6em;
@@ -2419,19 +2424,26 @@ main.la-wrapper.la-banner {
 }
 .la-sidebar.fixed {
   position: fixed;
-  top: 75px;
+  top: 95px;
 }
 .la-sidebar.is-stop-top {
   position: absolute;
   top: 0px;
 }
+.no-banner .la-sidebar.is-stop-top {
+  top: 95px;
+}
 .la-sidebar.is-stop-bottom {
+  position: absolute;
+  bottom: 0px;
+}
+.no-banner .la-sidebar.is-stop-bottom {
   position: absolute;
   bottom: 50px;
 }
 .la-footer {
   width: 750px;
-  margin: auto;
+  margin: 50px auto 0;
 }
 .swiper-wrapper {
   display: inherit !important;
@@ -2465,6 +2477,15 @@ main.la-wrapper.la-banner {
 }
 .la-article-card {
   position: relative;
+  margin-top: 13.99px;
+}
+.la-article-card:after {
+  padding-top: 77px !important;
+}
+@media screen and (max-width: 480px) {
+  .la-article-card:after {
+    padding-top: 17px !important;
+  }
 }
 .la-article-card .la-wrapper--box {
   width: 750px;
@@ -2490,6 +2511,9 @@ main.la-wrapper.la-banner {
 .la-article-card:after {
   padding-top: 78px;
 }
+.la-content .markdown-content figure {
+  margin: 32px 50px;
+}
 @media screen and (max-width: 480px) {
   .la-article-pic {
     width: 100%;
@@ -2498,6 +2522,9 @@ main.la-wrapper.la-banner {
     background-size: cover;
     position: relative;
     top: 0px;
+  }
+  .la-content .markdown-content figure {
+    margin: 32px 0;
   }
   .la-article-card header {
     position: static;
@@ -2545,10 +2572,12 @@ main.la-wrapper.la-banner {
 .la-content .markdown-content .la-item--content ul li p {
   display: inline-block;
   margin-bottom: 32px;
-  line-height: 32px;
+  line-height: 39px;
 }
 .la-content .markdown-content ul li:before {
   vertical-align: top;
+  position: relative;
+  top: 3.2px;
 }
 .la-content .markdown-content blockquote,
 .la-content .article-summary blockquote {
@@ -2564,10 +2593,19 @@ main.la-wrapper.la-banner {
 .markdown-content ul li p:last-of-type {
   margin-bottom: 0px !important;
 }
+.no-banner {
+  width: 1170px;
+  margin: 0 auto;
+}
 @media screen and (max-width: 480px) {
   .is-overflow {
     overflow: hidden;
     height: 100%;
+  }
+  .no-banner {
+    width: auto;
+    padding: 0px;
+    margin: 0px;
   }
   .la-content .markdown-content .la-item--content ul {
     margin: 0 20px 32px !important;
@@ -2596,7 +2634,7 @@ main.la-wrapper.la-banner {
     display: inherit;
     z-index: 10;
     top: unset !important;
-    bottom: 325px;
+    bottom: 336px;
     left: 0px;
 /*bottom: 325px;*/
   }
@@ -2652,12 +2690,18 @@ main.la-wrapper.la-banner {
     z-index: 10;
     top: 0px;
     left: 0px;
+    padding: 0px;
+    background: transparent;
+  }
+  .no-banner .la-content {
+    margin-top: 0px;
   }
   .la-content {
     font-size: 15px;
     width: 100%;
     display: inherit;
     vertical-align: top;
+    margin-top: 0px;
     margin-left: 0px;
   }
   .la-content .markdown-content ul li code,
@@ -2706,9 +2750,13 @@ main.la-wrapper.la-banner {
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 16px;
+    line-height: 32px;
+  }
+  .la-mobile-content .la-markdown-content .la-item--content blockquote {
+    margin: 0px;
   }
   .la-content .markdown-content .la-item--content ul li p:last-of-type {
-    margin: 0xp;
+    margin: 0px;
   }
   .la-content .markdown-content .la-item--content p,
   .app-long--article .is-pop-hide {
@@ -2856,6 +2904,7 @@ main.la-wrapper.la-banner {
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    margin-top: 25px;
   }
   .is-overflow header.header {
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.5)) !important;
