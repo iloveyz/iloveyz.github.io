@@ -2336,7 +2336,7 @@ main.la-wrapper.la-banner {
   margin-top: 15px;
 }
 .la-content {
-  font-size: 15px;
+  font-size: 16px;
   width: 820px;
   display: inline-block;
   vertical-align: top;
@@ -2534,7 +2534,7 @@ main.la-wrapper.la-banner {
   display: block;
 }
 .la-content .markdown-content .la-item--content ul {
-  margin: 0 50px !important;
+  margin: 0 50px 32px !important;
 }
 .la-content .markdown-content .la-item--content ul li {
   line-height: 32px;
@@ -2550,13 +2550,27 @@ main.la-wrapper.la-banner {
 .la-content .markdown-content ul li:before {
   vertical-align: top;
 }
+.la-content .markdown-content blockquote,
+.la-content .article-summary blockquote {
+  margin: 0 50px 32px;
+}
+.la-content .markdown-content .la-item--content blockquote p,
+.la-content .article-summary blockquote p,
+.la-content .markdown-content .la-item--content ul li p {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.markdown-content ul li:last-of-type,
+.markdown-content ul li p:last-of-type {
+  margin-bottom: 0px !important;
+}
 @media screen and (max-width: 480px) {
   .is-overflow {
     overflow: hidden;
     height: 100%;
   }
   .la-content .markdown-content .la-item--content ul {
-    margin: 0 20px !important;
+    margin: 0 20px 32px !important;
   }
   .la-content .close,
   .is-pc-hide {
@@ -2723,9 +2737,9 @@ main.la-wrapper.la-banner {
     margin: 0 0 15px;
     line-height: 26px;
   }
-  .app-long--article .la-mobile-content p,
-  .app-long--article .la-mobile-content blockquote {
-    margin: 0px;
+  .la-content .markdown-content blockquote,
+  .la-content .article-summary blockquote {
+    margin: 0 20px 32px;
   }
   .app-long--article .la-mobile-content .swiper-wrapper,
   .app-long--article .la-content .swiper-wrapper {
@@ -3470,12 +3484,13 @@ main.la-wrapper.la-banner {
   font-weight: 400;
   letter-spacing: 0.01rem;
   margin: 30px 0;
-  padding-left: 20px;
+  padding-left: 32px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content blockquote,
   .article-summary blockquote {
     margin: 0 20px 32px;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 480px) {
