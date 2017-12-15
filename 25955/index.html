@@ -18,7 +18,7 @@
 <meta property="og:description" content="长文章折腾长文章，就是指很长的文章，分块来展示文章，其实弄长文章的想法很早就有了，以前在用wordpress的时候就已经开始了，而且也实现了类似小说的那种，有卷有章节，以前可切换背景色和查看当前文章内容封面之类的功能。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2017/12/11/5a2ea337581a5.jpg">
-<meta property="og:updated_time" content="2017-12-15T07:16:58.591Z">
+<meta property="og:updated_time" content="2017-12-15T07:26:07.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="长文章页面...再一次折腾...">
 <meta name="twitter:description" content="长文章折腾长文章，就是指很长的文章，分块来展示文章，其实弄长文章的想法很早就有了，以前在用wordpress的时候就已经开始了，而且也实现了类似小说的那种，有卷有章节，以前可切换背景色和查看当前文章内容封面之类的功能。">
@@ -265,16 +265,12 @@
 <p>在每次折腾时，总得去google，百度一堆的东西，上各大网站提问，像什么<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>，<a href="https://www.v2ex.com" target="_blank" rel="external">v2ex</a>等。从中学到了很多新东西。虽然过程稍微艰辛了些…</p>
 </div></div>
 <div class="la-item--content swiper-slide longarticle"><div class="la-item--box"><h6 id="长文章问题的相关总结"><a href="#长文章问题的相关总结" class="headerlink" title="长文章问题的相关总结"></a>长文章问题的相关总结</h6><ul>
-<li><p>问题1：左侧的侧边栏，里面还有个小功能没有实现，就是滚动条随着页面的滚动而滚动。不然会找不到当前锚点的链接所在位置。</p>
-<ul>
-<li><p>该问题已经被成功解决，真是花了很久的时间，各大网站都去问了，<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>上有人回答我，但最终不是我想要的效果，但代码写的很好，准备以后用作其它方面。于是，为了自己想要的效果，我只好自己找着方法去解决了，最终解决了该问题。</p>
-</li>
-<li><p>问题难点所在。就是一开始的思路不正确，思路上老想着应该按页面滚动条的位置进行计算，可最后经过证明，此方法并不是多靠谱，因为此方法会导致计算的不够精准以及锚点来回抖动的问题。所以我采取了计算当前位置也就是<code>class.cur</code>（锚点所在位置），然后计算之前的高度进行叠加。</p>
-</li>
+<li>问题1：左侧的侧边栏，里面还有个小功能没有实现，就是滚动条随着页面的滚动而滚动。不然会找不到当前锚点的链接所在位置。<ul>
+<li>该问题已经被成功解决，真是花了很久的时间，各大网站都去问了，<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>上有人回答我，但最终不是我想要的效果，但代码写的很好，准备以后用作其它方面。于是，为了自己想要的效果，我只好自己找着方法去解决了，最终解决了该问题。</li>
+<li>问题难点所在。就是一开始的思路不正确，思路上老想着应该按页面滚动条的位置进行计算，可最后经过证明，此方法并不是多靠谱，因为此方法会导致计算的不够精准以及锚点来回抖动的问题。所以我采取了计算当前位置也就是<code>class.cur</code>（锚点所在位置），然后计算之前的高度进行叠加。</li>
 </ul>
 </li>
-<li><p>问题2：页面滚动，会出现一直刷新<code>html元素</code>，这个是因为页面滚动中，会一直获取高度导致的错误，目前该问题正在研究解决中。这也是长文章相关的最后一个问题。</p>
-</li>
+<li>问题2：页面滚动，会出现一直刷新<code>html元素</code>，这个是因为页面滚动中，会一直获取高度导致的错误，目前该问题正在研究解决中。这也是长文章相关的最后一个问题。</li>
 </ul>
 </div></div>
 <div class="la-item--content swiper-slide longarticle"><div class="la-item--box"><h6 id="开始努力工作，努力学习"><a href="#开始努力工作，努力学习" class="headerlink" title="开始努力工作，努力学习"></a>开始努力工作，努力学习</h6><p>折腾结束，意味着新工作的展开，为此，就需要新的学习，毕竟学习才是成长的唯一途径。</p>
@@ -433,16 +429,12 @@
 <p>在每次折腾时，总得去google，百度一堆的东西，上各大网站提问，像什么<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>，<a href="https://www.v2ex.com" target="_blank" rel="external">v2ex</a>等。从中学到了很多新东西。虽然过程稍微艰辛了些…</p>
 </div></div>
 <div class="la-item--content swiper-slide longarticle"><div class="la-item--box"><h6 id="长文章问题的相关总结"><a href="#长文章问题的相关总结" class="headerlink" title="长文章问题的相关总结"></a>长文章问题的相关总结</h6><ul>
-<li><p>问题1：左侧的侧边栏，里面还有个小功能没有实现，就是滚动条随着页面的滚动而滚动。不然会找不到当前锚点的链接所在位置。</p>
-<ul>
-<li><p>该问题已经被成功解决，真是花了很久的时间，各大网站都去问了，<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>上有人回答我，但最终不是我想要的效果，但代码写的很好，准备以后用作其它方面。于是，为了自己想要的效果，我只好自己找着方法去解决了，最终解决了该问题。</p>
-</li>
-<li><p>问题难点所在。就是一开始的思路不正确，思路上老想着应该按页面滚动条的位置进行计算，可最后经过证明，此方法并不是多靠谱，因为此方法会导致计算的不够精准以及锚点来回抖动的问题。所以我采取了计算当前位置也就是<code>class.cur</code>（锚点所在位置），然后计算之前的高度进行叠加。</p>
-</li>
+<li>问题1：左侧的侧边栏，里面还有个小功能没有实现，就是滚动条随着页面的滚动而滚动。不然会找不到当前锚点的链接所在位置。<ul>
+<li>该问题已经被成功解决，真是花了很久的时间，各大网站都去问了，<a href="https://segmentfault.com/" target="_blank" rel="external">segmentfault</a>上有人回答我，但最终不是我想要的效果，但代码写的很好，准备以后用作其它方面。于是，为了自己想要的效果，我只好自己找着方法去解决了，最终解决了该问题。</li>
+<li>问题难点所在。就是一开始的思路不正确，思路上老想着应该按页面滚动条的位置进行计算，可最后经过证明，此方法并不是多靠谱，因为此方法会导致计算的不够精准以及锚点来回抖动的问题。所以我采取了计算当前位置也就是<code>class.cur</code>（锚点所在位置），然后计算之前的高度进行叠加。</li>
 </ul>
 </li>
-<li><p>问题2：页面滚动，会出现一直刷新<code>html元素</code>，这个是因为页面滚动中，会一直获取高度导致的错误，目前该问题正在研究解决中。这也是长文章相关的最后一个问题。</p>
-</li>
+<li>问题2：页面滚动，会出现一直刷新<code>html元素</code>，这个是因为页面滚动中，会一直获取高度导致的错误，目前该问题正在研究解决中。这也是长文章相关的最后一个问题。</li>
 </ul>
 </div></div>
 <div class="la-item--content swiper-slide longarticle"><div class="la-item--box"><h6 id="开始努力工作，努力学习"><a href="#开始努力工作，努力学习" class="headerlink" title="开始努力工作，努力学习"></a>开始努力工作，努力学习</h6><p>折腾结束，意味着新工作的展开，为此，就需要新的学习，毕竟学习才是成长的唯一途径。</p>
