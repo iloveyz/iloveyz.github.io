@@ -2543,7 +2543,7 @@ main.la-wrapper.la-banner {
   margin: 15px 0 0 !important;
 }
 .la-content .markdown-content .la-item--content ul li p {
-  dislay: inline-block;
+  display: inline-block;
   margin-bottom: 32px;
   line-height: 32px;
 }
@@ -2688,12 +2688,20 @@ main.la-wrapper.la-banner {
   .la-content .swiper-container {
     height: 100%;
   }
-  .la-content .markdown-content .la-item--content p {
-    margin-right: 20px;
-    margin-left: 20px;
+  .la-content .markdown-content .la-item--content ul li p {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 16px;
   }
+  .la-content .markdown-content .la-item--content ul li p:last-of-type {
+    margin: 0xp;
+  }
+  .la-content .markdown-content .la-item--content p,
   .app-long--article .is-pop-hide {
     display: block;
+  }
+  .la-content .markdown-content .la-item--content p {
+    margin: 0 20px 32px 20px;
   }
   .app-long--article .la-mobile-content {
     font-size: 16px;
@@ -2714,6 +2722,10 @@ main.la-wrapper.la-banner {
     font-size: 14px;
     margin: 0 0 15px;
     line-height: 26px;
+  }
+  .app-long--article .la-mobile-content p,
+  .app-long--article .la-mobile-content blockquote {
+    margin: 0px;
   }
   .app-long--article .la-mobile-content .swiper-wrapper,
   .app-long--article .la-content .swiper-wrapper {
@@ -3479,7 +3491,7 @@ main.la-wrapper.la-banner {
 @media screen and (max-width: 480px) {
   .markdown-content blockquote p,
   .article-summary blockquote p {
-    margin: 32px 0 0 0 !important;
+    margin: 15px 0 0 0 !important;
   }
 }
 .markdown-content blockquote p:first-child,
