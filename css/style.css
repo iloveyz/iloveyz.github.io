@@ -2118,6 +2118,11 @@ span.caption:before {
   top: 0px;
   left: 0px;
   display: block;
+  z-index: 5;
+  border: 0px;
+}
+.app-long--article .preview-post--link .preview-post--title {
+  color: #34495e;
 }
 @media screen and (max-width: 480px) {
   .preview-post--link {
