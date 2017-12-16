@@ -2125,6 +2125,9 @@ span.caption:before {
   color: #34495e;
 }
 @media screen and (max-width: 480px) {
+  .app-long--article .preview-post--link .preview-post--title {
+    color: #fff;
+  }
   .preview-post--link {
     padding: 36px 20px 29px;
     max-height: 126px;
@@ -2620,7 +2623,11 @@ main.la-wrapper.la-banner {
     display: block;
   }
   .la-content div#la-gitalk-comment {
-    margin: 0 20px;
+    margin: 0 20px 25px;
+  }
+  .gt-container .gt-comments-null {
+    text-align: center;
+    font-size: 15px;
   }
   .app-long--article main.la-wrapper.la-banner {
     width: 100%;
@@ -2700,6 +2707,16 @@ main.la-wrapper.la-banner {
   }
   .no-banner .la-content {
     margin-top: 0px;
+  }
+  .la-content .la-footer,
+  .la-content .la-footer p {
+    margin: 0px !important;
+  }
+  .la-content .la-footer .notice {
+    margin: 15px 0 !important;
+  }
+  .la-content .la-footer .post-like {
+    margin-top: 25px;
   }
   .la-content {
     font-size: 15px;
