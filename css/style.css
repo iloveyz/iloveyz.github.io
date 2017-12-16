@@ -2625,6 +2625,10 @@ main.la-wrapper.la-banner {
   .la-content div#la-gitalk-comment {
     margin: 0 20px 25px;
   }
+  #la-gitalk-comment p {
+    margin-bottom: 15px !important;
+    line-height: normal;
+  }
   .gt-container .gt-comments-null {
     text-align: center;
     font-size: 15px;
