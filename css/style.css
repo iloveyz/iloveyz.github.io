@@ -2738,7 +2738,6 @@ main.la-wrapper.la-banner {
     transform: translateY(100%);
     opacity: 0;
     z-index: -99999;
-    transition: transform 0.5s ease, opacity 0.5s ease;
   }
   .la-content,
   .la-content .post-article,
