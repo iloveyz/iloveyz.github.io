@@ -2389,7 +2389,9 @@ span.caption:before {
   }
   .article-list--content header.app-header.app-title h2 a {
     color: #fff;
-    line-height: 36px;
+    line-height: 37px;
+    text-align: center;
+    overflow: hidden;
   }
   .article-list--content header.app-header.app-title {
     margin: 0 20px;
