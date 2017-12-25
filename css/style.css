@@ -2359,7 +2359,7 @@ span.caption:before {
     height: 115px;
   }
   .article-list--content header.app-header.app-title h2 {
-    font-size: 16px;
+    font-size: 19px;
     padding: 35px;
     border: 0px;
     padding: 0px;
@@ -2367,7 +2367,6 @@ span.caption:before {
     white-space: normal;
     text-overflow: ellipsis;
     position: relative;
-    top: -5px;
   }
   .article-list--content header.app-header.app-title h2 a {
     color: #34495e;
@@ -2380,6 +2379,9 @@ span.caption:before {
     height: 115px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .article-list--content .article-summary,
   .article-list--content .view-p,
@@ -2387,7 +2389,7 @@ span.caption:before {
     display: none;
   }
   .article-list--content .article-meta {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     margin: 0px;
@@ -2396,10 +2398,10 @@ span.caption:before {
     margin-right: 2px;
   }
   .article-list--content .article-meta .article-category {
-    font-size: 12px;
+    font-size: 14px;
   }
   .article-list--content .article-meta p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .article-list--img {
     width: 150px;
