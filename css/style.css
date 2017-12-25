@@ -2359,7 +2359,7 @@ span.caption:before {
     height: 115px;
   }
   .article-list--content header.app-header.app-title h2 {
-    font-size: 19px;
+    font-size: 16px;
     padding: 35px;
     border: 0px;
     padding: 0px;
@@ -2380,7 +2380,7 @@ span.caption:before {
     overflow: hidden;
     position: relative;
     display: flex;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
   }
   .article-list--content .article-summary,
@@ -2393,6 +2393,7 @@ span.caption:before {
     bottom: 0px;
     left: 0px;
     margin: 0px;
+    margin-top: 10px;
   }
   .article-list--content .article-meta p.view-p i {
     margin-right: 2px;
