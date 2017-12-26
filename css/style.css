@@ -20,7 +20,7 @@ body {
   position: relative;
   height: 100%;
   margin: 0;
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
   font-size: 16px;
 }
 @media screen and (max-width: 480px) {
@@ -564,7 +564,7 @@ h2.article-head {
   }
 }
 .article-head > a {
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
 }
 .article-meta {
   color: #7f8c8d;
@@ -588,7 +588,7 @@ h2.article-head {
 }
 .article-summary {
   margin: 35px 0 0;
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
   line-height: 1.9;
 }
 @media screen and (max-width: 480px) {
@@ -644,7 +644,7 @@ h2.article-head {
   margin: 0;
   font-size: 2.2em;
   color: #fff;
-  text-shadow: 0 0 40px #34495e;
+  text-shadow: 0 0 40px rgba(0,0,0,0.75);
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.4s;
@@ -810,7 +810,7 @@ h2.article-head {
   display: block;
   margin: 0;
   text-align: center;
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
 }
 .notice {
   font-size: 12px;
@@ -1449,7 +1449,7 @@ h2.archive-title {
   width: auto;
   padding: 0px;
   margin: 0px;
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
   line-height: 1.9;
   border: 0px;
 }
@@ -2122,7 +2122,7 @@ span.caption:before {
   border: 0px;
 }
 .app-long--article .preview-post--link .preview-post--title {
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
 }
 @media screen and (max-width: 480px) {
   .app-long--article .preview-post--link .preview-post--title {
@@ -2370,7 +2370,7 @@ span.caption:before {
     position: relative;
   }
   .article-list--content header.app-header.app-title h2 a {
-    color: #34495e;
+    color: rgba(0,0,0,0.75);
     line-height: 25px;
     text-align: center;
     overflow: hidden;
@@ -2427,6 +2427,12 @@ span.caption:before {
   }
   .article-list.article-card:after {
     padding-top: 17px !important;
+  }
+  .article-list.article-card {
+    margin-top: 16px !important;
+  }
+  .article-list.article-card:first-child {
+    margin-top: 79px !important;
   }
 }
 /* list css */
@@ -2498,12 +2504,17 @@ span.caption:before {
 .article-diary:nth-child(2) {
   margin: 43px 0px !important;
 }
-.article-diary--item.article-card:after {
-  padding-top: 17px;
+.article-diary--list.article-card:after {
+  padding-top: 0px;
+  position: relative;
+  top: -5px;
 }
 .article-diary:last-of-type {
   border: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 19px;
+}
+.article-diary--list.article-card {
+  padding: 15px 0 13.9px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content a[title=other],
@@ -2544,6 +2555,7 @@ span.caption:before {
     height: 195px;
   }
   .article-diary--content header.app-header.app-title h2 {
+    width: 100%;
     font-size: 16px;
     padding: 35px;
     border: 0px;
@@ -2556,10 +2568,14 @@ span.caption:before {
   .article-diary--content header.app-header.app-title h2 a {
     color: #fff;
     line-height: 25px;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .article-diary--content header.app-header.app-title {
+    width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -2606,7 +2622,7 @@ span.caption:before {
   .article-diary--content header.app-header.app-title:after {
     content: "";
     width: 100%;
-    height: 100px;
+    height: 132px;
     background-image: linear-gradient(to top, rgba(0,0,0,0.79), rgba(0,0,0,0));
     position: absolute;
     left: 0px;
@@ -2624,8 +2640,11 @@ span.caption:before {
     left: 0px;
     display: block;
   }
-  .article-diary.article-card:after {
-    padding-top: 17px !important;
+  .article-diary--list.article-card:after {
+    padding-top: 2.9px !important;
+  }
+  .article-diary--list.article-card {
+    padding: 15px 0 16px;
   }
   .article-diary--box {
     display: flex;
@@ -3399,7 +3418,7 @@ main.la-wrapper.la-banner {
   background-color: #7f8c8d;
 }
 .fixed-header .item-link {
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
 }
 .fixed-header .backto {
   background: url("images/al-fixed.png") center center no-repeat;
@@ -4109,7 +4128,7 @@ main.la-wrapper.la-banner {
   }
 }
 .time-section .section-list .section-list-item .archive-title {
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
   transition: all 0.3s ease;
   font-size: 1.1em;
 }
@@ -4260,7 +4279,7 @@ main.la-wrapper.la-banner {
   padding: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  color: #34495e;
+  color: rgba(0,0,0,0.75);
   transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 .card-container .project-card .card-wrap:hover {
