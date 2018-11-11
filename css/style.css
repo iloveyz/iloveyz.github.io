@@ -3770,11 +3770,11 @@ body.app-style {
   }
   .app-article .article-card .article-card--img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     position: static;
   }
   .app-article .article-card .app-header {
-    margin: 15px 25px;
+    margin: 20px 25px 15px;
   }
   .app-article .article-card .article-card--content .article-summary {
     word-break: break-all;
@@ -3787,12 +3787,12 @@ body.app-style {
     color: #666;
   }
   .app-article .article-card .article-card--content h2 {
-    font-size: 17px;
+    font-size: 16px;
     color: #000;
   }
   .app-article .article-card .article-card--content .article-meta {
-    padding: 15px 0;
-    margin: 15px 0 0 0;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
     background: #f9f9f9;
   }
   .article-background {
@@ -3834,10 +3834,29 @@ body.app-style {
   }
   .app-index .guide-pager {
     position: static;
-    margin: 25px auto;
+    margin: 20px auto 0;
   }
   .app-article .article-card:after {
     display: none;
+  }
+  .app-index .guide-pager {
+    width: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  .app-index .guide-pager a {
+    position: absolute;
+  }
+  .app-index .guide-pager a.prevpage {
+    left: 0px;
+    right: auto;
+  }
+  .app-index .guide-pager a.nextpage {
+    right: 0px;
+    left: auto;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {
