@@ -3770,7 +3770,7 @@ body.app-style {
   }
   .app-article .article-card .article-card--img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     position: static;
   }
   .app-article .article-card .app-header {
@@ -3821,16 +3821,17 @@ body.app-style {
   .app-article .article-meta p.cate-p span {
     font-size: 12px;
   }
-  .app-article .article-meta p.cate-p i {
-    margin-right: 0px;
-  }
   .app-article .article-meta p i {
     margin: 0 auto 10px;
     display: block;
   }
+  .app-article .article-meta p.cate-p i {
+    margin-right: 0px;
+    margin-bottom: 7px;
+  }
   .app-article .article-meta p.meta-date:before {
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 7px;
   }
   .app-index .guide-pager {
     position: static;
