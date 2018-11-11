@@ -3847,12 +3847,8 @@ body.app-style {
     bottom: auto;
     left: auto;
   }
-  .app-index .guide-pager a {
-    position: absolute;
-  }
   .app-index .guide-pager a.prevpage {
-    left: 0px;
-    right: auto;
+    margin-right: 20px;
   }
   .app-index .guide-pager a.nextpage {
     right: 0px;
