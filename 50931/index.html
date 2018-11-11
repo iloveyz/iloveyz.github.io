@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+
+<html lang=zh class="">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="referrer" content="no-referrer"/>
+  <meta name="description" content="belong to our world">
+  <meta name="keyword" content="娱乐, 折腾, 笔记, 分享, 软件">
+    
+    <title>文章内链的研究... - 赤色娱乐</title>
+    <meta name="description" content="经过几天年努力，算是把文章内链搞定了，其过程，听者流泪闻者伤心，因为完全不懂nodejs所以寸步难行。这折腾的过程，我也是醉的不行不行的…">
+<meta name="keywords" content="文章,内链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文章内链的研究...">
+<meta property="og:url" content="https://www.iloveyz.com/50931/index.html">
+<meta property="og:site_name" content="赤色娱乐">
+<meta property="og:description" content="经过几天年努力，算是把文章内链搞定了，其过程，听者流泪闻者伤心，因为完全不懂nodejs所以寸步难行。这折腾的过程，我也是醉的不行不行的…">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/08/T79eg.jpg">
+<meta property="og:updated_time" content="2017-12-21T14:30:20.020Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文章内链的研究...">
+<meta name="twitter:description" content="经过几天年努力，算是把文章内链搞定了，其过程，听者流泪闻者伤心，因为完全不懂nodejs所以寸步难行。这折腾的过程，我也是醉的不行不行的…">
+<meta name="twitter:image" content="https://s1.ax1x.com/2017/12/08/T79eg.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/swiper.min.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+<link rel="stylesheet" href="/css/plugins/gitalk.css">
+<link rel="stylesheet" href="/css/plugins/video-js.css">
+<link rel="stylesheet" href="/css/plugins/nprogress.min.css">
+<link rel="stylesheet" href="/css/plugins/tomorrow.min.css">
+	<!-- <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+	<script src="/js/cookie.js"></script>
+	<script src="/js/geopattern.min.js"></script>
+	<script src="/js/nprogress.min.js"></script>
+    <script src="/js/qrious.js"></script>
+    <script src="/js/jquery-ias.min.js"></script>
+</head>
+
+  <body class= ''>
+	
+    
+
+<header id="header-block" class="header fixed-header">
+
+  <div class="header-container">
+	
+	<a class="home-link" href="/">
+      <span>赤色娱乐</span>
+    </a>
+	<div class="menu left">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+	
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/like/" class="item-link">Like</a>
+          
+        </li>
+      
+    </ul>
+	
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/like/" class="menu-link">Like</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="search-btn"></div>
+<div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="index.search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="输入关键字..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '未知',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+</header>
+
+
+	
+    
+
+<main class="app-body app-top app-top-block">
+
+<header class="app-header app-content">
+	<h2>文章内链的研究...</h2>
+	<div class="post-meta">
+		<p>
+    <span class="article-category">
+        笔记
+    </span>
+</p>
+		<p class="meta-date" data-timeago="2017-12-08 11:21:35">17-12-08</p>
+		<p class="view-p">
+   <span url="/50931/" url="/50931/" class="leancloud_visitors" data-flag-name="文章内链的研究...">
+       <i class="fa fa-eye"></i>
+     <span class="leancloud-visitors-count"></span>
+    </span>
+</p>
+	</div>
+</header>
+
+
+
+
+  <article class="post-article article-entry">
+    <section class="markdown-content"><p><img src="https://s1.ax1x.com/2017/12/08/T79eg.jpg" alt=""></p>
+<p>经过几天年努力，算是把文章内链搞定了，其过程，听者流泪闻者伤心，因为完全不懂<code>nodejs</code>所以寸步难行。这折腾的过程，我也是醉的不行不行的…<a id="more"></a></p>
+<p>对于文章内链的执念来自wordpress，因为可以很美观并可自定义的展示网站其它文章链接，就这点就足以吸引我去折腾。当然，点赞和文章浏览次数也是。那时为了点赞也是折腾了N长时间，其实在我完成点赞后，发现基本上就是把刷新变成了点击增加而已，最多就是cookie存下当前的状态。当然一开始的思路是正确的，然后不断调整。完成后，除了成就感，还是成就感。{:坏笑:}</p>
+<p>而文章内链让我对nodejs又有了些认识，当然我所指的认识也只是了解了最最基本的一些东西。对nodejs不懂，很多都不知道该怎么进行。</p>
+<hr>
+<p>一开始，尝试使用replace过滤文章的html标签，为此还想了很多办法去进行。结果一弄就报错。<code>TypeError: Cannot read property &#39;parent&#39; of undefined</code>以及<code>ReferenceError: replace is not defined</code>等。这也是我唯一可以看懂的地方了。</p>
+<p>首先，在做之前开始构思，一开始的想法是在主题里进行对文章的循环来达到文章内链的目的，的确可以循环出所有文章链接，但却不知道该怎么对文章里的链接进行匹配。弄了一段时间，发现这个方法对于我来说，似乎并不是很好的可行方法。但我并没有因此而觉得无法实现，就去网上找相关文章，最后无果。经过一两天，没实现这个功能还是觉得很不爽，于是就继续在网上搜索，在google上偶然间发现了，可以使用标签<code>{``% post_link slug [title] %``}</code>我简单的试了下，在不输入[title]的情况下，可以直接获取文章的标题。</p>
+<div class="preview-post--link"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/11/26/5a1ad6b398ae9.jpg)"></div><div class="preview-post--title">日常研究和like页面以及关于博客</div><div class="preview-post--time meta-date" data-timeago="2017-11-25 10:21:46">2017-11-25 10:21:46</div><div class="preview-post--content">
+
+bitcron试用到期了，暂时没打算续费，但以后估计还会用，主要还是没啥时间和太懒更新，先闲置着吧。现在把hexo拾掇拾掇继续用起来，...</div><a href="/58255/" title="日常研究和like页面以及关于博客"></a></div>
+<p>这又重燃我的信心，开始寻找<code>post_link</code>这个文件，并尝试修改，在这个文件里发现到有一个<code>post.title</code>我就试着，<code>post.content</code>，结果还真输入了对应文章。无疑这是令人兴奋的。</p>
+<p>于是折腾就此展开。一开始的难题就是，过滤html标签，限制文字字数。有难度，虽然hexo有自己的限制函数，可无法直接使用。苦恼，开始找原因，发现需要调用，<code>var util = require(&#39;hexo-util&#39;);</code>于是调用，再使用对应的函数，立即解决问题。于是如法炮制，因为时间<code>post.date</code>获取后是unix时间戳（单位毫秒），于是使用<code>moment.js</code>（hexo同样已经集成<code>var moment = require(&#39;moment&#39;);</code>）把时间成功转换。</p>
+<p>最后成功了，样式调整好，成就感溢于言表，最后觉得太单调，又无图无真相，就开始研究如何获取文章内第一张图的<code>src</code>。因为无法直接使用<code>replace</code>和<code>match</code>就很难正则匹配，弄了半天也弄不出个所以然。</p>
+<p>于是经过一些尝试以及去网上询问，才知道<code>cherrio</code>，看到这个等于发现了新大陆，而hexo是集成了<code>cherrio</code>的，可以在nodejs里使用简单的jquery。这让我很兴奋啊。于是最终完成了文章内图片的获取和判断。</p>
+<hr>
+<p>过程是困难的，结果是令人满意的。经过努力已经把<code>hexo clean</code>之后出错或获取不到文章内容的问题解决啦，目前近乎完美。也不想多折腾了，感觉不错。嘿嘿！~{:扶眼镜:}，就此，hexo的折腾至此结束。不再折腾啦！~</p>
+<blockquote>
+<p>最后的折腾…并把以下东西整了下，这次真结束了，不再弄了，- -。要好好写博客了…</p>
+</blockquote>
+<ul>
+<li>修复一些样式问题</li>
+<li>删除分类链接，移除分类页面（<del>懒得折腾</del>）<ul>
+<li>同时删除标签页，归档页</li>
+</ul>
+</li>
+<li>删除搜索里的上述链接</li>
+<li>代码框的样式问题</li>
+<li>手机站内链接的多行样式</li>
+</ul>
+</section>
+	<div class="post-like">
+		<span id="/50931/" class="like-content leancloud-visitors" data-flag-title="文章内链的研究...">
+			<i class="fa fa-heart-o"></i>
+			<span class="like-count">0</span>
+		</span>
+	</div>
+	
+	
+	
+    
+      <div class="tags">
+        <p class="tag-p">
+
+  <a href="/tags#文章" >
+    <span class="tag-code">文章</span>
+  </a>
+
+  <a href="/tags#内链" >
+    <span class="tag-code">内链</span>
+  </a>
+
+</p>
+      </div>
+    
+    <!--<div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>-->
+    <div class="qrcode">
+		<div class="qr-box">
+			<canvas id="share-qrcode"></canvas>
+			<p class="notice">扫描二维码或点下方按钮，分享此文章</p>
+		</div>
+    </div>
+	<div class="article-footer">
+		<div class="share-container">
+
+
+    <div class="bdsharebuttonbox">
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+		float: none;
+		display: inline-block;
+        margin: 0px 6px;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft jhenghei','Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
+	</div>
+	
+		
+<nav id="article-nav">
+    
+        <a href="/51677/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+        </a>
+    
+    
+        <a href="/23126/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+        </a>
+    
+</nav>
+
+
+	
+	<div id="vcomment"></div>
+  </article>
+</main>
+<div class="like-active"><span><em></em></span></div>
+
+<script>
+new Valine({
+	el: '#vcomment',
+	appId: 'GM9SIwrOcd1dWuY21JsjQQsj-gzGzoHsz',
+	appKey: 'xqyvopE9x4lEQCqaSvz0SWze',
+	visitor: true,
+	placeholder: '发表您的评论...'
+});
+</script>
+<script src="/js/gitalk.min.js"></script>
+<script>
+(function () {
+	var url = 'https://www.iloveyz.com/50931/';
+	$(".markdown-content img").each(function(){
+		$(this).parents('p').addClass('full-pic');
+	});
+	$('.header').removeClass('fixed-header')
+
+	// qrcode
+	var qr = new QRious({
+		element: document.getElementById('share-qrcode'),
+		value: document.location.href
+	});
+})();
+</script>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    
+<footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 · Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>·Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+</footer>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("/js/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("/js/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+<script src="/js/jquery.liveTimeAgo.js"></script>
+<script src="/js/iloveyz.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script>
+var swiper1 = new Swiper('.swiper1', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
+});
+var swiper2 = new Swiper('.swiper2', {
+	pagination: '.swiper-pagination',
+	slidesPerView: 'auto',
+	paginationClickable: true,
+	paginationBulletRender: function (swiper, index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	}
+});
+swiper1.params.control = swiper2;
+swiper2.params.control = swiper1;
+</script>
+	
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+	
+		
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("GM9SIwrOcd1dWuY21JsjQQsj-gzGzoHsz", "xqyvopE9x4lEQCqaSvz0SWze");</script>
+  <script>
+	function showLike(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $like = $(".like-content");
+      var $visitors = $(".leancloud_visitors");
+
+      $like.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.like-count';
+          var VIEW_CONTAINER_COUNT = '.leancloud-visitors-count';
+          if (results.length === 0) {
+            $like.find(COUNT_CONTAINER_REF).text(0);
+            $visitors.find(VIEW_CONTAINER_COUNT).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var like = item.get('like');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(like);
+			$(element).parents('.like-p').prev('.view-p').find(VIEW_CONTAINER_COUNT).text(time);
+			
+			if($('.app-long--article').length == 1){
+				$(element).parents('.app-long--article').next('.la-footer').find(COUNT_CONTAINER_REF).text(like);
+				$(element).parents('.post-like').parents('.la-footer').prev('.app-long--article').find(VIEW_CONTAINER_COUNT).text(time);
+				$(element).parents('.post-like').parents('.la-content').prev('.la-sidebar').find(VIEW_CONTAINER_COUNT).text(time);
+			}else{
+				$(element).parents('.post-like').parents('.article-entry').prev('.app-header').find(VIEW_CONTAINER_COUNT).text(time);
+			}
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addLike(Counter) {
+      var $like = $(".like-content");
+      var url = $like.attr('id').trim();
+      var title = $like.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("like");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.like-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("like", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.like-count').text(newcounter.get('like'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+	
+	function addCount(Counter) {
+      var $like = $(".like-content");
+      var url = $like.attr('id').trim();
+      var title = $like.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.parents('.like-p').prev('.view-p').find('.leancloud-visitors-count').text(counter.get('time'));
+                $element.parents('.post-like').parents('.article-entry').prev('.app-header').find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.parents('.like-p').prev('.view-p').find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $element.parents('.post-like').parents('.article-entry').prev('.app-header').find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+		/*var viewCounter = AV.Object.extend("Counter");
+		if ($('.leancloud_visitors').length == 1) {
+			addLike(postLike);
+		} else if ($('.post-title-link').length > 1) {
+			showLike(postLike);
+		}*/
+		var postLike = AV.Object.extend("Counter");
+		var cookieClass = $.cookie('class');
+		$('.post-like').attr('class',cookieClass);
+		$('.post-article .like-content,.la-footer .like-content').on('click', function(){
+			if($(this).parents('.post-like').hasClass('is-active')){
+				$(".like-active").addClass('cur--click').html("<em>您已经点过赞啦</em>");
+				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+			}else{
+				$(this).parents('.post-like').addClass('is-active');
+				var className=$(this).parents('.post-like').attr("class");
+				var cur_url = $(this).attr('id');
+				$.cookie('class', className, { expires: 999999, path: cur_url });
+				addLike(postLike);
+				$(".like-active").addClass('cur--click').html("<span>点赞成功</span>");
+				setTimeout(function(){$('.like-active').removeClass('cur--click');},3000);
+			}
+		});
+		showLike(postLike);
+		if ($('.app-content .leancloud_visitors').length == 1) {
+			addCount(postLike);
+		} else if ($('.app-article').length == 1) {
+			showLike(postLike);
+		}
+    });
+  </script>
+
+	
+  </body>
+</html>
