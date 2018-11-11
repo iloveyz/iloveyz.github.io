@@ -3744,6 +3744,13 @@ body.app-style {
 .topic-article-meta p:last-of-type:after {
   display: none;
 }
+.article-img--link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 @media screen and (max-width: 480px) {
   .app-footer {
     padding: 25px 32px !important;
@@ -3759,7 +3766,7 @@ body.app-style {
   .app-article .article-card {
     width: 100%;
     height: auto;
-    position: static;
+    position: relative;
   }
   .app-article .article-card .article-card--content {
     width: 100%;
@@ -3784,7 +3791,7 @@ body.app-style {
     -webkit-line-clamp: 2;
     margin: 15px 25px 0;
     font-size: 14px;
-    color: #666;
+    color: #999;
   }
   .app-article .article-card .article-card--content h2 {
     font-size: 16px;
@@ -3854,6 +3861,9 @@ body.app-style {
   .app-index .guide-pager a.nextpage {
     right: 0px;
     left: auto;
+  }
+  .article-card.la-article .la-article-icon {
+    display: none;
   }
 }
 @-webkit-keyframes ft_tinyapp_pop {
