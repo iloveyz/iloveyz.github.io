@@ -3803,7 +3803,7 @@ h3.link-title,
 .app-index-header {
   position: relative;
 }
-.app-index-header .search-btn {
+.app-style .search-btn {
   width: 65px;
   height: 65px;
   line-height: 65px;
@@ -3816,7 +3816,7 @@ h3.link-title,
 .ins-section:nth-child(2) {
   display: none;
 }
-.app-index-header .ins-search-container {
+.app-style .ins-search-container {
   width: 650px;
   height: 390px;
   top: 50%;
@@ -3968,12 +3968,12 @@ h3.link-title,
     left: -10px;
     padding: 2px 5px;
   }
-  .app-index-header .search-btn {
+  .app-style .search-btn {
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
-  .app-index-header .ins-search-container {
+  .app-style .ins-search-container {
     top: 0px !important;
     left: 0px !important;
     margin: 0;
@@ -3983,7 +3983,7 @@ h3.link-title,
     margin-left: 0px !important;
     transform: none !important;
   }
-  .app-index-header .ins-search-container {
+  .app-style .ins-search-container {
     left: 50%;
     top: 100px;
     z-index: 101;
