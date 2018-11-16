@@ -3813,7 +3813,7 @@ h3.link-title,
   text-align: center;
   justify-content: center;
 }
-.app-index-header .ins-section:nth-child(2) {
+.ins-section:nth-child(2) {
   display: none;
 }
 .app-index-header .ins-search-container {
