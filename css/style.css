@@ -3824,7 +3824,226 @@ h3.link-title,
   transform: translate(-50%, -50%);
   margin-left: 0px;
 }
+.dl-wrapper {
+  max-width: 750px;
+  background: #fff;
+  box-shadow: 0px 32px 50px rgba(0,0,0,0.05);
+  padding-bottom: 50px;
+  margin: 50px 0;
+}
+.dl-pic {
+  width: 100%;
+  height: 295px;
+  background-position: top center;
+  background-size: cover;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.dl-pic:after {
+  content: "";
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.15));
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.dl-content {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.dl-icon {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  margin: -50px auto 0;
+}
+.dl-infor {
+  max-width: 520px;
+  padding-bottom: 25px;
+  margin: 25px auto;
+  line-height: normal;
+  border-bottom: 1px solid #ebebeb;
+}
+.dl-infor .dl-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.dl-infor .dl-meta {
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+.dl-link {
+  max-width: 520px;
+  font-size: 0px;
+  text-align: center;
+  margin: 25px auto 0;
+}
+.dl-link a {
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 20px 20px 0;
+}
+.dl-link a:nth-child(3),
+.dl-link a:last-of-type {
+  margin-right: 0px;
+}
+.dl-link a.bd {
+  background: #337dfc;
+  box-shadow: 0 15px 32px rgba(51,125,252,0.2);
+}
+.dl-link a.bt {
+  background: #e7a738;
+  box-shadow: 0 15px 32px rgba(231,167,56,0.2);
+}
+.dl-link a.xl {
+  background: linear-gradient(to right, #337dfc, #c669ff);
+  box-shadow: 0 15px 32px rgba(150,150,255,0.2);
+}
+.dl-link a.gh {
+  background: #323232;
+  box-shadow: 0 15px 32px rgba(0,0,0,0.2);
+}
+.dl-link a.zl {
+  background: #e7387e;
+  box-shadow: 0 15px 32px rgba(231,56,126,0.2);
+}
+.dl-link a.qt {
+  background: #7e38e7;
+  box-shadow: 0 15px 32px rgba(126,56,231,0.2);
+}
+.dl-link a:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+  background-size: 20px 20px;
+}
+.dl-link a:after {
+  color: #fff;
+  font-weight: normal;
+}
+.dl-link a.bd:before {
+  background-image: url("/css/images/icon-bd.png");
+}
+.dl-link a.bt:before {
+  background-image: url("/css/images/icon-bt.png");
+}
+.dl-link a.xl:before {
+  background-image: url("/css/images/icon-xl.png");
+}
+.dl-link a.gh:before {
+  background-image: url("/css/images/icon-gh.png");
+}
+.dl-link a.zl:before {
+  background-image: url("/css/images/icon-zl.png");
+}
+.dl-link a.qt:before {
+  background-image: url("/css/images/icon-qt.png");
+}
+.dl-link a.bd:after {
+  content: "百度网盘";
+}
+.dl-link a.bt:after {
+  content: "bt磁链";
+}
+.dl-link a.xl:after {
+  content: "迅雷链接";
+}
+.dl-link a.gh:after {
+  content: "Github";
+}
+.dl-link a.zl:after {
+  content: "直链地址";
+}
+.dl-link a.qt:after {
+  content: "其它网盘";
+}
+.dl-link a i {
+  font-size: 12px;
+  color: #fff;
+  background: #e73838;
+  height: 19px;
+  line-height: 19px;
+  padding: 0 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -9.5px;
+  right: 10px;
+}
+.dl-tip {
+  max-width: 520px;
+  color: #999;
+  padding-top: 15px;
+  margin: 15px auto 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-top: 1px solid #ebebeb;
+}
+.dl-link a:hover:before {
+  transform: translateX(-5px);
+}
 @media screen and (max-width: 480px) {
+  .dl-wrapper {
+    padding-bottom: 25px;
+    margin: 32px auto;
+  }
+  .dl-infor {
+    padding-bottom: 25px;
+    margin: 25px 25px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .dl-name {
+    font-size: 20px !important;
+  }
+  .dl-meta {
+    font-size: 12px !important;
+  }
+  .dl-icon {
+    width: 75px;
+    height: 75px;
+    margin-top: -37px;
+  }
+  .dl-pic {
+    height: 160px;
+  }
+  .dl-link {
+    margin-top: 32px;
+  }
+  .dl-link a {
+    width: 39%;
+    font-size: 14px;
+  }
+  .dl-link a:nth-child(3),
+  .dl-link a:last-of-type {
+    margin-right: 20px;
+  }
+  .dl-link a:nth-child(2n),
+  .dl-link a:last-of-type {
+    margin-right: 0px;
+  }
+  .dl-tip {
+    display: none;
+  }
   .topic-article-meta .view-p:before,
   .topic-article-meta .like-p:before {
     content: "";

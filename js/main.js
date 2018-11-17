@@ -12,7 +12,10 @@
             }
 			if($(this).hasClass('smile')){
 				 $(this).unwrap('<a href="' + ($(this).attr("data-imgbig") ? $(this).attr("data-imgbig") : this.src) + '" title="' + this.alt + '" class="gallery-item"></a>');
-			}
+            }
+            if($(this).hasClass('dl-img')){
+				 $(this).unwrap('<a href="' + ($(this).attr("data-imgbig") ? $(this).attr("data-imgbig") : this.src) + '" title="' + this.alt + '" class="gallery-item"></a>');
+            }
 			if($(this).parent().parent().hasClass('topic-box')){
 				 $(this).unwrap('<a></a>');
 			}
