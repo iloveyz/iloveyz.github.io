@@ -2116,11 +2116,13 @@ span.caption:before {
   }
   .preview-post--link {
     padding: 36px 20px 29px;
-    max-height: 126px;
+    height: 200px;
     min-height: 98px;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
     border: 0px;
     position: relative;
+    display: flex;
+    align-items: center;
   }
   .preview-post--image {
     width: 100%;
@@ -4002,10 +4004,30 @@ h3.link-title,
 .dl-link a:hover:before {
   transform: translateX(-5px);
 }
+.qrcode img {
+  width: 132px;
+  height: 132px;
+  border: 1px solid #ebebeb;
+}
 @media screen and (max-width: 480px) {
   .dl-wrapper {
     padding-bottom: 25px;
-    margin: 32px auto;
+    margin: 32px 20px;
+  }
+  .dl-link a {
+    height: 39px;
+    line-height: 39px;
+  }
+  .dl-link a:before {
+    transition: none;
+  }
+  .dl-link a:hover:before {
+    transform: none;
+  }
+  .dl-link a i {
+    padding: 0 5px;
+    height: 16px;
+    line-height: 16px;
   }
   .dl-infor {
     padding-bottom: 25px;
@@ -4151,12 +4173,12 @@ h3.link-title,
   .app-index-footer {
     width: auto;
     text-align: center !important;
-    padding: 39px 25px 25px !important;
+    padding: 39px 0 25px !important;
     margin: 65px 25px 0 !important;
     box-sizing: border-box;
   }
   .app-index-footer .app-footer-style {
-    margin: 25px;
+    margin: 25px 0;
   }
   .app-index-footer .guide-pager {
     top: -21.9px;
@@ -4894,6 +4916,9 @@ h3.link-title,
   line-height: 1.9 !important;
   font-weight: normal !important;
 }
+.markdown-content .h2title {
+  margin: 50px 0 !important;
+}
 @media screen and (max-width: 480px) {
   .markdown-content h1,
   .markdown-content h2,
@@ -4902,6 +4927,9 @@ h3.link-title,
   .markdown-content h5,
   .markdown-content h6 {
     margin: 32px 20px !important;
+  }
+  .markdown-content .h2title {
+    margin: 32px 0 !important;
   }
 }
 .markdown-content h1:after,
@@ -5031,7 +5059,7 @@ h3.link-title,
     border: 0px !important;
   }
   .post-preview a {
-    padding: 32px !important;
+    padding: 65px 32px !important;
     position: relative;
     border-right: 0px !important;
     border-left: 0px !important;

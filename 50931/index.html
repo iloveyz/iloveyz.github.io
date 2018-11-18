@@ -219,9 +219,9 @@
 <hr>
 <p>一开始，尝试使用replace过滤文章的html标签，为此还想了很多办法去进行。结果一弄就报错。<code>TypeError: Cannot read property &#39;parent&#39; of undefined</code>以及<code>ReferenceError: replace is not defined</code>等。这也是我唯一可以看懂的地方了。</p>
 <p>首先，在做之前开始构思，一开始的想法是在主题里进行对文章的循环来达到文章内链的目的，的确可以循环出所有文章链接，但却不知道该怎么对文章里的链接进行匹配。弄了一段时间，发现这个方法对于我来说，似乎并不是很好的可行方法。但我并没有因此而觉得无法实现，就去网上找相关文章，最后无果。经过一两天，没实现这个功能还是觉得很不爽，于是就继续在网上搜索，在google上偶然间发现了，可以使用标签<code>{``% post_link slug [title] %``}</code>我简单的试了下，在不输入[title]的情况下，可以直接获取文章的标题。</p>
-<div class="preview-post--link"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/11/26/5a1ad6b398ae9.jpg)"></div><div class="preview-post--title">日常研究和like页面以及关于博客</div><div class="preview-post--time meta-date" data-timeago="2017-11-25 10:21:46">2017-11-25 10:21:46</div><div class="preview-post--content">
+<div class="preview-post--link"><div class="preview-post--wrwapper"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/11/26/5a1ad6b398ae9.jpg)"></div><div class="preview-post--title">日常研究和like页面以及关于博客</div><div class="preview-post--time meta-date" data-timeago="2017-11-25 10:21:46">2017-11-25 10:21:46</div><div class="preview-post--content">
 
-bitcron试用到期了，暂时没打算续费，但以后估计还会用，主要还是没啥时间和太懒更新，先闲置着吧。现在把hexo拾掇拾掇继续用起来，...</div><a href="/58255/" title="日常研究和like页面以及关于博客"></a></div>
+bitcron试用到期了，暂时没打算续费，但以后估计还会用，主要还是没啥时间和太懒更新，先闲置着吧。现在把hexo拾掇拾掇继续用起来，...</div><a href="/58255/" title="日常研究和like页面以及关于博客"></a></div></div>
 <p>这又重燃我的信心，开始寻找<code>post_link</code>这个文件，并尝试修改，在这个文件里发现到有一个<code>post.title</code>我就试着，<code>post.content</code>，结果还真输入了对应文章。无疑这是令人兴奋的。</p>
 <p>于是折腾就此展开。一开始的难题就是，过滤html标签，限制文字字数。有难度，虽然hexo有自己的限制函数，可无法直接使用。苦恼，开始找原因，发现需要调用，<code>var util = require(&#39;hexo-util&#39;);</code>于是调用，再使用对应的函数，立即解决问题。于是如法炮制，因为时间<code>post.date</code>获取后是unix时间戳（单位毫秒），于是使用<code>moment.js</code>（hexo同样已经集成<code>var moment = require(&#39;moment&#39;);</code>）把时间成功转换。</p>
 <p>最后成功了，样式调整好，成就感溢于言表，最后觉得太单调，又无图无真相，就开始研究如何获取文章内第一张图的<code>src</code>。因为无法直接使用<code>replace</code>和<code>match</code>就很难正则匹配，弄了半天也弄不出个所以然。</p>
@@ -284,8 +284,8 @@ bitcron试用到期了，暂时没打算续费，但以后估计还会用，主�
     </div>-->
     <div class="qrcode">
 		<div class="qr-box">
-			<canvas id="share-qrcode"></canvas>
-			<p class="notice">扫描二维码或点下方按钮，分享此文章</p>
+			<img src="/css/images/qrcode.jpg" />
+			<p class="notice">扫码关注公众号或点下方按钮，分享此文章</p>
 		</div>
     </div>
 	<div class="article-footer">
@@ -370,10 +370,10 @@ new Valine({
 	$('.header').removeClass('fixed-header')
 
 	// qrcode
-	var qr = new QRious({
-		element: document.getElementById('share-qrcode'),
-		value: document.location.href
-	});
+	// var qr = new QRious({
+	// 	element: document.getElementById('share-qrcode'),
+	// 	value: document.location.href
+	// });
 })();
 </script>
 

@@ -227,10 +227,10 @@
 <p>现在博客基本不差什么，至少满足了自己的需求。其实按道理来说，评论是不需要的，单机要什么自行车。</p>
 <hr>
 <p>刚一开始才接触hexo就没日夜的整，还真是疯狂啊。主要是心血来潮想整的视频页，弄了好久，因为视频页是我在<code>wordpress</code>上的突发其想，纯粹满足自己的看视频的喜好。也没啥技术可言。</p>
-<div class="preview-post--link"><div class="preview-post--image" style="background-image: url(/css/images/thumb-default-small.png)"></div><div class="preview-post--title">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</div><div class="preview-post--time meta-date" data-timeago="2017-08-11 08:54:48">2017-08-11 08:54:48</div><div class="preview-post--content">
+<div class="preview-post--link"><div class="preview-post--wrwapper"><div class="preview-post--image" style="background-image: url(/css/images/thumb-default-small.png)"></div><div class="preview-post--title">视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~</div><div class="preview-post--time meta-date" data-timeago="2017-08-11 08:54:48">2017-08-11 08:54:48</div><div class="preview-post--content">
 
 这篇主要是用来提供观赏使用，视频页...还有一重要的事情
-</div><a href="/61722/" title="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~"></a></div>
+</div><a href="/61722/" title="视频页展示，主要用来展示，暂时没想到其它好的作用，观赏下社会青年魅力也不错！~"></a></div></div>
 <p>而网站的样式呢，完全没时间和精力去构思和设计，就随便按照最简单的来。有些地方都是模仿别的站弄来的，哈哈。{: 坏笑 :}，这叫能省事就省事，属于拼凑型网站风格。自己看得过去就行。</p>
 <p>总得来说就是懒，一折腾起来不折腾的时候就感觉少了什么，不知道是受惯了这种折腾的感觉还是就是为了折腾才弄的博客就不得而知了，明明折腾的初衷就是为了更好的体验博客和写作的乐趣。</p>
 <p><a href="#" title="text">吐槽一下</a>hexo官方的文档写的好模糊。想搜的什么也搜不到，介绍的也不是特别清楚，对于像我这种本来就水平有限的初学者来说，太难了，最关键的是，百度，GOOGLE，你想去搜个hexo什么东西，相关文章又少的可怜，当然大多是搜不到的。一般都是什么如何配置建站hexo+github静态博客的配置…只好默默地看<code>node_modules</code>里的文件，慢慢找。真是太费劲了。- -。希望<code>hexo</code>能够补充的更丰富些…</p>
@@ -276,8 +276,8 @@
     </div>-->
     <div class="qrcode">
 		<div class="qr-box">
-			<canvas id="share-qrcode"></canvas>
-			<p class="notice">扫描二维码或点下方按钮，分享此文章</p>
+			<img src="/css/images/qrcode.jpg" />
+			<p class="notice">扫码关注公众号或点下方按钮，分享此文章</p>
 		</div>
     </div>
 	<div class="article-footer">
@@ -362,10 +362,10 @@ new Valine({
 	$('.header').removeClass('fixed-header')
 
 	// qrcode
-	var qr = new QRious({
-		element: document.getElementById('share-qrcode'),
-		value: document.location.href
-	});
+	// var qr = new QRious({
+	// 	element: document.getElementById('share-qrcode'),
+	// 	value: document.location.href
+	// });
 })();
 </script>
 

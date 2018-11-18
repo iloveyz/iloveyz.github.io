@@ -212,10 +212,10 @@
   <article class="post-article article-entry">
     <section class="markdown-content"><p>其实也不知道说多少遍了，再折腾就剁手。这次绝对是真的，- -。不忘开博初衷，不然就没太多记录的乐趣了。所以就此决定，不再继续折腾。<a id="more"></a></p>
 <p>最近一直在整长文章页面，倒也遇到不少麻烦，但都解决了，非常的有成就感。可能还存在不少问题，懒得解决了，除非是大问题，不然肯定不再折腾了。嘿嘿。hexo用了近5个月左右吧，感觉挺有意思的。除了不能随时随地的更新文章，其它都挺好，不过和bitcron相比，bitcron还是集聚魅力的。bitcron的文档详尽，比hexo不知道清晰多少倍。估计使用bitcron制作长文章页面，肯定效率会快很多。如果以后我用回bitcron，估计不会折腾长文章了，耗时耗精力。{:睡:}</p>
-<div class="preview-post--link"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/12/14/5a31ca3fd09da.jpg)"></div><div class="preview-post--title">长文章页面...再一次折腾...</div><div class="preview-post--time meta-date" data-timeago="2017-12-12 10:05:01">2017-12-12 10:05:01</div><div class="preview-post--content">
+<div class="preview-post--link"><div class="preview-post--wrwapper"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/12/14/5a31ca3fd09da.jpg)"></div><div class="preview-post--title">长文章页面...再一次折腾...</div><div class="preview-post--time meta-date" data-timeago="2017-12-12 10:05:01">2017-12-12 10:05:01</div><div class="preview-post--content">
 长文章折腾
 
-长文章，就是指很长的文章，分块来展示文章，其实弄长文章的想法很早就有了，以前在用wordpress的时候就已经开始了，而且...</div><a href="/25955/" title="长文章页面...再一次折腾..."></a></div>
+长文章，就是指很长的文章，分块来展示文章，其实弄长文章的想法很早就有了，以前在用wordpress的时候就已经开始了，而且...</div><a href="/25955/" title="长文章页面...再一次折腾..."></a></div></div>
 <hr>
 <p>最近天气忽然转凉，早上完全起不来，被转入新公司，才录上指纹，今天就迟到了二十分钟，{:挖鼻:}，同事还善意提醒让我来早点，差点儿没钻地下去。以前就老干这样的事，去单位就职，第一天就迟到，天天缺觉，不睡到快迟到都起不来。</p>
 <p>这种毛病其实在小时候就形成了，根深蒂固。记得少时上学，第二天起床，闹钟响了墨迹半天起床，然后顺着楼梯一层一层的坐下去，这种操作还是挺骚的，迟到自然是常有的事了。以前天除了上班上学，休息日的上午基本不属于我，一觉睡到自然醒。这感觉还是舒坦的（当然除了上网需要早起外，这个很积极）。所以再好听的闹钟铃声都是异常刺耳的。</p>
@@ -262,8 +262,8 @@
     </div>-->
     <div class="qrcode">
 		<div class="qr-box">
-			<canvas id="share-qrcode"></canvas>
-			<p class="notice">扫描二维码或点下方按钮，分享此文章</p>
+			<img src="/css/images/qrcode.jpg" />
+			<p class="notice">扫码关注公众号或点下方按钮，分享此文章</p>
 		</div>
     </div>
 	<div class="article-footer">
@@ -348,10 +348,10 @@ new Valine({
 	$('.header').removeClass('fixed-header')
 
 	// qrcode
-	var qr = new QRious({
-		element: document.getElementById('share-qrcode'),
-		value: document.location.href
-	});
+	// var qr = new QRious({
+	// 	element: document.getElementById('share-qrcode'),
+	// 	value: document.location.href
+	// });
 })();
 </script>
 
