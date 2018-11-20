@@ -21,7 +21,7 @@
 <meta property="og:description" content="以前在玩wordpress时，添加了一些可有可无的功能，像什么视频，小说，下载。除了折腾成功的那种成就感外，似乎平时写文章时很少用到。哈哈，主要还是折腾的那种快感。非常棒的。最近就心血来潮，把下载功能搬到了博客里…">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542488399645&di=d082e4cd196a04aa68483f7fae1723bd&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike60%252C5%252C5%252C60%252C20%2Fsign%3D71aea724c2cec3fd9f33af27b7e1bf5a%2F54fbb2fb43166d2287f64f7c472309f79152d251.jpg">
-<meta property="og:updated_time" content="2018-11-18T17:41:44.239Z">
+<meta property="og:updated_time" content="2018-11-20T14:38:48.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么？折腾的味道很迷人...">
 <meta name="twitter:description" content="以前在玩wordpress时，添加了一些可有可无的功能，像什么视频，小说，下载。除了折腾成功的那种成就感外，似乎平时写文章时很少用到。哈哈，主要还是折腾的那种快感。非常棒的。最近就心血来潮，把下载功能搬到了博客里…">
@@ -217,7 +217,7 @@
 <p>其实就是个下载有样式的下载框而已，看起来像那么回事。</p>
 </blockquote>
 <div class="h2title "><span>效果如下</span></div>
-<div class="dl-wrapper"> <div clas="dl-column"> <div class="dl-pic" style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4114411605,4269336417&fm=26&gp=0.jpg);"></div> <div class="dl-content"> <div class="dl-icon"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542488399645&di=d082e4cd196a04aa68483f7fae1723bd&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike60%252C5%252C5%252C60%252C20%2Fsign%3D71aea724c2cec3fd9f33af27b7e1bf5a%2F54fbb2fb43166d2287f64f7c472309f79152d251.jpg" class="dl-img"></div> <div class="dl-infor"><div class="dl-name">火狐浏览器</div><div class="dl-meta">30.71MB</div> </div> <div class="dl-link"> <a href="https://pan.baidu.com/s/1shAB4tJMpCei4Pcz-yQk0Q" class="bd" target="_blank" rel="external"><i>epss</i></a><a href="link" class="zl"></a><a href="src" class="bt"></a><a href="l1" class="qt"></a><a href="l2" class="xl"></a><a href="https://pan.baidu.com/s/1un0y7zNCVbSu5rzt0QcqFw" class="bd" target="_blank" rel="external"><i>wpym</i></a> </div>  <div class="dl-tip">如下载遇到网盘提示过期或地址有误，请评论留言，我会第一时间补链，谢谢！~</div> </div> </div> </div>
+<div class="dl-wrapper"> <div clas="dl-column"> <div class="dl-pic" style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4114411605,4269336417&fm=26&gp=0.jpg);"></div> <div class="dl-content"> <div class="dl-icon"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542488399645&di=d082e4cd196a04aa68483f7fae1723bd&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike60%252C5%252C5%252C60%252C20%2Fsign%3D71aea724c2cec3fd9f33af27b7e1bf5a%2F54fbb2fb43166d2287f64f7c472309f79152d251.jpg" class="dl-img"></div> <div class="dl-infor"><div class="dl-name">火狐浏览器</div><div class="dl-meta">30.71MB</div> </div> <div class="dl-link"> <a href="https://pan.baidu.com/s/1shAB4tJMpCei4Pcz-yQk0Q" class="bd" target="_blank" rel="external"><i>epss</i></a><a href="link" class="zl"></a><a href="src" class="bt"></a><a href="l1" class="qt"></a><a href="l2" class="xl"></a><a href="https://pan.baidu.com/s/1un0y7zNCVbSu5rzt0QcqFw" class="bd" target="_blank" rel="external"><i>wpym</i></a> </div> <div class="dl-tip">如下载遇到网盘提示过期或地址有误，请评论留言，我会第一时间补链，谢谢！~</div> </div> </div> </div>
 <p>弄完之后才发现，这个居然高度有这么高。不过样式倒是不打算再调整了，挺好。哈哈！~{:扶眼镜:}</p>
 <p>这个下载其实就是使用了以前文章提过的自定义标签，超好用。<code>&lt;% 自定义标签名 参数[可选参数] %&gt;</code>就是这个。</p>
 <h1 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h1><p>首先，我们要有个大致的样式框架，至少要知道哪些是自己需要的。比如，软件预览大图，软件图标，软件的大小，以及下载地址和提示信息。没错，这些就是字段了。把这些通过数组进行分组一一对应之后，剩下的就只是在文章中填充这些字段的信息即可。</p>
@@ -344,6 +344,10 @@
 	
 		
 <nav id="article-nav">
+    
+        <a href="/17117/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+        </a>
     
     
         <a href="/18518/" id="article-nav-older" class="article-nav-link-wrap">
