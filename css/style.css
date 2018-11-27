@@ -4009,6 +4009,11 @@ h3.link-title,
   height: 132px;
   border: 1px solid #ebebeb;
 }
+.justified-gallery>a>.caption,
+.justified-gallery>div>.caption {
+  text-align: center;
+  font-family: 'PingFang SC', 'Microsoft Yahei';
+}
 @media screen and (max-width: 480px) {
   .dl-wrapper {
     padding-bottom: 25px;
