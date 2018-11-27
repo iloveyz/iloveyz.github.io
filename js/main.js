@@ -19,6 +19,9 @@
 			if($(this).parent().parent().hasClass('topic-box')){
 				 $(this).unwrap('<a></a>');
 			}
+			if($(this).parents().hasClass('qrcode')){
+				 $(this).unwrap('<a></a>');
+			}
         });
     });
     if (typeof lightGallery != 'undefined') {
