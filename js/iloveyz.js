@@ -86,8 +86,11 @@
                     for(var i in data.genres){
                         db_genres += data.genres[i]+" ";
                     }
-                    var db_star = Math.ceil(data.rating.average)
-                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>"+data.title+"<span>（"+data.year+"）</span></h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>导演："+data.directors[0].name+" / 主演："+db_casts+" / 类型："+db_genres+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
+                    var db_star = Math.ceil(data.rating.stars);
+                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>"+data.title+"<span>（"+data.year+"）</span></h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average.toFixed(1)+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>导演："+data.directors[0].name+" / 主演："+db_casts+" / 类型："+db_genres+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
+                },
+                error: function(error) {
+                    $('#db'+id).addClass('douban_error').html("<div class='douban_error_pic'><img src='/css/images/thumb-default-750.png' title='抱歉，获取豆瓣信息失败...' /></div>");
                 }
             });
         }else if (id.length > 9){
@@ -97,7 +100,7 @@
                 type: 'GET',
                 dataType: 'JSONP',
                 success: function (data) {
-                    var db_star = Math.ceil(data.rating.average)
+                    var db_star = Math.ceil(data.rating.stars);
                     $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>《"+data.title+"》"+data.subtitle+"</h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>作者："+data.author[0]+" / 出版社："+data.publisher+" / 出版年："+data.pubdate+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
                 }
             });

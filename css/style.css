@@ -5017,6 +5017,59 @@ h3.link-title,
   background-image: url("/css/images/douban_star.png");
   overflow: hidden;
 }
+.allstar50,
+.allstar45,
+.allstar40,
+.allstar35,
+.allstar30,
+.allstar25,
+.allstar20,
+.allstar15,
+.allstar10,
+.allstar05,
+.allstar00 {
+  background: url("/css/images/douban_star.png") no-repeat;
+  width: 75px;
+  height: 15px;
+  overflow: hidden;
+}
+.douban_error {
+  box-shadow: none;
+  border: 0px !important;
+}
+.rating-star.allstar00 {
+  background-position: 0 -150px;
+}
+.rating-star.allstar05 {
+  background-position: 0 -135px;
+}
+.rating-star.allstar10 {
+  background-position: 0 -120px;
+}
+.rating-star.allstar15 {
+  background-position: 0 -105px;
+}
+.rating-star.allstar20 {
+  background-position: 0 -90px;
+}
+.rating-star.allstar25 {
+  background-position: 0 -75px;
+}
+.rating-star.allstar30 {
+  background-position: 0 -60px;
+}
+.rating-star.allstar35 {
+  background-position: 0 -45px;
+}
+.rating-star.allstar40 {
+  background-position: 0 -30px;
+}
+.rating-star.allstar45 {
+  background-position: 0 -15px;
+}
+.rating-star.allstar50 {
+  background-position: 0 0px;
+}
 .rating-average {
   color: #777;
   display: inline-block;
