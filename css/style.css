@@ -5037,37 +5037,65 @@ h3.link-title,
   box-shadow: none;
   border: 0px !important;
 }
-.rating-star.allstar00 {
+.rating-star,
+.allstar50,
+.allstar45,
+.allstar40,
+.allstar35,
+.allstar30,
+.allstar25,
+.allstar20,
+.allstar15,
+.allstar10,
+.allstar05,
+.allstar00 {
+  background: url("https://iloveyz.github.io/css/images/douban_star.png") no-repeat;
+  width: 75px;
+  height: 15px;
+  overflow: hidden;
+}
+.rating-star.allstar0,
+.allstar00 {
   background-position: 0 -150px;
 }
-.rating-star.allstar05 {
+.rating-star.allstar1,
+.allstar05 {
   background-position: 0 -135px;
 }
-.rating-star.allstar10 {
+.rating-star.allstar2,
+.allstar10 {
   background-position: 0 -120px;
 }
-.rating-star.allstar15 {
+.rating-star.allstar3,
+.allstar15 {
   background-position: 0 -105px;
 }
-.rating-star.allstar20 {
+.rating-star.allstar4,
+.allstar20 {
   background-position: 0 -90px;
 }
-.rating-star.allstar25 {
+.rating-star.allstar5,
+.allstar25 {
   background-position: 0 -75px;
 }
-.rating-star.allstar30 {
+.rating-star.allstar6,
+.allstar30 {
   background-position: 0 -60px;
 }
-.rating-star.allstar35 {
+.rating-star.allstar7,
+.allstar35 {
   background-position: 0 -45px;
 }
-.rating-star.allstar40 {
+.rating-star.allstar8,
+.allstar40 {
   background-position: 0 -30px;
 }
-.rating-star.allstar45 {
+.rating-star.allstar9,
+.allstar45 {
   background-position: 0 -15px;
 }
-.rating-star.allstar50 {
+.rating-star.allstar10,
+.allstar50 {
   background-position: 0 0px;
 }
 .rating-average {
@@ -5105,6 +5133,18 @@ h3.link-title,
   position: absolute;
   right: 0px;
   top: 0px;
+}
+.post-preview--date span.rating-director i,
+.post-preview--date span.rating-actor i {
+  font-style: normal;
+}
+.post-preview--date span.rating-director i:after,
+.post-preview--date span.rating-actor i:after {
+  content: " ";
+}
+.post-preview--date span.rating-director i:last-of-type:after,
+.post-preview--date span.rating-actor i:last-of-type:after {
+  display: none;
 }
 .markdown-content {
   line-height: 1.8em;

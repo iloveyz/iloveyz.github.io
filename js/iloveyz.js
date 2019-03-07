@@ -70,44 +70,73 @@
 	$('.markdown-content h1,.markdown-content h2,.markdown-content h3,.markdown-content h4,.markdown-content h5').removeAttr('id');
 	//By ImMmMm.com 20180102
     $('.douban_item').each(function(){
-        var id = $(this).attr('date-dbid').toString();
-	  	//console.log(id);
-        if (id.length < 9){
-            var url= "https://api.douban.com/v2/movie/subject/"+id+"?apikey=0dad551ec0f84ed02907ff5c42e8ec70";
-            $.ajax({
-                url: url,
-                type: 'GET',
-                dataType: "jsonp",
-                success: function (data) {
-                    var db_casts = "",db_genres= "";
-                    for(var i in data.casts){
-                        db_casts += data.casts[i].name+" ";
-                    }
-                    for(var i in data.genres){
-                        db_genres += data.genres[i]+" ";
-                    }
-                    var db_star = Math.ceil(data.rating.stars);
-                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>"+data.title+"<span>（"+data.year+"）</span></h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average.toFixed(1)+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>导演："+data.directors[0].name+" / 主演："+db_casts+" / 类型："+db_genres+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
-                },
-                error: function(error) {
-                    $('#db'+id).addClass('douban_error').html("<div class='douban_error_pic'><img src='/css/images/thumb-default-750.png' title='抱歉，获取豆瓣信息失败...' /></div>");
-                }
-            });
-        }else if (id.length > 9){
-            var url= "https://api.douban.com/v2/book/isbn/"+id+"?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0dad551ec0f84ed02907ff5c42e8ec70";
-            $.ajax({
-                url: url,
-                type: 'GET',
-                dataType: 'JSONP',
-                success: function (data) {
-                    var db_star = Math.ceil(data.rating.stars);
-                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>《"+data.title+"》"+data.subtitle+"</h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>作者："+data.author[0]+" / 出版社："+data.publisher+" / 出版年："+data.pubdate+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
-                }
-            });
-        }else{
-            console.log("出错"+ id)
-        }
-    });
+	        var id = $(this).attr('date-dbid').toString();
+		  	//console.log(id);
+	        if (id.length < 9){
+	            var url= "https://api.douban.com/v2/movie/subject/"+id+"?apikey=0dad551ec0f84ed02907ff5c42e8ec70";
+	            $.ajax({
+	                url: url,
+	                type: 'GET',
+	                dataType: "jsonp",
+	                success: function (data) {
+	                    var db_casts = "",db_genres= "";
+	                    for(var i in data.casts){
+	                        db_casts += data.casts[i].name+" ";
+	                    }
+	                    for(var i in data.genres){
+	                        db_genres += data.genres[i]+" ";
+	                    }
+	                    var db_star = Math.ceil(data.rating.stars);
+	                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>"+data.title+"<span>（"+data.year+"）</span></h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average.toFixed(1)+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>导演："+data.directors[0].name+" / 主演："+db_casts+" / 类型："+db_genres+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
+	                },
+	                error: function(error) {
+	                    var url= "https://api.douban.com/v2/movie/"+id
+			            $.ajax({
+			                url: url,
+			                type: 'GET',
+			                dataType: "jsonp",
+			                success: function (data) {
+			                    var db_author = "",db_casts = "",db_genres= "",db_director = "",db_actor = "";
+			                    for(var i in data.author){
+			                        db_author += data.author[i].name;
+			                        db_director += "<i>"+data.author[i].name.split(' ')[0]+"</i>";
+			                    }
+			                    for(var i in data.attrs.cast){
+			                        // db_casts += "<i>"+data.attrs.cast[i]+"</i>";
+			                        db_casts += data.attrs.cast[i];
+			                        db_actor += "<i>"+data.attrs.cast[i].split(' ')[0]+"</i>";
+			                    }
+
+			                    for(var i in data.attrs.movie_type){
+			                        db_genres += data.attrs.movie_type[i]+" ";
+			                    }
+
+			                    var db_star = Math.ceil(data.rating.average);
+			                    var db_alt = data.alt;
+			                    var db_href = db_alt.replace(/\/movie\//g,'/subject/');
+			                    $('#db'+id).html("<a target='_blank' href='"+db_href+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>"+data.alt_title+"<span>（"+data.attrs.year+"）</span></h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>导演：<span class='rating-director'>"+db_director+"</span> / 主演：<span class='rating-actor'>"+db_actor+"</span> / 类型："+db_genres+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.image+");'></div></a>");
+			                    if($('.post-preview--date span i').length > 6){
+			                    	$('.post-preview--date span i:gt(5)').remove();
+			                    }
+			                }
+	                	})
+	                }
+	            });
+	        }else if (id.length > 9){
+	            var url= "https://api.douban.com/v2/book/isbn/"+id+"?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0dad551ec0f84ed02907ff5c42e8ec70";
+	            $.ajax({
+	                url: url,
+	                type: 'GET',
+	                dataType: 'JSONP',
+	                success: function (data) {
+	                    var db_star = Math.ceil(data.rating.stars);
+	                    $('#db'+id).html("<a target='_blank' href='"+data.alt+"'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview-top'><h2 class='post-preview--name'>《"+data.title+"》"+data.subtitle+"</h2><div class='rating'><div class='rating-star allstar"+db_star+"'></div><div class='rating-average'>"+data.rating.average+"</div></div></div><div class='post-preview--infor'><div class='post-preview--date'>作者："+data.author[0]+" / 出版社："+data.publisher+" / 出版年："+data.pubdate+"</div></div><section class='post-preview--excerpt'>"+data.summary+"</section></div></div><div class='post-preview--image' style='background-image:url("+data.images.large+");'></div></a>");
+	                }
+	            });
+	        }else{
+	            console.log("出错"+ id)
+	        }
+	    });
 	if($('.markdown-content').length >= 1){
 		var reg = /\{:.+?\:}/g;
 		var str = $('.markdown-content').html();
