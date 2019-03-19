@@ -2,9 +2,9 @@
 <html>
   <!DOCTYPE html>
 
-<html lang=zh class="">
+<html lang="zh" class>
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="referrer" content="no-referrer">
@@ -31,7 +31,7 @@
     
 
     
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico">
     
 
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
@@ -61,15 +61,16 @@
 	<!-- <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="/js/jquery.min.js"></script>
 	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+	<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 	<script src="/js/cookie.js"></script>
 	<script src="/js/geopattern.min.js"></script>
 	<script src="/js/nprogress.min.js"></script>
     <script src="/js/qrious.js"></script>
     <script src="/js/jquery-ias.min.js"></script>
-</head>
-
+</head></html>
+  
   <body class= ''>
+  
 	
     
 
@@ -148,14 +149,14 @@
 <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="index.search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="index.search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="输入关键字..." />
+            <input type="text" class="ins-search-input" placeholder="输入关键字...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -195,12 +196,12 @@
 	<div class="post-meta">
 		<p>
     <span class="article-category">
-        笔记
+        <a class="article-category-link" href="/categories/笔记/">笔记</a>
     </span>
 </p>
 		<p class="meta-date" data-timeago="2017-12-08 11:21:35">17-12-08</p>
 		<p class="view-p">
-   <span url="/50931/" url="/50931/" class="leancloud_visitors" data-flag-name="文章内链的研究...">
+   <span url="/50931/" class="leancloud_visitors" data-flag-name="文章内链的研究...">
        <i class="fa fa-eye"></i>
      <span class="leancloud-visitors-count"></span>
     </span>
@@ -212,16 +213,14 @@
 
 
   <article class="post-article article-entry">
-    <section class="markdown-content"><p><img src="https://s1.ax1x.com/2017/12/08/T79eg.jpg" alt=""></p>
+    <section class="markdown-content"><p><img src="https://s1.ax1x.com/2017/12/08/T79eg.jpg" alt></p>
 <p>经过几天年努力，算是把文章内链搞定了，其过程，听者流泪闻者伤心，因为完全不懂<code>nodejs</code>所以寸步难行。这折腾的过程，我也是醉的不行不行的…<a id="more"></a></p>
 <p>对于文章内链的执念来自wordpress，因为可以很美观并可自定义的展示网站其它文章链接，就这点就足以吸引我去折腾。当然，点赞和文章浏览次数也是。那时为了点赞也是折腾了N长时间，其实在我完成点赞后，发现基本上就是把刷新变成了点击增加而已，最多就是cookie存下当前的状态。当然一开始的思路是正确的，然后不断调整。完成后，除了成就感，还是成就感。{:坏笑:}</p>
 <p>而文章内链让我对nodejs又有了些认识，当然我所指的认识也只是了解了最最基本的一些东西。对nodejs不懂，很多都不知道该怎么进行。</p>
 <hr>
 <p>一开始，尝试使用replace过滤文章的html标签，为此还想了很多办法去进行。结果一弄就报错。<code>TypeError: Cannot read property &#39;parent&#39; of undefined</code>以及<code>ReferenceError: replace is not defined</code>等。这也是我唯一可以看懂的地方了。</p>
-<p>首先，在做之前开始构思，一开始的想法是在主题里进行对文章的循环来达到文章内链的目的，的确可以循环出所有文章链接，但却不知道该怎么对文章里的链接进行匹配。弄了一段时间，发现这个方法对于我来说，似乎并不是很好的可行方法。但我并没有因此而觉得无法实现，就去网上找相关文章，最后无果。经过一两天，没实现这个功能还是觉得很不爽，于是就继续在网上搜索，在google上偶然间发现了，可以使用标签<code>{``% post_link slug [title] %``}</code>我简单的试了下，在不输入[title]的情况下，可以直接获取文章的标题。</p>
-<div class="preview-post--link"><div class="preview-post--wrwapper"><div class="preview-post--image" style="background-image: url(https://i.loli.net/2017/11/26/5a1ad6b398ae9.jpg)"></div><div class="preview-post--title">日常研究和like页面以及关于博客</div><div class="preview-post--time meta-date" data-timeago="2017-11-25 10:21:46">2017-11-25 10:21:46</div><div class="preview-post--content">
+<p>首先，在做之前开始构思，一开始的想法是在主题里进行对文章的循环来达到文章内链的目的，的确可以循环出所有文章链接，但却不知道该怎么对文章里的链接进行匹配。弄了一段时间，发现这个方法对于我来说，似乎并不是很好的可行方法。但我并没有因此而觉得无法实现，就去网上找相关文章，最后无果。经过一两天，没实现这个功能还是觉得很不爽，于是就继续在网上搜索，在google上偶然间发现了，可以使用标签<code>{`</code>% post_link slug [title] %<code></code>}`我简单的试了下，在不输入[title]的情况下，可以直接获取文章的标题。</p>
 
-bitcron试用到期了，暂时没打算续费，但以后估计还会用，主要还是没啥时间和太懒更新，先闲置着吧。现在把hexo拾掇拾掇继续用起来，...</div><a href="/58255/" title="日常研究和like页面以及关于博客"></a></div></div>
 <p>这又重燃我的信心，开始寻找<code>post_link</code>这个文件，并尝试修改，在这个文件里发现到有一个<code>post.title</code>我就试着，<code>post.content</code>，结果还真输入了对应文章。无疑这是令人兴奋的。</p>
 <p>于是折腾就此展开。一开始的难题就是，过滤html标签，限制文字字数。有难度，虽然hexo有自己的限制函数，可无法直接使用。苦恼，开始找原因，发现需要调用，<code>var util = require(&#39;hexo-util&#39;);</code>于是调用，再使用对应的函数，立即解决问题。于是如法炮制，因为时间<code>post.date</code>获取后是unix时间戳（单位毫秒），于是使用<code>moment.js</code>（hexo同样已经集成<code>var moment = require(&#39;moment&#39;);</code>）把时间成功转换。</p>
 <p>最后成功了，样式调整好，成就感溢于言表，最后觉得太单调，又无图无真相，就开始研究如何获取文章内第一张图的<code>src</code>。因为无法直接使用<code>replace</code>和<code>match</code>就很难正则匹配，弄了半天也弄不出个所以然。</p>
@@ -249,17 +248,15 @@ bitcron试用到期了，暂时没打算续费，但以后估计还会用，主�
 		</span>
 	</div>
 	
-	
-	
     
       <div class="tags">
         <p class="tag-p">
 
-  <a href="/tags#文章" >
+  <a href="/tags#文章">
     <span class="tag-code">文章</span>
   </a>
 
-  <a href="/tags#内链" >
+  <a href="/tags#内链">
     <span class="tag-code">内链</span>
   </a>
 
@@ -284,7 +281,7 @@ bitcron试用到期了，暂时没打算续费，但以后估计还会用，主�
     </div>-->
     <div class="qrcode">
 		<div class="qr-box">
-			<img src="/css/images/qrcode.jpg" />
+			<img src="/css/images/qrcode.jpg">
 			<p class="notice">扫码关注公众号或点下方按钮，分享此文章</p>
 		</div>
     </div>
@@ -451,6 +448,7 @@ var swiper2 = new Swiper('.swiper2', {
 swiper1.params.control = swiper2;
 swiper2.params.control = swiper1;
 </script>
+  
 	
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>

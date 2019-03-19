@@ -611,16 +611,6 @@ h2.article-head {
     padding-top: 0px;
   }
 }
-.article-category a.article-category-link:after {
-  content: "/";
-  margin: 0 5px;
-  color: #ccc;
-}
-.article-category a.article-category-link:last-of-type:after {
-  content: "-";
-  margin: 0 10px;
-  color: #ccc;
-}
 #article-banner {
   width: 100%;
   box-sizing: border-box;
